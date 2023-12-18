@@ -1,0 +1,41 @@
+﻿<Window x:Class="BscanILLTester.TestForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:export="clr-namespace:BscanILL.UI.Dialogs.ExportDialog;assembly=BscanILL"
+    Title="Window1" Height="700" Width="850" 
+	Closing="Form_Closing">
+    
+	<DockPanel>
+		<Grid DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal">
+				<GroupBox Header="Scanner" >
+                    <StackPanel>
+						<Button Content="Connect" Click="ScannerConnect_Click" />
+						<Button Content="Get Settings" Click="ScannerGetSettings_Click" />
+						<Button Content="Set Settings" Click="ScannerSetSettings_Click" />
+						<Button Content="Scan" Click="Scan_Click" />
+						<Button Content="Settings..." Click="Settings_Click" />
+						<CheckBox x:Name="checkScannerButtonPress" Content="Check" Checked="CheckScannerStatus_CheckedChanged" Unchecked="CheckScannerStatus_CheckedChanged" />
+						<CheckBox x:Name="checkScannerLockUi" Content="Lock Ui" Checked="CheckScannerLockUi_CheckedChanged" Unchecked="CheckScannerLockUi_CheckedChanged" />
+					</StackPanel>
+                </GroupBox>
+				<GroupBox Header="Misc" >
+					<StackPanel>
+						<Button Content="Test 1" Click="Test1_Click" />
+						<Button Content="Test 2" Click="Test2_Click" />
+						<Button Content="Test 3" Click="Test3_Click" />
+						<Button Content="Test 4" Click="Test4_Click" />
+						<Button Content="Test 5" Click="Test5_Click" />
+					</StackPanel>
+				</GroupBox>
+				<export:Ftp x:Name="ftp" />
+			</StackPanel>
+		</Grid>
+		
+		<Grid >
+			<ProgressBar x:Name="progressBar" VerticalAlignment="Bottom" Height="20" Margin="8"/>
+			<TextBox x:Name="richTextBox" TextWrapping="Wrap" Margin="8,8,8,36" FontFamily="Courier New" VerticalScrollBarVisibility="Auto" />
+		</Grid>
+	</DockPanel>
+	
+</Window>

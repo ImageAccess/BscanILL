@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BscanILL.UI.Frames.ItResults.ControlPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:edit="clr-namespace:BscanILL.UI.Frames.Edit"
+	xmlns:buttons="clr-namespace:BscanILL.UI.Buttons"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="216">
+	
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../ResourceDictionaries/WindowDictionary.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
+	<Grid>
+		<Border Margin="1" Padding="1" BorderThickness="1" BorderBrush="Black">
+			<Grid>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<StackPanel Grid.Row="1" >
+						<buttons:BigFunctionButton Click="ResetCurrentSettings_Click" Margin="20,8,20,0" Height="46" >
+							<TextBlock>Restore Current Image<LineBreak/>To Original</TextBlock>
+						</buttons:BigFunctionButton>
+						<buttons:BigFunctionButton Click="ResetAllSettings_Click" Margin="20,8,20,0" Height="46" >
+							<TextBlock>Restore Entire Article<LineBreak/>To Original</TextBlock>
+						</buttons:BigFunctionButton>
+					</StackPanel>
+
+				</Grid>
+				<StackPanel VerticalAlignment="Bottom" Margin="8">
+					<buttons:BigFunctionButton Click="Done_Click" Margin="8,8,8,4" Height="60" >
+						<TextBlock>DONE</TextBlock>
+					</buttons:BigFunctionButton>
+				</StackPanel>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

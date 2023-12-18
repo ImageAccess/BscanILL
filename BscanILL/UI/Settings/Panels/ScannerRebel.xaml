@@ -1,0 +1,38 @@
+﻿<panels:PanelBase x:Class="BscanILL.UI.Settings.Panels.ScannerRebel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:panels="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="330" Width="500" IsVisibleChanged="Form_IsVisibleChanged">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			
+			<BooleanToVisibilityConverter x:Key="MyBooleanToVisibilityConverter" />
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
+	<Border Style="{StaticResource groupBorderStyle}">
+		<Grid>
+            <Button Content="Open Settings..." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Width="100" Height="23" Click="OpenSettings_Click" />
+            <GroupBox Header="Quick Settings" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,60,0,0" Width="180" Height="50">
+                <Grid Margin="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="COM Port:" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <ComboBox x:Name="comboSerialPort" SelectedItem="{Binding Path=ComPort, Mode=TwoWay}" Grid.Column="1" Margin="8,1,0,1" Width="100" />
+                </Grid>
+            </GroupBox>
+            <panels:ScannerAddOn x:Name="scannerAddOn" Margin="16,16,16,16" Width="Auto" Height="Auto" VerticalAlignment="Bottom" />
+        </Grid>
+	</Border>
+	
+</panels:PanelBase>

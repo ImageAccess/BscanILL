@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F8324C1-9926-4E95-A726-48AFA843FE82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scanners</RootNamespace>
+    <AssemblyName>Scanners</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ProgramsDebug\Scanners\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ProgramsRelease\Scanners\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIP">
+      <HintPath>..\Shared\BIP.dll</HintPath>
+    </Reference>
+    <Reference Include="CanonCamera, Version=11.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\CanonCamera.dll</HintPath>
+    </Reference>
+    <Reference Include="ClickCommon, Version=11.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\ClickCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClickDLL, Version=11.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\ClickDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TwainApp, Version=2.6.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\TwainApp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Click\ClickBase.cs" />
+    <Compile Include="Click\ClickMiniSettings.cs" />
+    <Compile Include="Click\ClickSettings.cs" />
+    <Compile Include="Click\ClickMiniWrapper.cs" />
+    <Compile Include="Click\ClickWrapper.cs" />
+    <Compile Include="Click\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Misc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\ClickMini\ScanModeSetting.cs" />
+    <Compile Include="Click\Settings\Click\ScanModeSetting.cs" />
+    <Compile Include="Click\Settings\Click\ScanPageSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\BrightnessSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\ClickSettingBase.cs" />
+    <Compile Include="Click\Settings\ColorModeSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\ContrastSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\DpiSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\FocusSetting.cs" />
+    <Compile Include="Click\Settings\FileFormatSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Click\Settings\ISetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc.cs" />
+    <Compile Include="S2N\Enums.cs" />
+    <Compile Include="S2N\IS2NScanner.cs" />
+    <Compile Include="S2N\IS2NWrapper.cs" />
+    <Compile Include="S2N\Settings\BitonalThresholdSetting.cs" />
+    <Compile Include="S2N\Settings\AutofocusSetting.cs" />
+    <Compile Include="S2N\Settings\BooleanSetting.cs" />
+    <Compile Include="S2N\Settings\LightSetting.cs" />
+    <Compile Include="S2N\Settings\DespeckleSetting.cs" />
+    <Compile Include="S2N\Settings\RotationSetting.cs" />
+    <Compile Include="S2N\Settings\DpiModeSetting.cs" />
+    <Compile Include="S2N\S2nScanerBase.cs" />
+    <Compile Include="S2N\Settings\SplittingStartPageSetting.cs" />
+    <Compile Include="S2N\TestS2N.cs" />
+    <Compile Include="MODELS\Enums.cs" />
+    <Compile Include="MODELS\Model.cs" />
+    <Compile Include="ScannersEx.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="Properties\ScannersSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ScannersSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerTypeClass.cs" />
+    <Compile Include="SETTINGS\BaseClass.cs" />
+    <Compile Include="SETTINGS\ScanSettings.cs" />
+    <Compile Include="Twain\AdfScanner.cs" />
+    <Compile Include="S2N\Bookeye4.cs" />
+    <Compile Include="S2N\S2NSettings.cs" />
+    <Compile Include="S2N\Bookeye4Wrapper.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="IScanner.cs" />
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S2N\Settings\ColorModeSetting.cs" />
+    <Compile Include="S2N\Settings\DocumentModeSetting.cs" />
+    <Compile Include="S2N\Settings\DocumentSizeSetting.cs" />
+    <Compile Include="S2N\Settings\EnumSetting.cs" />
+    <Compile Include="S2N\Settings\FileFormatSetting.cs" />
+    <Compile Include="S2N\Settings\ISetting.cs" />
+    <Compile Include="S2N\Settings\RangeSetting.cs" />
+    <Compile Include="S2N\Settings\ScanModeSetting.cs" />
+    <Compile Include="S2N\Settings\SpeedSetting.cs" />
+    <Compile Include="S2N\Settings\SplittingSetting.cs" />
+    <Compile Include="S2N\Settings\TiffCompressionSetting.cs" />
+    <Compile Include="S2N\Settings\UserUnitSetting.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="S2N\ScannerS2N.cs" />
+    <Compile Include="S2N\ScannerS2NWrapper.cs" />
+    <Compile Include="SETTINGS\Settings.cs" />
+    <Compile Include="Twain\BookedgeSettings.cs" />
+    <Compile Include="Twain\AdfSettings.cs" />
+    <Compile Include="Twain\Enums.cs" />
+    <Compile Include="Twain\Misc.cs" />
+    <Compile Include="Twain\Settings\Adf\DuplexSetting.cs" />
+    <Compile Include="Twain\Settings\TransferCountSetting.cs" />
+    <Compile Include="Twain\Settings\DocSizeSetting.cs" />
+    <Compile Include="Twain\Settings\Bookedge\ScanPageSetting.cs" />
+    <Compile Include="Twain\Settings\ColorModeSetting.cs" />
+    <Compile Include="Twain\Settings\ContrastSetting.cs" />
+    <Compile Include="Twain\Settings\DpiSetting.cs" />
+    <Compile Include="Twain\Settings\ISetting.cs" />
+    <Compile Include="Twain\Settings\BrightnessSetting.cs" />
+    <Compile Include="Twain\Settings\TwainSettingBase.cs" />
+    <Compile Include="Twain\TwainSettings.cs" />
+    <Compile Include="Twain\TwainBase.cs" />
+    <Compile Include="Twain\TwainScanner.cs" />
+    <Compile Include="Twain\Settings\FileFormatSetting.cs" />
+    <Compile Include="WakeOnLAN.cs" />
+    <Compile Include="S2N\WrapperBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\ScannersSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ScannersSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

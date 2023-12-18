@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ViewPane.ImageTreatmentUi.CurveUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:ClassModifier="internal"
+    Height="Auto" Width="Auto">
+    
+	<Grid>
+		<Polyline x:Name="polygon" StrokeThickness="2" Stroke="#FF000080" MouseLeftButtonDown="Mouse_LeftButtonDown" MouseLeftButtonUp="Mouse_LeftButtonUp" MouseMove="Mouse_Move" MouseRightButtonDown="Mouse_RightButtonDown" Cursor="SizeNS" ClipToBounds="False" />
+		<Grid x:Name="gridPoints"/>
+	</Grid>
+	
+</UserControl>

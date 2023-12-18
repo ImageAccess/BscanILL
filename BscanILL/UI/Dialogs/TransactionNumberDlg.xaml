@@ -1,0 +1,45 @@
+﻿<Window x:Class="BscanILL.UI.Dialogs.TransactionNumberDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Transaction Number" Height="240" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+	
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../ResourceDictionaries/WindowDictionary.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Grid>
+		<StackPanel>
+			<TextBlock Text="Please Enter Transaction Number" HorizontalAlignment="Center" Margin="8,16,8,16" FontSize="20" />
+			<Grid Margin="8,0,8,0">
+				<Grid.RowDefinitions >
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition Width="8" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="ILL Number:" />
+				<TextBlock Text="Address:" Grid.Row="1" />
+				<TextBlock Text="Delivery Method:" Grid.Row="2" />
+				<TextBlock Text="Patron" Grid.Row="3" />
+				<TextBlock Text="Transaction Number:" Grid.Row="4" />
+
+				<TextBlock x:Name="textIllNumber" Text="N/A" Grid.Column="2" Margin="5,0,0,0" />
+				<TextBlock x:Name="textAddress" Text="N/A" Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" />
+				<TextBlock x:Name="textDeliveryMethod" Text="N/A" Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" />
+				<TextBlock x:Name="textPatron" Text="N/A" Grid.Row="3" Grid.Column="2" Margin="5,0,0,0" />
+				<TextBox x:Name="textTransactionNumber" Grid.Row="4" Grid.Column="2" TextChanged="TextBox_TextChanged" />
+			</Grid>
+		</StackPanel>
+		<Button x:Name="buttonOk" Content="OK" Width=" 75" VerticalAlignment="Bottom" Margin="8" IsEnabled="False" Click="Ok_Click" />
+	</Grid>
+</Window>

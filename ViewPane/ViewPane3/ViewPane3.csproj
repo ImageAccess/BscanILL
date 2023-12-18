@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8BF8977-7624-4DCB-9892-4DA9C8691E4A}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ViewPane</RootNamespace>
+    <AssemblyName>ViewPane3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/ViewPane2/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\ProgramsDebug\ViewPane\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\ProgramsRelease\ViewPane\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIP, Version=3.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Shared\BIP.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="SmartAssembly.Attributes">
+      <HintPath>..\..\Shared\SmartAssembly.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\IpDlg.xaml.cs">
+      <DependentUpon>IpDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DespeckleDlg.xaml.cs">
+      <DependentUpon>DespeckleDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Hierarchy\VpImage.cs" />
+    <Compile Include="Hierarchy\VpImages.cs" />
+    <Compile Include="ImageTreatmentUi\BfPointUi.xaml.cs">
+      <DependentUpon>BfPointUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\CurveUi.xaml.cs">
+      <DependentUpon>CurveUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IP\ItResultsCreator.cs" />
+    <Compile Include="IP\IitResultsCaller.cs" />
+    <Compile Include="IP\IPreviewCaller.cs" />
+    <Compile Include="IP\PreviewCreator.cs" />
+    <Compile Include="IP\Resizing.cs" />
+    <Compile Include="ItResults\ItResultsImage.cs" />
+    <Compile Include="ItResults\ItResultsItem.cs" />
+    <Compile Include="ItResults\ItResultsPanel.xaml.cs">
+      <DependentUpon>ItResultsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItResults\ItResultsImagePane.xaml.cs">
+      <DependentUpon>ItResultsImagePane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItResults\StripPane.xaml.cs">
+      <DependentUpon>StripPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItResults\Thumbnail.cs" />
+    <Compile Include="IT\Enums.cs" />
+    <Compile Include="IT\ItProcessing.cs" />
+    <Compile Include="Misc\MemoryManagement.cs" />
+    <Compile Include="Misc\Misc.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Thumbnails\StripPane.xaml.cs">
+      <DependentUpon>StripPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thumbnails\Thumbnail.xaml.cs">
+      <DependentUpon>Thumbnail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\DeleteControl.xaml.cs">
+      <DependentUpon>DeleteControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\Enums.cs" />
+    <Compile Include="Toolbar\ToolbarBase.cs" />
+    <Compile Include="Toolbar\ToolbarBookInfo.xaml.cs">
+      <DependentUpon>ToolbarBookInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\Toolbar.xaml.cs">
+      <DependentUpon>Toolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarHeader.xaml.cs">
+      <DependentUpon>ToolbarHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarItSettings.xaml.cs">
+      <DependentUpon>ToolbarItSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarItTransforms.xaml.cs">
+      <DependentUpon>ToolbarItTransforms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarNavigation.xaml.cs">
+      <DependentUpon>ToolbarNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarPages.xaml.cs">
+      <DependentUpon>ToolbarPages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarPostProcessingCheck.cs" />
+    <Compile Include="Toolbar\ToolbarPostProcessingRadio.cs" />
+    <Compile Include="Toolbar\ToolbarScan.xaml.cs">
+      <DependentUpon>ToolbarScan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarTreatment.xaml.cs">
+      <DependentUpon>ToolbarTreatment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarZoomMode.xaml.cs">
+      <DependentUpon>ToolbarZoomMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarZoomSize.xaml.cs">
+      <DependentUpon>ToolbarZoomSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\UiStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UiStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarPostProcessing.xaml.cs">
+      <DependentUpon>ToolbarPostProcessing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePanel\ViewImageGeneric.cs" />
+    <Compile Include="ViewPanel.xaml.cs">
+      <DependentUpon>ViewPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\BookfoldUi.xaml.cs">
+      <DependentUpon>BookfoldUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\FingersUi.xaml.cs">
+      <DependentUpon>FingersUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\FingerUi.xaml.cs">
+      <DependentUpon>FingerUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\OpticsUi.xaml.cs">
+      <DependentUpon>OpticsUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTreatmentUi\PageUi.xaml.cs">
+      <DependentUpon>PageUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePanel\ViewBitmap.cs" />
+    <Compile Include="ImagePanel\IViewImage.cs" />
+    <Compile Include="ImagePanel\IImagePane.cs" />
+    <Compile Include="ImageTreatmentUi\ImageUi.xaml.cs">
+      <DependentUpon>ImageUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarCheckBox.cs" />
+    <Compile Include="ImagePanel\ViewImage.cs">
+    </Compile>
+    <Compile Include="Thumbnails\IStripPane.cs" />
+    <Compile Include="ImagePanel\ImagePane.xaml.cs">
+      <DependentUpon>ImagePane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IViewPane.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Toolbar\ToolbarComboBox.cs" />
+    <Compile Include="Toolbar\ToolbarRadioButton.cs" />
+    <Compile Include="Toolbar\ToolbarButton.cs" />
+    <Compile Include="VpException.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Dialogs\IpDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\DespeckleDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\BfPointUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\CurveUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItResults\ItResultsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItResults\ItResultsImagePane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItResults\StripPane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Thumbnails\StripPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thumbnails\Thumbnail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\DeleteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarBookInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\Toolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Toolbar\ToolbarHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarItSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarItTransforms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarNavigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarPages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarPostProcessing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Toolbar\ToolbarResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarScan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarTreatment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarZoomMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar\ToolbarZoomSize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\BookfoldUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\FingersUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\FingerUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\ImageUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\OpticsUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageTreatmentUi\PageUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImagePanel\ImagePane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PinIn.png">
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Move.gif">
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ZoomIn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ZoomOut.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ZoomDinamic.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SelectRegion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\OriginalSize.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\FitImage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\FitWidth.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ZoomPlus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ZoomMinus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ToolbarArrowDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\NoImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\IndependentImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ClipsSameSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BookfoldCorrection.png" />
+    <Resource Include="images\FingerRemoval.png" />
+    <Resource Include="images\Pages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Settings.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\NavigationFirst.png" />
+    <Resource Include="images\NavigationLast.png" />
+    <Resource Include="images\NavigationNext.png" />
+    <Resource Include="images\NavigationPrev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PagesL.png" />
+    <Resource Include="images\PagesR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Rotate180.gif" />
+    <Resource Include="images\Rotate90.gif" />
+    <Resource Include="images\RotateCCW.gif" />
+    <Resource Include="images\RotateCW.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CursorFist.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CursorZoomOut.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CursorHand.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CursorZoomDynamic.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CursorZoomIn.cur" />
+    <EmbeddedResource Include="Languages\UiStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UiStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DisabledNew.png" />
+    <Resource Include="images\DownNew.png" />
+    <Resource Include="images\UpNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\DisabledNew.png" />
+    <Resource Include="images\PostProcessingToolbar\DownNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\Rotate0Checked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate0Disabled.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate0Unchecked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate180Checked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate180Disabled.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate180Unchecked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate270Disabled.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate270Unchecked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate90Checked.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate90Disabled.png" />
+    <Resource Include="images\PostProcessingToolbar\Rotate90Unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\Rotate270Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\InvertChecked.png" />
+    <Resource Include="images\PostProcessingToolbar\InvertDisabled.png" />
+    <Resource Include="images\PostProcessingToolbar\InvertUnchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\DespeckleChecked.png" />
+    <Resource Include="images\PostProcessingToolbar\DespeckleDisabled.png" />
+    <Resource Include="images\PostProcessingToolbar\DespeckleUnchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\BackgroundRemovalChecked.png" />
+    <Resource Include="images\PostProcessingToolbar\BackgroundRemovalUnchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\BackgroundRemovalDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PostProcessingToolbar\BlackBorderRemovalChecked.png" />
+    <Resource Include="images\PostProcessingToolbar\BlackBorderRemovalDisabled.png" />
+    <Resource Include="images\PostProcessingToolbar\BlackBorderRemovalUnchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Waiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cursors\Fist.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cursors\Hand.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cursors\ZoomOut.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cursors\ZoomDynamic.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cursors\ZoomIn.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

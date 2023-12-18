@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="BscanILL.UI.Settings.ClickWizard.MainPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.ClickWizard"
+	mc:Ignorable="d" Background="White"
+	d:DesignHeight="460" d:DesignWidth="480">
+    
+	<Grid>
+		<Grid.Background>
+			<ImageBrush ImageSource="/BscanILL;component/UI/Resources/BookeyePattern.BMP" Viewport="0,0,125,125" ViewportUnits="Absolute" TileMode="Tile" />
+		</Grid.Background>
+		<local:PanelInit x:Name="panel01Init" />
+		<local:PanelInitResult x:Name="panel02InitResult" Visibility="Hidden" />
+		<local:PanelFocus x:Name="panel03Focus" Visibility="Hidden" />
+		<local:PanelFocusResult x:Name="panel04FocusResult" Visibility="Hidden" />
+		<local:PanelRegPoints x:Name="panel05RegPoints" Visibility="Hidden" />
+		<local:PanelRegPointsResult x:Name="panel06RegPointsResult" Visibility="Hidden" />
+		<local:PanelLaser x:Name="panel07Laser" Visibility="Hidden" />
+		<local:PanelLaserResult x:Name="panel08LaserResult" Visibility="Hidden" />
+		<local:PanelWhiteBalance x:Name="panel09WhiteBalance" Visibility="Hidden" />
+		<local:PanelWhiteBalanceProgress x:Name="panel10WhiteBalanceProgress" Visibility="Hidden" />
+		<local:PanelWhiteBalanceResult x:Name="panel11WhiteBalanceResult" Visibility="Hidden" />
+		<local:PanelLightDist x:Name="panel12Light" Visibility="Hidden" />
+		<local:PanelLightDistResult x:Name="panel13LightResult" Visibility="Hidden" />
+		<local:PanelTest x:Name="panel14Test" Visibility="Hidden" />
+	</Grid>
+	
+</UserControl>

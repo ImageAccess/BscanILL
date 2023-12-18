@@ -1,0 +1,75 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Dialogs.ExportDialog.SaveOnDisk"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Dialogs.ExportDialog"
+    Height="222" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="./PanelsResources.xaml" />
+	</UserControl.Resources>
+
+	<Grid >
+		<Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+			<Grid >
+				<Grid >
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="140"/>
+						<ColumnDefinition/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Export Root Directory:" Grid.Row="0" VerticalAlignment="Center" />
+					<Button x:Name="browseButton" Content="Browse..." Margin="8,1,0,1" Width="75" Grid.Column="2" Click="Browse_Click" />
+					<TextBox Text="{Binding Path=ExportDirPath, Mode=TwoWay}" Margin="0,1" Grid.Column="1" />
+
+					<TextBlock Text="File Name Prefix:" Grid.Row="1" VerticalAlignment="Center" />
+					<TextBox Text="{Binding Path=FileNamePrefix, Mode=TwoWay}" Margin="0,1" Grid.Row="1" Grid.Column="1" Width="140" HorizontalAlignment="Left" />
+
+                    <TextBlock Text="Export into Subdirectory:" Grid.Row="2" />
+                    <StackPanel Orientation="Horizontal"  Grid.Row="2" Grid.Column="1" Margin="0,1">
+                        <CheckBox x:Name="checkSaveToSubfolder" IsChecked="{Binding Path=SaveToSubfolder, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Checked="CheckSubfolder_CheckedChanged" Unchecked="CheckSubfolder_CheckedChanged" />
+                        <ComboBox x:Name="comboSubfolderName" Margin="8,0,0,0" Width="140" SelectedIndex="{Binding Path=SubfolderNameIndex, Mode=TwoWay}" Visibility="Hidden">
+                            <ComboBoxItem Content="ILL Number" />
+                            <ComboBoxItem Content="Transaction Number" />
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <TextBlock Text="File Format:" Grid.Row="3" />
+					<local:FileFormatControl x:Name="fileformatCtrl" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
+
+                    <TextBlock Text="Include Pullslip:" Grid.Row="4" />
+                    <CheckBox x:Name="checkIncludePullslip" Grid.Row="4" Grid.Column="1" IsChecked="{Binding Path=IncludePullslip, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" />
+
+                    <local:FileParamControl x:Name="fileparamCtrl" Grid.Row="4" Margin="0,0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right"/>
+                    
+                    <TextBlock Text="Before Export:" Grid.Row="5" />
+					<ComboBox x:Name="comboActionBefore" SelectedIndex="{Binding Path=BeforeActionIndex, Mode=TwoWay}" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Stretch" >
+						<ComboBoxItem Content="Keep Existing Files Inside Export Directory" />
+						<ComboBoxItem Content="Clean Export Directory Before Export" />
+					</ComboBox>
+
+				</Grid>
+				<Grid x:Name="gridExport" Margin="0,16,0,0" VerticalAlignment="Bottom">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="22" />
+						<RowDefinition Height="22"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="130"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<CheckBox x:Name="checkUpdateILLiad" Grid.Row="0" Grid.ColumnSpan="2" IsChecked="{Binding Path=UpdateILLiad, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Update ILLiad" Checked="CheckUpdateILLiad_CheckedChanged" Unchecked="CheckUpdateILLiad_CheckedChanged" />
+					<CheckBox x:Name="checkChangeStatusToRequestFinished" Margin="24,4,0,4" Content="Change Status to Request Finished" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsChecked="{Binding Path=ChangeStatusToRequestFinished, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="Check to change status to request finished." IsEnabled="False" />
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</local:PanelBase>

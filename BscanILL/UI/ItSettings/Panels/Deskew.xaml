@@ -1,0 +1,31 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.ItSettings.Panels.Deskew"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.ItSettings.Panels"
+   Height="420" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="TextBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+					<Style TargetType="PasswordBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<!--<CheckBox x:Name="checkBoxEnabled" Content="Enabled" IsChecked="{Binding Path=ArielEnabled, Mode=TwoWay}" ToolTip="Check to enable ariel functionality." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" HorizontalAlignment="Left" VerticalAlignment="Top" />
+		<Border x:Name="groupBox"  Style="{StaticResource groupBorderStyle}" >
+			
+		</Border>-->
+	</Grid>
+</local:PanelBase>

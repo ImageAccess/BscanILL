@@ -1,0 +1,48 @@
+﻿<panels:PanelBase x:Class="BscanILL.UI.Settings.Panels.ScannerAddOn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:panels="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="86" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			
+			<BooleanToVisibilityConverter x:Key="MyBooleanToVisibilityConverter" />
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<GroupBox Style="{StaticResource groupBoxWithCheckBox}">
+		<GroupBox.Header>
+			<Grid Background="#01000000">
+				<CheckBox x:Name="checkEnabled" IsChecked="{Binding Path=ScannerEnabled, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}"  Content="ADF Add-On Scanner" Checked="CheckScannerAddOn_CheckedChanged" Unchecked="CheckScannerAddOn_CheckedChanged" />
+			</Grid>
+		</GroupBox.Header>
+		<StackPanel x:Name="stackPanel" IsEnabled="False" >
+			<Grid Margin="4,8,4,4" >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="23" />
+					<RowDefinition Height="23"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="110"/>
+					<ColumnDefinition Width="8"/>
+					<ColumnDefinition/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Scanner Type:" VerticalAlignment="Center"/>
+				<ComboBox x:Name="comboScannerType" ItemsSource="{Binding Path=ScannerTypes}" SelectedItem="{Binding Path=SelectedScannerType, Mode=TwoWay}" DisplayMemberPath="Caption" Grid.Row="0" Grid.Column="2" Width="180" HorizontalAlignment="Left" ToolTip="Scanner type." VerticalAlignment="Center" />
+				<Button Width="75" Click="TestScanAdf_Click" Grid.Column="3" Margin="2,0" Grid.RowSpan="2" >
+					<TextBlock TextAlignment="Center">Test<LineBreak/>Scan</TextBlock>
+				</Button>
+				<Button Content="Settings..." Width="75"  Click="SettingsAdf_Click" Grid.Column="4" Margin="2,0" Grid.RowSpan="2"/>
+				<TextBlock Text="Default Scan Mode:" VerticalAlignment="Center" Grid.Row="1"/>
+				<ComboBox x:Name="comboDefaultScanMode" ItemsSource="{Binding Path=ScanModes}" SelectedItem="{Binding Path=SelectedScanMode, Mode=TwoWay}" DisplayMemberPath="Caption" Grid.Row="1" Grid.Column="2" Width="180" HorizontalAlignment="Left" ToolTip="Default scan mode." VerticalAlignment="Center" />
+			</Grid>
+		</StackPanel>
+	</GroupBox>
+
+</panels:PanelBase>

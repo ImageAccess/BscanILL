@@ -1,0 +1,266 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style x:Key="checkBoxExport" TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="Green"/>
+		<Setter Property="FontFamily" Value="Times New Roman" />
+		<Setter Property="Padding" Value="4" />
+		<Setter Property="Margin" Value="4" />
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<Grid x:Name="buttonGrid" RenderTransformOrigin=".5,.5">
+						<Rectangle x:Name="outerRectangle" RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="1" Fill="White" />
+
+						<Grid x:Name="gridContent" Margin="2" >
+							<Rectangle x:Name="innerRect" Fill="{TemplateBinding Background}" RadiusX="10" RadiusY="10" />
+							<Rectangle x:Name="innerGlow" RadiusX="10" RadiusY="10">
+								<Rectangle.Fill>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#B4FFFFFF" Offset="0"/>
+										<GradientStop Color="#5AFFFFFF" Offset="0.5"/>
+										<GradientStop Color="#00FFFFFF" Offset="0.52"/>
+										<GradientStop Color="#ABFFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+								<ContentPresenter Margin="2" />
+							</Viewbox>
+						</Grid>
+					</Grid>
+
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="innerGlow"  Property="Fill">
+								<Setter.Value>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#70FFFFFF" Offset="0"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.3"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.8"/>
+										<GradientStop Color="#70FFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="Padding" Value="5"/>
+							<Setter Property="Foreground" Value="Black"/>
+							<Setter TargetName="outerRectangle" Property="Fill" Value="Red"/>
+							<Setter TargetName="innerRect" Property="RadiusX" Value="6"/>
+							<Setter TargetName="innerRect" Property="RadiusY" Value="6"/>
+							<Setter TargetName="gridContent"  Property="Margin" Value="3"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="innerRect" Property="Fill" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="radioButtonExport" TargetType="{x:Type RadioButton}">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="Green"/>
+		<Setter Property="FontFamily" Value="Times New Roman" />
+		<Setter Property="Padding" Value="4" />
+		<Setter Property="Margin" Value="4" />
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Grid x:Name="buttonGrid" RenderTransformOrigin=".5,.5">
+						<Rectangle x:Name="outerRectangle" RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="1" Fill="White" />
+
+						<Grid x:Name="gridContent" Margin="2" >
+							<Rectangle x:Name="innerRect" Fill="{TemplateBinding Background}" RadiusX="10" RadiusY="10" />
+							<Rectangle x:Name="innerGlow" RadiusX="10" RadiusY="10">
+								<Rectangle.Fill>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#B4FFFFFF" Offset="0"/>
+										<GradientStop Color="#5AFFFFFF" Offset="0.5"/>
+										<GradientStop Color="#00FFFFFF" Offset="0.52"/>
+										<GradientStop Color="#ABFFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+								<ContentPresenter Margin="2" />
+							</Viewbox>
+						</Grid>
+					</Grid>
+
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="innerGlow"  Property="Fill">
+								<Setter.Value>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#70FFFFFF" Offset="0"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.3"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.8"/>
+										<GradientStop Color="#70FFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="Padding" Value="5"/>
+							<Setter Property="Foreground" Value="Black"/>
+							<Setter TargetName="outerRectangle" Property="Fill" Value="Red"/>
+							<Setter TargetName="innerRect" Property="RadiusX" Value="6"/>
+							<Setter TargetName="innerRect" Property="RadiusY" Value="6"/>
+							<Setter TargetName="gridContent"  Property="Margin" Value="3"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="innerRect" Property="Fill" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="buttonExport" TargetType="{x:Type ButtonBase}">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="Green"/>
+		<Setter Property="FontFamily" Value="Times New Roman" />
+		<Setter Property="Padding" Value="2" />
+		<Setter Property="Margin" Value="4" />
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ButtonBase}">
+					<Grid x:Name="buttonGrid" RenderTransformOrigin=".5,.5">
+						<Rectangle x:Name="outerRectangle" RadiusX="10" RadiusY="10" Stroke="Black" StrokeThickness="1" Fill="White" />
+
+						<Grid x:Name="gridContent" Margin="2" >
+							<Rectangle x:Name="innerRect" Fill="{TemplateBinding Background}" RadiusX="10" RadiusY="10" />
+							<Rectangle x:Name="innerGlow" RadiusX="10" RadiusY="10">
+								<Rectangle.Fill>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#B4FFFFFF" Offset="0"/>
+										<GradientStop Color="#5AFFFFFF" Offset="0.5"/>
+										<GradientStop Color="#00FFFFFF" Offset="0.52"/>
+										<GradientStop Color="#ABFFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+								<ContentPresenter Margin="2" />
+							</Viewbox>
+						</Grid>
+					</Grid>
+
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter TargetName="innerGlow"  Property="Fill">
+								<Setter.Value>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+										<GradientStop Color="#70FFFFFF" Offset="0"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.3"/>
+										<GradientStop Color="#30FFFFFF" Offset="0.8"/>
+										<GradientStop Color="#70FFFFFF" Offset="1"/>
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="Padding" Value="5"/>
+							<Setter Property="Foreground" Value="Black"/>
+							<Setter TargetName="outerRectangle" Property="Fill" Value="Red"/>
+							<Setter TargetName="gridContent"  Property="Margin" Value="3"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="innerRect" Property="Fill" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
+	
+	<Style x:Key="styleGroupBox" TargetType="{x:Type GroupBox}">
+		<Setter Property="FontFamily" Value="Times New Roman"/>
+		<Setter Property="BorderBrush" Value="#FFD0D0BF"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Margin" Value="2" />
+		<Setter Property="Foreground" Value="Black" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type GroupBox}">
+					<Grid SnapsToDevicePixels="true">
+						<Border Margin="0,14,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2" CornerRadius="4" >
+							<Border.OpacityMask>
+								<MultiBinding Converter="{StaticResource BorderGapMaskConverter}" ConverterParameter="12" >
+									<Binding Path="ActualWidth" ElementName="Header"/>
+									<Binding Path="ActualWidth" RelativeSource="{RelativeSource Self}"/>
+									<Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}" />
+								</MultiBinding>
+							</Border.OpacityMask>
+						</Border>
+
+						<Border x:Name="Header" Margin="8,0,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+							<Grid>
+								<TextBlock Padding="6,0,0,0" FontFamily="{TemplateBinding FontFamily}" Text="{TemplateBinding Header}" FontSize="22" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" />
+							</Grid>
+						</Border>
+
+						<Grid Margin="7,24,7,7">
+							<ContentPresenter SnapsToDevicePixels="True" />
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="checkBoxExportOption" TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="Background" Value="#01000000"/>
+		<Setter Property="FontFamily" Value="Times New Roman" />
+		<Setter Property="Padding" Value="4" />
+		<Setter Property="Margin" Value="4" />
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<Grid x:Name="buttonGrid" RenderTransformOrigin=".5,.5">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Grid >
+							<Rectangle Width="20" Height="20" StrokeThickness="3" RadiusX="10" RadiusY="10" >
+								<Rectangle.Stroke>
+									<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+										<GradientStop Color="#FF707070" Offset="0"/>
+										<GradientStop Color="#FF000000" Offset="0.5"/>
+										<GradientStop Color="#FF505050" Offset="1"/>
+									</LinearGradientBrush>
+								</Rectangle.Stroke>
+							</Rectangle>
+							<Rectangle x:Name="selectedCircle" Width="14" Height="14" StrokeThickness="3" RadiusX="10" RadiusY="10" Fill="#01000000" />
+						</Grid>
+						<Viewbox Grid.Column="1" HorizontalAlignment="Left" Margin="4,0,0,0">
+							<!--<ContentPresenter Margin="{TemplateBinding Padding}" />-->
+                            <TextBlock HorizontalAlignment="Left" TextAlignment="Left" Text="{TemplateBinding Content}" />
+                        </Viewbox>
+					</Grid>
+
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="selectedCircle"  Property="Fill" Value="Yellow" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="buttonGrid" Property="Background" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

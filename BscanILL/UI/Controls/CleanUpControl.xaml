@@ -1,0 +1,21 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Controls.CleanUpControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+    Height="100" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<StackPanel>
+		<TextBlock x:Name="textDescription" Margin="0,2"/>
+		<ProgressBar x:Name="progressBar" Maximum="100" Height="16" Margin="0,0,0,8"/>
+		<Button Content="Cancel" Width="75" Height="23" Click="Cancel_Click" />
+	</StackPanel>
+	
+</local:PanelBase>

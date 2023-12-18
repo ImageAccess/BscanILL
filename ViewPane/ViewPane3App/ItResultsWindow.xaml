@@ -1,0 +1,11 @@
+﻿<Window x:Class="ViewPane2App.ItResultsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:itResults="clr-namespace:ViewPane.ItResults;assembly=ViewPane3"
+    Title="It Results" Height="500" Width="860" MinWidth="860" MinHeight="500"
+	Closing="Window_Closing" >
+
+	<Grid>
+		<itResults:ItResultsPanel x:Name="panel" Width="Auto" Height="Auto" />
+	</Grid>
+</Window>

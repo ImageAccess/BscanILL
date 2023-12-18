@@ -1,0 +1,111 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.General"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+    Height="360" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+    <Grid>
+        <StackPanel Height="50" VerticalAlignment="Top">
+            <Grid>
+		        <Grid.ColumnDefinitions>
+			        <ColumnDefinition Width="Auto" />
+			        <ColumnDefinition Width="8"/>
+			        <ColumnDefinition/>
+		        </Grid.ColumnDefinitions>
+		        <Grid.RowDefinitions>
+			        <RowDefinition Height="27" />
+                    <RowDefinition Height="27" />            
+		        </Grid.RowDefinitions>
+		        <TextBlock Text="Pullslips Directory:" Grid.Row="0" Grid.Column="0"/>
+		        <TextBox x:Name="textSite" Grid.Row="0" Grid.Column="2" Text="{Binding Path=PullslipsDirectory, Mode=TwoWay}" />
+		        <TextBlock Text="Articles Directory:" Grid.Row="1" Grid.Column="0"/>
+                <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Path=ArticlesDirectory, Mode=TwoWay}" />
+            </Grid>
+        </StackPanel>
+        <StackPanel Margin="0,65,0,0">
+            <GroupBox Header="General" x:Name="groupBoxMultiArticle" Style="{StaticResource groupBoxWithCheckBox}" Margin="0,8,0,4" >
+                <!--<GroupBox.Header>-->
+                <!--    <Grid Background="#01000000">-->
+                <!--    <CheckBox x:Name="checkMultipleArticles" Content="Multiple Articles Session Mode" IsChecked="{Binding Path=MultipleArticlesSupport, Mode=TwoWay}" HorizontalAlignment="Left" Checked="CheckMultipleArticles_CheckedChanged" Unchecked="CheckMultipleArticles_CheckedChanged" ToolTip="If checked, multiple articles are allowed in a session." />-->
+                <!--    </Grid>-->
+                <!--</GroupBox.Header>-->
+                <!--<StackPanel x:Name="gridMultiArticleGroup" Margin="8,8,8,8" IsEnabled="False">-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />                            
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <CheckBox x:Name="checkMultipleArticles" Grid.Row="0" Content="Multiple Articles Session Mode" IsChecked="{Binding Path=MultipleArticlesSupport, Mode=TwoWay}" HorizontalAlignment="Left" Checked="CheckMultipleArticles_CheckedChanged" Unchecked="CheckMultipleArticles_CheckedChanged" ToolTip="If checked, multiple articles are allowed in a session." />
+                    <CheckBox x:Name="checkPreviewWindow" Grid.Row="1" Content="Preview Window" IsChecked="{Binding Path=CheckPreviewWindowBind, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="If checked, preview window with lastly scanned image will be enabled." />
+                    <CheckBox x:Name="checkArticlesExportDialog" Grid.Row="2" Content="Export Dialog" IsChecked="{Binding Path=CheckExportDialogBind, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="If checked, export dialog is enabled before export." />
+                    </Grid>
+                <!--</StackPanel>-->
+            </GroupBox>            
+        <!--</StackPanel>           -->
+        <!--<StackPanel Margin="0,170,0,0"> -->
+           <GroupBox Header="PDF Import Parameters" Style="{StaticResource groupBoxWithCheckBox}" Margin="0,0,0,8">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Default Color mode:" Grid.Row="0" Grid.Column="0"/>
+                    <ComboBox x:Name="comboPdfImportColor" SelectedIndex="{Binding Path=PdfImportColor, Mode=TwoWay}" Grid.Row="0"  Grid.Column="3" Width="90" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="Auto" />
+                        <ComboBoxItem Content="Bitonal" />
+                        <ComboBoxItem Content="Grayscale" />
+                        <ComboBoxItem Content="Color" />
+                    </ComboBox>
+                    <TextBlock Text="Default Resolution (dpi):" Grid.Row="1" Grid.Column="0"/>
+                    <ComboBox x:Name="comboPdfImportDpi" SelectedIndex="{Binding Path=PdfImportDpi, Mode=TwoWay}" Grid.Row="1"  Grid.Column="3" Width="50" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="150" />
+                        <ComboBoxItem Content="200" />
+                        <ComboBoxItem Content="250" />
+                        <ComboBoxItem Content="300" />
+                        <ComboBoxItem Content="350" />
+                        <ComboBoxItem Content="400" />
+                    </ComboBox>
+                    <CheckBox x:Name="checkForceDefaultPdfParams" Content="Force Default PDF Parameters" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" IsChecked="{Binding Path=ForceDefaultPdfParams, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="If unchecked, color and resolution will be set based on pdf's image object." />
+                </Grid>
+           </GroupBox>
+           <GroupBox Header="OCR Engine Parameters" Style="{StaticResource groupBoxWithCheckBox}" Margin="0,0,0,8">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Profile:" Grid.Row="0" Grid.Column="0"/>
+                    <ComboBox x:Name="comboOcrEngineProfile" SelectedIndex="{Binding Path=OcrEngProfile, Mode=TwoWay}" Grid.Row="0"  Grid.Column="3" Width="90" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="Speed" />
+                        <ComboBoxItem Content="Accuracy" />
+                    </ComboBox>                                       
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+    
+</local:PanelBase>

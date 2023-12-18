@@ -1,0 +1,26 @@
+﻿<toolbar:ToolbarBase x:Class="ViewPane.Toolbar.ToolbarTreatment"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+ 	xmlns:toolbar="clr-namespace:ViewPane.Toolbar"
+    xmlns:resources="clr-namespace:ViewPane"
+	xmlns:languages="clr-namespace:ViewPane.Languages"
+	mc:Ignorable="d" 
+	x:ClassModifier="internal" 
+	>
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="ToolbarResources.xaml" />
+	</UserControl.Resources>
+
+	<UserControl Style="{StaticResource toolbarStyle}">
+		<StackPanel Orientation="Horizontal">
+			<toolbar:ToolbarButton x:Name="buttonRotate90" Image="/ViewPane3;component/images/Rotate90.gif" ToolTip="{x:Static languages:UiStrings.PressToRotateImage90_STR}" Click="Button_Click" />
+			<toolbar:ToolbarButton x:Name="buttonRotate180" Image="/ViewPane3;component/images/Rotate180.gif" ToolTip="{x:Static languages:UiStrings.PressToRotateImage180_STR}" Click="Button_Click" />
+			<toolbar:ToolbarButton x:Name="buttonRotateCCW" Image="/ViewPane3;component/images/RotateCCW.gif" ToolTip="{x:Static languages:UiStrings.PressToRotateImage1_STR}" Click="Button_Click" />
+			<toolbar:ToolbarButton x:Name="buttonRotateCW" Image="/ViewPane3;component/images/RotateCW.gif" ToolTip="{x:Static languages:UiStrings.PressToRotateImagePlus1_STR}" Click="Button_Click" />
+		</StackPanel>
+	</UserControl>
+
+</toolbar:ToolbarBase>

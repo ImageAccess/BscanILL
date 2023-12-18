@@ -1,0 +1,37 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.CloudAndSmartDock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="400" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="ListViewItem">
+						<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+					</Style>
+				</ResourceDictionary>
+
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<StackPanel>
+		<GroupBox x:Name="groupBoxCloud" Header="Cloud Storage" Style="{StaticResource groupBoxStyle}"  >
+			<StackPanel Margin="8">
+				<CheckBox Margin="16,16,0,32" x:Name="checkBoxGoogleDocs" Content="Allow storing documents and images at Google Docs" IsChecked="{Binding Path=GoogleDocsEnabled, Mode=TwoWay}" ToolTip="Check to allow storing documents and images at Google Docs cloud servers." HorizontalAlignment="Left" VerticalAlignment="Top" />
+			</StackPanel>
+		</GroupBox>
+		<GroupBox x:Name="groupBoxSmartPhones" Header="Smart Phones and Tablets" Style="{StaticResource groupBoxStyle}" >
+			<StackPanel Margin="8">
+				<CheckBox Margin="16,16,0,32" x:Name="checkBoxQr" IsChecked="{Binding Path=QrEnabled, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Check to allow storing documents and images on DLSG servers and to be able to download documents using smart phones QR code scan.">
+					<TextBlock>Let users download documents and images to their Smart Phones and Tablets<LineBreak /> using QR Code.</TextBlock>
+				</CheckBox>
+			</StackPanel>
+		</GroupBox>
+		
+	</StackPanel>
+</local:PanelBase>

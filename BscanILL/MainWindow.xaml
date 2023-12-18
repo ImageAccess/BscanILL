@@ -1,0 +1,24 @@
+﻿<Window x:Class="BscanILL.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:frameStart="clr-namespace:BscanILL.UI.Frames.Start"
+	xmlns:frameScan="clr-namespace:BscanILL.UI.Frames.Scan"
+	xmlns:frameEdit="clr-namespace:BscanILL.UI.Frames.Edit"
+	xmlns:frameExport="clr-namespace:BscanILL.UI.Frames.Export"
+	xmlns:frameResend="clr-namespace:BscanILL.UI.Frames.Resend"
+	xmlns:frameHelp="clr-namespace:BscanILL.UI.Frames.Help"
+	xmlns:frameStartUp="clr-namespace:BscanILL.UI.Frames.StartUp"
+    Title="Bscan ILL" Height="900" Width="1400" Icon="/BscanILL;component/Images/ico430.ico" MinWidth="1280" MinHeight="915"
+	Loaded="Form_Loaded" Closing="Form_Closing" PreviewKeyDown="Window_PreviewKeyDown">
+	
+    <Grid>
+		<frameStart:FrameStartUi x:Name="frameStartUi" />
+		<frameScan:FrameScanUi x:Name="frameScanUi" Visibility="Hidden" />
+		<frameEdit:FrameEditUi x:Name="frameEditUi" Visibility="Hidden" />
+		<frameExport:FrameExportUi x:Name="frameExportUi" Visibility="Hidden" />
+		<frameResend:FrameResendUi x:Name="frameResendUi" Visibility="Hidden" />
+		<frameHelp:FrameHelpUi x:Name="frameHelpUi" Visibility="Hidden" />
+		<frameStartUp:StartUpUi x:Name="frameStartUpUi" Width="Auto" Height="Auto" />
+	</Grid>
+	
+</Window>

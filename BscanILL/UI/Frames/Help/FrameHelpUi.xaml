@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BscanILL.UI.Frames.Help.FrameHelpUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:buttons="clr-namespace:BscanILL.UI.Buttons"
+	xmlns:controls="clr-namespace:BscanILL.UI.Controls"
+    mc:Ignorable="d" 
+    d:DesignHeight="350" d:DesignWidth="1300">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../ResourceDictionaries/WindowDictionary.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
+	<DockPanel>
+		<Grid DockPanel.Dock="Top" Height="50" Margin="0,0,0,1">
+			<Image HorizontalAlignment="Left" Source="/BscanILL;component/Images/TabsControl/Tabs.png" />
+			<Button Margin="10,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToStart_Click" Style="{StaticResource blindTabButton}" />
+			<Button Margin="210,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToScan_Click" Style="{StaticResource blindTabButton}" />
+			<Button Margin="401,0,0,0" HorizontalAlignment="Left" Width="240" Click="GoToIt_Click" Style="{StaticResource blindTabButton}" />
+			<Image HorizontalAlignment="Right" Source="/BscanILL;component/Images/TabsControl/TabsShortHelp.png" />
+			<Button Margin="0,0,240,0" HorizontalAlignment="Right" Width="180" Click="GoToResend_Click" Style="{StaticResource blindTabButton}" />
+		</Grid>
+		<Grid DockPanel.Dock="Left" Width="140" >
+			<StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+				<buttons:TurnPagesButton Content="&lt;&lt;" Click="First_Click" Margin="8,4,8,4" Height="42" Width="46" />
+				<buttons:TurnPagesButton Content="&lt;" Click="Previous_Click" Margin="8,4,8,4" Height="42" Width="46" />
+			</StackPanel>
+		</Grid>
+		<Grid DockPanel.Dock="Right" Width="140" >
+			<StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+				<buttons:TurnPagesButton Content="&gt;" Click="Next_Click" Margin="8,4,8,4" Height="42" Width="46" />
+				<buttons:TurnPagesButton Content="&gt;&gt;" Click="Last_Click" Margin="8,4,8,4" Height="42" Width="46" />
+			</StackPanel>
+		</Grid>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Image x:Name="imageL"  HorizontalAlignment="Stretch"/>
+			<Image x:Name="imageR" Grid.Column="1" Source="/BscanILL;component/Images/Manual/BSCAN ILL User Guide Version 3_Page_01.jpg" HorizontalAlignment="Stretch"  />
+		</Grid>
+	</DockPanel>
+</UserControl>

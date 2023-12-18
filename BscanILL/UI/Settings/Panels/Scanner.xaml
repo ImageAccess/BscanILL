@@ -1,0 +1,47 @@
+﻿<panels:PanelBase x:Class="BscanILL.UI.Settings.Panels.Scanner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:panels="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="400" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+
+			<BooleanToVisibilityConverter x:Key="MyBooleanToVisibilityConverter" />
+
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<DockPanel>
+		<Grid DockPanel.Dock="Top">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="180"/>
+			</Grid.ColumnDefinitions>
+			<DockPanel VerticalAlignment="Bottom">
+				<TextBlock Text="Scanner Type:" VerticalAlignment="Center" DockPanel.Dock="Left" />
+				<ComboBox x:Name="comboScannerType" ItemsSource="{Binding Path=ScannerTypes}" SelectedItem="{Binding Path=SelectedScannerType, Mode=TwoWay}" DisplayMemberPath="Caption" Margin="8,0,0,0" SelectionChanged="ComboScannerType_SelectionChanged" ToolTip="Scanner type. Use 'IP Scanner (Bookeye, WideTEK, ...)' for Bookeye scanner." />
+			</DockPanel>
+			<Grid Grid.Column="3" Grid.RowSpan="3" Height="60" >
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				
+				<Button Content="Check License File" Margin="24,0,8,2" ToolTip="Press to check installed license file." Click="CheckLicenseFile_Click" />
+				<Button Content="Download License File" Margin="24,2,8,0" Grid.Row="1" ToolTip="Press to download latest license file from DLSG server." Click="GetLicenseFile_Click" />
+			</Grid>
+		</Grid>
+		
+		<Grid>
+			<panels:ScannerTwain x:Name="panelTwain" Width="Auto" Height="Auto" Visibility="Hidden" />
+			<panels:ScannerRebel x:Name="panelRebel" Width="Auto" Height="Auto" Visibility="Hidden" />
+			<panels:ScannerClickMini x:Name="panelClickMini" Width="Auto" Height="Auto" Visibility="Hidden" />
+			<panels:ScannerS2N x:Name="panelS2N" Width="Auto" Height="Auto" Visibility="Hidden" />
+		</Grid>
+		
+	</DockPanel>
+</panels:PanelBase>

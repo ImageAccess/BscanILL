@@ -1,0 +1,48 @@
+﻿<toolbar:ToolbarBase x:Class="ViewPane.Toolbar.ToolbarZoomSize"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+ 	xmlns:toolbar="clr-namespace:ViewPane.Toolbar"
+    xmlns:resources="clr-namespace:ViewPane"
+	xmlns:languages="clr-namespace:ViewPane.Languages"
+	mc:Ignorable="d" 
+	x:ClassModifier="internal" 
+	>
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="ToolbarResources.xaml" />
+	</UserControl.Resources>
+
+	<UserControl Style="{StaticResource toolbarStyle}">
+		<StackPanel Orientation="Horizontal">
+			<toolbar:ToolbarRadioButton x:Name="buttonActualSize" Image="/ViewPane3;component/images/OriginalSize.gif" Checked="RadioSize_Checked" ToolTip="{x:Static languages:UiStrings.PressToSeeOriginalSize_STR}" />
+			<toolbar:ToolbarRadioButton x:Name="buttonFitImage" Image="/ViewPane3;component/images/FitImage.gif" Checked="RadioSize_Checked" ToolTip="{x:Static languages:UiStrings.PressToFitImage_STR}" />
+			<toolbar:ToolbarRadioButton x:Name="buttonFitWidth" Image="/ViewPane3;component/images/FitWidth.gif" Checked="RadioSize_Checked" ToolTip="{x:Static languages:UiStrings.PressToFitWidth_STR}" />
+			<toolbar:ToolbarButton x:Name="buttonZoomIn" Image="/ViewPane3;component/images/ZoomPlus.gif" ToolTip="{x:Static languages:UiStrings.PressToZoomIn_STR}" Click="ZoomButton_Click" />
+			<TextBox x:Name="textZoom" Width="60" Height="20" Text="100%" IsReadOnly="True" />
+			<toolbar:ToolbarButton x:Name="buttonZoomMenu" Image="/ViewPane3;component/images/ToolbarArrowDown.gif" Width="17" Height="17" Click="ToolbarZoomSize_Click" >
+				<toolbar:ToolbarButton.ContextMenu>
+					<controls:ContextMenu x:Name="contextMenu">
+						<MenuItem x:Name="menu1600" Header="1,600%" Click="Menu_Click" />
+						<MenuItem x:Name="menu800" Header="800%" Click="Menu_Click" />
+						<MenuItem x:Name="menu400" Header="400%" Click="Menu_Click" />
+						<MenuItem x:Name="menu200" Header="200%" Click="Menu_Click" />
+						<MenuItem x:Name="menu150" Header="150%" Click="Menu_Click" />
+						<MenuItem x:Name="menu100" Header="100%" Click="Menu_Click" />
+						<MenuItem x:Name="menu50" Header="50%" Click="Menu_Click" />
+						<MenuItem x:Name="menu25" Header="25%" Click="Menu_Click" />
+						<MenuItem x:Name="menu12" Header="12.5%" Click="Menu_Click" />
+						<Separator/>
+						<MenuItem x:Name="menuActSize" Header="{x:Static languages:UiStrings.ActualSize_STR}" Click="Menu_Click" />
+						<MenuItem x:Name="menuFitImage" Header="{x:Static languages:UiStrings.FitImage_STR}" Click="Menu_Click" />
+						<MenuItem x:Name="menuFitWidth" Header="{x:Static languages:UiStrings.FitWidth_STR}" Click="Menu_Click" />
+					</controls:ContextMenu>
+				</toolbar:ToolbarButton.ContextMenu>
+			</toolbar:ToolbarButton>
+			<toolbar:ToolbarButton x:Name="buttonZoomOut" Image="/ViewPane3;component/images/ZoomMinus.gif" ToolTip="{x:Static languages:UiStrings.PressToZoomOut_STR}" Click="ZoomButton_Click" />
+		</StackPanel>
+	</UserControl>
+	
+</toolbar:ToolbarBase>

@@ -1,0 +1,33 @@
+﻿<scannerControls:ScannerControlBase x:Class="BscanILL.UI.Controls.ScannerControls.S2N.DpiModeControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:scannerControls="clr-namespace:BscanILL.UI.Controls.ScannerControls.S2N"
+	xmlns:buttons="clr-namespace:BscanILL.UI.Buttons"
+    Height="50" Width="240">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../ResourceDictionary.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid>
+		<GroupBox Header="DPI Mode" x:Name="groupBox" Style="{StaticResource styleGroupBox}" >
+			<GroupBox.HeaderTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding}" Foreground="Black" HorizontalAlignment="Stretch"/>
+				</DataTemplate>
+			</GroupBox.HeaderTemplate>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<RadioButton x:Name="radioFlexible" Style="{StaticResource styleScannerControlRadio}" Content="Flexible" Margin="2" IsChecked="True" Checked="RadioButtonColor_Checked" PreviewMouseDown="Radio_PreviewMouseDown" />
+				<RadioButton x:Name="radioFixed" Style="{StaticResource styleScannerControlRadio}" Content="Fixed" Margin="2" Grid.Column="1" Checked="RadioButtonColor_Checked" PreviewMouseDown="Radio_PreviewMouseDown" />
+			</Grid>
+		</GroupBox>
+	</Grid>
+</scannerControls:ScannerControlBase>

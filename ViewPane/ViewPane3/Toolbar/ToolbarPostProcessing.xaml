@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="ViewPane.Toolbar.ToolbarPostProcessing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:ViewPane"
+	xmlns:languages="clr-namespace:ViewPane.Languages"
+    xmlns:toolbars="clr-namespace:ViewPane.Toolbar"
+    Height="Auto" Width="34">
+
+	<StackPanel SnapsToDevicePixels="True">
+
+		<toolbars:ToolbarPostProcessingCheck x:Name="checkDespeckle" Margin="0,0,0,4"
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/DespeckleChecked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/DespeckleUnchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/DespeckleDisabled.png" 
+				ToolTip="{x:Static languages:UiStrings.DespeckleAppliesToBitonalImagesOnly_STR}" Checked="Despeckle_CheckedChanged" Unchecked="Despeckle_CheckedChanged" />
+
+		<StackPanel x:Name="gridAdvanced" Visibility="Collapsed" >
+			<toolbars:ToolbarPostProcessingRadio x:Name="radioNoRotation" 
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate0Checked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate0Unchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate0Disabled.png" 
+                ToolTip="{x:Static languages:UiStrings.NoRotation_STR}" Checked="Rotation_Checked" />
+
+			<toolbars:ToolbarPostProcessingRadio x:Name="radioRotation90" Margin="0,1,0,1"
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate90Checked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate90Unchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate90Disabled.png" 
+                ToolTip="{x:Static languages:UiStrings.Rotation_STR}" Checked="Rotation_Checked" />
+
+			<toolbars:ToolbarPostProcessingRadio x:Name="radioRotation180" 
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate180Checked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate180Unchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate180Disabled.png" 
+                ToolTip="{x:Static languages:UiStrings.Rotation2_STR}" Checked="Rotation_Checked" />
+
+            <toolbars:ToolbarPostProcessingRadio x:Name="radioRotation270" Margin="0,1,0,4"
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate270Checked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate270Unchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/Rotate270Disabled.png" 
+				ToolTip="{x:Static languages:UiStrings.Rotation3_STR}" Checked="Rotation_Checked" />
+
+			<toolbars:ToolbarPostProcessingCheck x:Name="checkBlackBorderRemoval" 
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/BlackBorderRemovalChecked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/BlackBorderRemovalUnchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/BlackBorderRemovalDisabled.png" 
+				ToolTip="{x:Static languages:UiStrings.BlackBorderRemovalAppliesToBitonalImagesOnly_STR}" Checked="BlackBorder_CheckedChanged" Unchecked="BlackBorder_CheckedChanged" />
+
+			<toolbars:ToolbarPostProcessingCheck x:Name="checkBackgroundRemoval" Margin="0,1,0,1"
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/BackgroundRemovalChecked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/BackgroundRemovalUnchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/BackgroundRemovalDisabled.png" 
+				ToolTip="{x:Static languages:UiStrings.BackgroundRemovalAppliesToColorAndGrayscale_STR}" Unchecked="Background_CheckedChanged" Checked="Background_CheckedChanged" />
+
+			<toolbars:ToolbarPostProcessingCheck x:Name="checkInvert" 
+                CheckedUri="/ViewPane3;component/images/PostProcessingToolbar/InvertChecked.png" 
+                UncheckedUri="/ViewPane3;component/images/PostProcessingToolbar/InvertUnchecked.png" 
+                DisabledUri="/ViewPane3;component/images/PostProcessingToolbar/InvertDisabled.png" 
+				ToolTip="{x:Static languages:UiStrings.InvertFunction_STR}" Checked="Invert_CheckedChanged" Unchecked="Invert_CheckedChanged" />
+		</StackPanel>
+		
+	</StackPanel>
+	
+</UserControl>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BscanILL.UI.Frames.StartUp.StartUpUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" FontFamily="Times New Roman" FontSize="40" 
+    d:DesignHeight="40" d:DesignWidth="500">
+
+	<UserControl.Resources>
+		<Storyboard x:Name="lockStoryboard" x:Key="lockStoryboardKey">
+			<DoubleAnimation Storyboard.TargetName="r1" Storyboard.TargetProperty="Opacity" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r2" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.125" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r3" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.250" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r4" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.375" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r5" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.500" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r6" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.625" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r7" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.750" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r8" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.875" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+		</Storyboard>
+	</UserControl.Resources>
+
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="Grid.Loaded" SourceName="lockUiGrid">
+			<BeginStoryboard Storyboard="{StaticResource lockStoryboardKey}"/>
+		</EventTrigger>
+	</UserControl.Triggers>
+
+	<Grid Background="#D0FFFFFF">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Grid x:Name="lockUiGrid" Visibility="Visible" Margin="7,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+				<Rectangle x:Name="r1" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="0,-20,0,0" Opacity="1"/>
+				<Rectangle x:Name="r2" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="14,-14,0,0" Opacity="0.9" />
+				<Rectangle x:Name="r3" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="20,0,0,0" Opacity="0.80" />
+				<Rectangle x:Name="r4" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="14,14,0,0" Opacity="0.7" />
+				<Rectangle x:Name="r5" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="0,20,0,0" Opacity="0.6" />
+				<Rectangle x:Name="r6" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="-14,14,0,0" Opacity="0.5" />
+				<Rectangle x:Name="r7" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="-20,0,0,0" Opacity="0.4" />
+				<Rectangle x:Name="r8" Width="5" Height="5" Fill="Red" RadiusX="3" RadiusY="3" Margin="-14,-14,0,0" Opacity="0.3" />
+			</Grid>
+			<TextBlock Grid.Row="0" x:Name="progressText" Text="0%" Margin="8,0,0,0" FontFamily="Times New Roman" FontSize="16" VerticalAlignment="Center" />
+			<TextBlock Grid.Row="1" x:Name="description" Text="Opening Bscan ILL..." Margin="8,0,0,0" FontFamily="Times New Roman" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap" />
+		</StackPanel>
+	</Grid>
+
+</UserControl>

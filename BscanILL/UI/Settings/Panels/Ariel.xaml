@@ -1,0 +1,81 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.Ariel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+   Height="420" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="TextBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+					<Style TargetType="PasswordBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<CheckBox x:Name="checkBoxEnabled" Content="Enabled" IsChecked="{Binding Path=ArielEnabled, Mode=TwoWay}" ToolTip="Check to enable ariel functionality." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" HorizontalAlignment="Left" VerticalAlignment="Top" />
+		<Border x:Name="groupBox"  Style="{StaticResource groupBorderStyle}" >
+			<Grid Margin="16,8,16,8">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="150"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Ariel Version:" Grid.Row="0" VerticalAlignment="Center" />
+                    <TextBlock Text="Ariel Executable Path:" Grid.Row="1" VerticalAlignment="Top" Margin="0,4,0,0"  />
+                    <ComboBox x:Name="comboArielVersion" SelectedItem="{Binding Path=ArielVersionSelectedItem, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" Width="120" HorizontalAlignment="Left" />
+                    <DockPanel Grid.Row="1" Grid.Column="2" >
+                        <Button Content="Browse..." Margin="8,1,0,1" Width="75" DockPanel.Dock="Right" Click="BrowseExe_Click" />
+                        <TextBox Text="{Binding Path=ArielExePath, Mode=TwoWay}" ToolTip="Ariel executable path." />
+                    </DockPanel>
+                    <TextBlock Text="Articles' Export File Name:" Grid.Row="2" />
+                    <ComboBox x:Name="comboExportName" SelectedIndex="{Binding Path=ExportNameIndex, Mode=TwoWay}" Grid.Row="2"  Grid.Column="1" Width="140" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="ILL Number" />
+                        <ComboBoxItem Content="Transaction Number" />
+                    </ComboBox>
+                </Grid>
+
+				<GroupBox x:Name="panelPulseReader" Style="{StaticResource groupBoxWithCheckBox}" VerticalAlignment="Bottom" >
+					<GroupBox.Header>
+						<Grid Background="#01000000">
+							<CheckBox x:Name="checkUpdateILLiad" IsChecked="{Binding Path=UpdateILLiad, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Update ILLiad" Checked="CheckUpdateILLiad_CheckedChanged" Unchecked="CheckUpdateILLiad_CheckedChanged" />
+						</Grid>
+					</GroupBox.Header>
+					<StackPanel x:Name="gridUpdateILLiad" Margin="16,8,16,8" IsEnabled="False">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="24" />
+								<RowDefinition Height="24"/>
+								<RowDefinition/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="130"/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+                            <TextBlock Text="Avoid updating ILLiad when using these IP Addresses:" Grid.Row="2" VerticalAlignment="Center" TextWrapping="Wrap" />
+							<CheckBox x:Name="checkChangeStatusToRequestFinished" Content="Change Status to Request Finished" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" IsChecked="{Binding Path=ChangeStatusToRequestFinished, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="Check to change status to request finished." />
+                            <CheckBox x:Name="checkUpdateArticlesWithNegatineId" Content="Update Articles with Negative ID (Rapid)" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" IsEnabled="False" IsChecked="{Binding Path=UpdateArticlesWithNegativeId, Mode=TwoWay}" HorizontalAlignment="Left" />
+                            <TextBox x:Name="textAvoidIP" Grid.Row="2" Grid.Column="1" Height="45" Text="{Binding Path=TextAvoidIp, Mode=TwoWay}" HorizontalAlignment="Stretch" ToolTip="When sending to these IP Addresses, the ILLiad database is not updated. Separate multiple IP Addresses using commas ','." TextWrapping="Wrap"  VerticalScrollBarVisibility="Auto" />
+						</Grid>
+					</StackPanel>
+				</GroupBox>
+			</Grid>
+		</Border>
+	</Grid>
+</local:PanelBase>

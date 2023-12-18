@@ -1,0 +1,56 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.Printers"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+    Height="400" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary>
+					<Style TargetType="TextBlock">
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<CheckBox x:Name="checkBoxEnabled" Content="Enabled" ToolTip="Check to enable printing capabilities." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" VerticalAlignment="Top" HorizontalAlignment="Left" />
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+			<TextBlock Text="Functionality:" Grid.Row="3"  />
+			<settingsControls:PrintFunctionalityPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="8,0,0,0" />
+		</StackPanel>
+		<Border x:Name="groupBox"  Style="{StaticResource groupBorderStyle}" >
+			<Grid>
+				<Border Margin="8,8,8,60" BorderThickness="1" BorderBrush="#30000000" >
+					<ScrollViewer Margin="1" VerticalScrollBarVisibility="Auto">
+						<StackPanel x:Name="scrollViewerStackPanel" >
+							
+						</StackPanel>
+					</ScrollViewer>
+				</Border>
+				<Grid VerticalAlignment="Bottom" Margin="8">
+					<Button Content="Add Printer..." Width="100" Height="27" HorizontalAlignment="Right" VerticalAlignment="Top" Click="AddPrinter_Click" />
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<CheckBox x:Name="checkBoxSplitCopies" Grid.ColumnSpan="3" Content="Split Copies Into Separate Print Jobs" IsChecked="{Binding Path=SplitCopies, Mode=TwoWay}" ToolTip="Check to split multiple print copies into separate printing jobs." VerticalAlignment="Center" HorizontalAlignment="Left" />
+					</Grid>
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+	
+</local:PanelBase>

@@ -1,0 +1,12 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Controls.PrintFunctionalityPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="Auto" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+	<StackPanel Orientation="Horizontal">
+		<TextBlock x:Name="textFunctionalityCaption" Text="{Binding Path=FunctionalityCaption}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+		<TextBlock Text="Change..." Foreground="Blue" VerticalAlignment="Center" Cursor="Hand" MouseDown="Change_Click" />
+	</StackPanel>
+	
+</local:PanelBase>

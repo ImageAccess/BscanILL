@@ -1,0 +1,89 @@
+﻿<!--<Window x:Class="ViewPane.Dialogs.IpDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:language="clr-namespace:ViewPane.Languages"
+	Title="{x:Static languages:UiStrings.IpDlg_FormTitle_STR}" Width="550" Height="460" WindowStyle="ToolWindow" ResizeMode="NoResize" 
+		WindowStartupLocation="CenterScreen">-->
+<Window x:Class="ViewPane.Dialogs.IpDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:languages="clr-namespace:ViewPane.Languages"
+	Title="Image Processing" Width="550" Height="460" WindowStyle="ToolWindow" ResizeMode="NoResize" 
+		WindowStartupLocation="CenterScreen">
+
+	<DockPanel>
+		<Grid DockPanel.Dock="Bottom" Margin="8,24,8,8" >
+			<StackPanel Orientation="Horizontal">
+			    <TextBlock Text="{x:Static languages:UiStrings.IpDlg_ApplyTo_STR}" VerticalAlignment="Center" />
+                <ComboBox x:Name="applyToCombo" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedIndex="0" Margin="8,0,0,0" />
+			</StackPanel>
+			<Button Content="{x:Static languages:UiStrings.Close_STR}" Height="32" Width="50" HorizontalAlignment="Right" Click="Close_Click" />
+			<Button Content="{x:Static languages:UiStrings.ApplyAndClose_STR}" IsDefault="True" Height="32" Width="120" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right" Margin="0,0,58,0" Click="Apply_Click" />
+		</Grid>
+		
+		<StackPanel>
+
+			<GroupBox x:Name="groupBoxDespeckle" Header="{x:Static languages:UiStrings.IpDlg_GroupDespeckle_STR}" Margin="8,8,8,0">
+				<StackPanel>
+					<CheckBox x:Name="despeckleEnabled" Content="{x:Static languages:UiStrings.Enabled_STR}" Margin="16,8,0,4" Checked="DespeckleChecked_Changed" Unchecked="DespeckleChecked_Changed" />
+					<Grid Margin="32,4,0,4">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="110" />
+							<ColumnDefinition  />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="27" />
+                            <RowDefinition Height="27" />
+                        </Grid.RowDefinitions>
+						<TextBlock Text="{x:Static languages:UiStrings.IpDlg_DespeckleMask_STR}" VerticalAlignment="Center" />
+						<ComboBox x:Name="despeckleMask" Width="120" SelectedIndex="1" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+							<ComboBox.Items>
+								<TextBlock Text="1 x 1" />
+								<TextBlock Text="2 x 2" />
+								<TextBlock Text="3 x 3" />
+								<TextBlock Text="4 x 4" />
+								<TextBlock Text="5 x 5" />
+								<TextBlock Text="6 x 6" />
+							</ComboBox.Items>
+						</ComboBox>
+                        <TextBlock Grid.Row="1" Text="{x:Static languages:UiStrings.DespeckleDlg_Options_STR}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        <ComboBox x:Name="comboDespeckleOptions" Margin="0,0,32,0" ItemsSource="{Binding Path=DespeckleModes}" SelectedItem="{Binding Path=SelectedDespeckleMode, Mode=TwoWay}" DisplayMemberPath="Caption" SelectedIndex="0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" IsEnabled="False" />
+                    </Grid>
+				</StackPanel>
+			</GroupBox>
+
+			<GroupBox x:Name="groupBoxRotation" Header="{x:Static languages:UiStrings.IpDlg_GroupRotation_STR}" Margin="8,8,8,0">
+				<StackPanel>
+					<Grid Margin="32,4,0,4">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="110" />
+							<ColumnDefinition  />
+						</Grid.ColumnDefinitions>
+						<TextBlock Text="{x:Static languages:UiStrings.IpDlg_Rotation_STR}" VerticalAlignment="Center" />
+                        <ComboBox x:Name="rotationCombo" Width="120" Grid.Column="1" HorizontalAlignment="Left" SelectedIndex="0" VerticalAlignment="Center" />
+                    </Grid>
+				</StackPanel>
+			</GroupBox>
+
+			<GroupBox x:Name="groupBoxBlackBorderRemoval" Header="{x:Static languages:UiStrings.IpDlg_BbRemoval_STR}" Margin="8,8,8,0">
+				<StackPanel>
+					<CheckBox x:Name="blackBorderEnabled" Content="{x:Static languages:UiStrings.Enabled_STR}" Margin="16,8,0,4" />
+				</StackPanel>
+			</GroupBox>
+
+			<GroupBox x:Name="groupBoxBackgroundRemoval" Header="{x:Static languages:UiStrings.IpDlg_BackgroundRemoval_STR}" Margin="8,8,8,0">
+				<StackPanel>
+					<CheckBox x:Name="backgroundEnabled" Content="{x:Static languages:UiStrings.Enabled_STR}" Margin="16,8,0,4" />
+				</StackPanel>
+			</GroupBox>
+
+			<GroupBox x:Name="groupBoxInvert" Header="{x:Static languages:UiStrings.IpDlg_GroupInvert_STR}" Margin="8,8,8,0">
+				<StackPanel>
+					<CheckBox x:Name="invertEnabled" Content="{x:Static languages:UiStrings.Enabled_STR}" Margin="16,8,0,4" />
+				</StackPanel>
+			</GroupBox>
+
+		</StackPanel>
+	</DockPanel>
+
+</Window>

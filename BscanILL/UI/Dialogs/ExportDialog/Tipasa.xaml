@@ -1,0 +1,40 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Dialogs.ExportDialog.Tipasa"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Dialogs.ExportDialog"
+    Height="200" Width="500">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="./PanelsResources.xaml" />
+    </UserControl.Resources>
+    <Grid >
+        <Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+            <StackPanel >
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Institutional Symbol:" Grid.Row="0" VerticalAlignment="Center" />
+                    <TextBox Text="{Binding Path=InstitutionalSymbol, Mode=OneWay}" Margin="0,1" IsReadOnly="True" Width="70" Grid.Column="2" HorizontalAlignment="Left"/>
+                    
+                    <TextBlock Text="File Name Prefix:" Grid.Row="1" VerticalAlignment="Center" />
+                    <TextBox Text="{Binding Path=FileNamePrefix, Mode=TwoWay}" Margin="0,1" Grid.Row="1" Grid.Column="2" Width="140" HorizontalAlignment="Left" />
+
+                    <TextBlock Text="File Format:" Grid.Row="2" />
+                    <local:FileFormatControl x:Name="fileformatCtrl" Grid.Row="2" Grid.Column="2" />
+                    <local:FileParamControl x:Name="fileparamCtrl" Grid.Row="3" Margin="0,0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left"/>
+
+                </Grid>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</local:PanelBase>

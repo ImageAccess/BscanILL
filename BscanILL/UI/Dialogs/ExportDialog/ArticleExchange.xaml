@@ -1,0 +1,52 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Dialogs.ExportDialog.ArticleExchange"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Dialogs.ExportDialog"
+    Height="200" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="./PanelsResources.xaml" />
+	</UserControl.Resources>
+
+	<Grid >
+		<Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+			<StackPanel >
+				<Grid >
+					<Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+						<RowDefinition Height="70" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="8"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Recipient's Email Address:" Grid.Row="0" VerticalAlignment="Center" />
+					<TextBox Text="{Binding Path=RecipientEmail, Mode=TwoWay}" Margin="0,1" Grid.Column="2" />
+
+					<TextBlock Text="Confirmation Email Address:" Grid.Row="1" VerticalAlignment="Center" />
+					<ComboBox x:Name="comboConfirmationRecipients" ItemsSource="{Binding Path=ConfirmationEmails, Mode=OneTime}" IsEditable="True"  Margin="0,1" Grid.Row="1" Grid.Column="2" TextBoxBase.TextChanged="Combo_SelectionChanged" />
+
+                    <TextBlock Text="File Name Prefix:" Grid.Row="2" VerticalAlignment="Center" />
+                    <TextBox Text="{Binding Path=FileNamePrefix, Mode=TwoWay}" Margin="0,1" Grid.Row="2" Grid.Column="2" Width="140" HorizontalAlignment="Left" />
+                    
+                    <TextBlock Text="File Format:" Grid.Row="3" />
+					<local:FileFormatControl x:Name="fileformatCtrl" Grid.Row="3" Grid.Column="2" />
+
+                    <local:FileParamControl x:Name="fileparamCtrl" Grid.Row="4" Margin="0,0" Grid.Column="2" HorizontalAlignment="Left" />
+                    
+					<TextBlock Text="Message Subject:" Grid.Row="5" />
+					<TextBox x:Name="textMessageSubject" Grid.Row="5" Grid.Column="2" Text="{Binding Path=MessageSubject, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" ToolTip="Email subject, received by Article Exchange recipient." />
+					<TextBlock Text="Message Body:" Grid.Row="6" VerticalAlignment="Top" />
+					<TextBox x:Name="textMessageBody" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="2" Text="{Binding Path=MessageBody, Mode=TwoWay}" ToolTip="Email body, received by Article Exchange recipient. {URL} and {PASS} will be replaced when Article Exchange Server returns this information after successfull article upload." TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+				</Grid>
+
+			</StackPanel>
+		</Border>
+	</Grid>
+</local:PanelBase>

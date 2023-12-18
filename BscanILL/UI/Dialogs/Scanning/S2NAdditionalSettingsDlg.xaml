@@ -1,0 +1,31 @@
+﻿<Window x:Class="BscanILL.UI.Dialogs.Scanning.S2NAdditionalSettingsDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:scannersControls="clr-namespace:BscanILL.UI.Controls.ScannerControls.S2N"
+	mc:Ignorable="d"
+    Title="S2N Additional Settings" Height="718" Width="188" WindowStyle="ToolWindow" ResizeMode="NoResize"
+	Icon="/BscanILL;component/App.ico" WindowStartupLocation="CenterScreen"
+	Loaded="Form_Loaded">
+	
+	<Grid Margin="4">
+		<StackPanel>
+			<scannersControls:DocModeControl x:Name="docModeControl" Width="Auto" />
+			<scannersControls:DpiModeControl x:Name="dpiModeControl" Width="Auto" />
+			<scannersControls:GammaRollingControl x:Name="gammaControl" Width="Auto" />
+			<scannersControls:DocSizeControl x:Name="docSizeControl" Width="Auto" />
+			<scannersControls:RotationControl x:Name="rotationControl" Width="Auto" />
+			<scannersControls:JpegQualityRollingControl x:Name="jpegQualityControl" Width="Auto" />
+			<scannersControls:TiffCompressionControl x:Name="tiffCompressionControl" Width="Auto" />
+			<scannersControls:DespeckleControl x:Name="despeckleControl" Width="Auto" />
+			<scannersControls:SharpenControl x:Name="sharpenControl" Width="Auto" />
+			<scannersControls:BitonalThreshold x:Name="bitonalThresholdControl" Width="Auto" />
+            <scannersControls:PageSplittingStartPageControl x:Name="pageSplittingFirstPageControl" Width="Auto" />
+		</StackPanel>
+
+		<Grid VerticalAlignment="Bottom">
+			<Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="4" Content="Close" Width="70" Height="23" IsCancel="True" />
+		</Grid>
+	</Grid>
+</Window>

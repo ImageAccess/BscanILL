@@ -1,0 +1,209 @@
+; v 2.0
+
+; 1.0 (2015-11-22)
+; 2.0 (2016-02-29) - FormA delivery changed to Article Exchange, upper/lower email field implemented
+
+
+[PROCESS21]
+HourGlass=On
+
+OCRClearZones=Yes
+Iftr=%4VN!=Bsnt
+; Do not show zones if twain
+OCRShowZones=Yes
+EndIftr=
+
+PS=00000000000000000000
+StatusClear1=ID
+StatusClear2=RG
+            
+FC=0001
+CV[0]=0
+            
+;If2g=%F7!=ADF
+:00a=
+:01a=
+:02a=
+:04a=
+:05a=
+:20a=
+:21a=
+:30a=
+;EndIf2g= 
+
+OCRClearRegistration1=Yes
+OCRSetRegistration1=Form
+
+EditBox7=OpenLive
+
+ActiveOcrFonts8e=%AP\..\Lib\%F6\%F6-ID.bsf
+
+;search for 'Borr' in 'Borrower' - formA 
+OCR89=279,49,657,388,NOADJUST,REGISTER(485,263),RC>=30,B
+#94w=%CA
+#91p=0
+
+Ifx=%#94>=30
+If8b=%#91==0
+   ;formA     
+     ActiveOcrFonts3a=%AP\..\Lib\%F6\%F6-Reg-FormA.bsf     
+     ;:30p=Odyssey     
+     :30w=Article Exchange
+     
+     OCRClearRegistration1=Yes
+                        
+         OCR13=1133,726,1438,1216,SEARCH,NOADJUST,REGISTER(1467,1099),RC>=30,e               
+         If41=%RC==31                          
+            ActiveOcrFonts5=
+            
+            OCRt5=1349,884,2111,972,SKIPZONEFIND,LOWER,NUMERIC,PLUSCHAR(-_.@),TestLead(1,0,5,RCC,2),TestTrail(1,0,5,RCC,2),:04                      
+            :59a=
+            :60a=
+            :04yy=%-.-:04            
+            If77=%-.-:04!=
+                   LocateEmail6=%:04,:59,:60             
+                   #60a=%:60             
+                   :04v=                   
+                   Ifw5=%#60>=60
+                       ; 49 is minimum conf if @ was found
+                       ; 60 is minimum if extension with proper length and @ found                                                                
+                     Ifw2=%-.-:59!=
+                      :04u=%:59
+                     EndIfw2=                                 
+                   EndIfw5=  
+            EndIf77= 
+            ActiveOcrFonts8=%AP\..\Lib\%F6\%F6-Reg-FormA.bsf
+            :04yy=%-.-:04                                                       
+            
+            OCR72=1205,936,1373,1112,SEARCH,REGISTER(1468,1191)INTO(Content),RC>=30,E
+            OCRSetRegistration4=Content 
+            If41=%RC==31                                 
+                   :01ip=  
+                   ActiveOcrFonts5=                                                                  
+                   OCRd5=1370,968,2126,1064,SKIPZONEFIND,UPPER,NUMERIC,PLUSCHAR(-_.@),TestLead(1,0,5,RCC,2),TestTrail(1,0,5,RCC,2),:01
+                   :01s=%-.-:01
+                                      
+                   :59a=
+                   :60a=
+                   :01s=%-.-:01                        
+                   If18=%-.-:01!=
+                     LocateEmail5=%:01,:59,:60             
+                     #60a=%:60             
+                     :01v=
+                     Ifw5=%#60>=60
+                       ; 49 is minimum conf if @ was found
+                       ; 60 is minimum if extension with proper length and @ found                                                                
+                       Ifw3=%-.-:59!=
+                         :01p2=%:59
+                       EndIfw3=
+                     EndIfw5=                                     
+                   EndIf18=          
+              
+                   ActiveOcrFonts8=%AP\..\Lib\%F6\%F6-Reg-FormA.bsf
+                   :01t2=%0-.-:01               
+            
+            EndIf41=             
+            OCRSetRegistration5=Form                                
+            :05ti=%UC(%:04)         
+            If88=%0-.-:01!=%0-.-:05
+                   :01ss=
+                   #81p=1
+                   #96p=1
+                   ; do not validate - but keep error flags set above...
+                   #87p=2            
+            EndIf88= 
+            :05h=  
+            :04g=                   
+         EndIf41=    
+         
+         OCRClearRegistration1=Yes 
+         
+         ;Read ILL Barcode
+         SetRegion6h=258,989,1114,1458
+         BarRead2o=Region(258,989,1114,1458),TYPES(CODE39),DIRECTION(LeftToRight),SPEED(0,6,0,0,0,0),TOLERANCE(3)
+         :04fg=%BC
+         :04t8=%-.-:04  
+         Ifr8=%-.-:04==          
+          ; try OCR           
+           OCR44=466,942,750,1410,SEARCH,NOADJUST,REGISTER(678,1447),RC>=30,B          
+           If4=%RC==31
+             ActiveOcrFonts6=
+             OCRj8=657,1185,901,1247,SKIPZONEFIND,Numeric1,TestLead(1,0,5,RCC,2),TestTrail(1,0,5,RCC,2),:04
+             :04t8=%-.-:04
+             ActiveOcrFonts3a=%AP\..\Lib\%F6\%F6-Reg-FormA.bsf
+           EndIf4=                    
+         EndIfr8= 
+         :02c=%:04         
+         
+         OCRClearRegistration1=Yes
+         
+         ;search for Patron:            
+         OCR38=295,292,603,637,SEARCH,NOADJUST,REGISTER(476,574),RC>=30,P                           
+         If4=%RC==31
+             SetRegion6o=545,466,617,505
+             #80r=%PB(545,466,617,505)
+             If45=%#80>30
+               ActiveOcrFonts6=
+               OCR31=532,445,1206,528,SKIPZONEFIND,TestLead(1,0,5,RCC,2),TestTrail(1,0,5,RCC,2),:00
+               :00f=%0-.-:00             
+             EndIf45=
+         EndIf4=          
+         
+         Ifp2=%#77==0
+           ;Read TN Barcode
+           OCRClearRegistration1=Yes
+           SetRegion6r=163,351,464,1140
+           BarRead2r=Region(163,351,464,1140),TYPES(CODE39),DIRECTION(BottomToTop),SPEED(0,6,0,0,0,0),TOLERANCE(3)
+           :05fg=%BC
+           :05t6=%-.-:05                   
+           Ifr3=%-.-:05==
+            ; try OCR
+             Rotate1=90             
+             ActiveOcrFonts3a=%AP\..\Lib\%F6\%F6-Reg-FormA.bsf
+             OCR22=17,186,691,490,SEARCH,NOADJUST,REGISTER(327,389),RC>=30,T                                       
+             If4=%RC==31               
+               ActiveOcrFonts6=
+               OCR78=357,286,513,374,SKIPZONEFIND,Numeric1,TestLead(1,0,5,RCC,2),TestTrail(1,0,5,RCC,2),:05        
+               :05t6=%-.-:05            
+             EndIf4=
+             Ifmn=%4VN==Bsnt
+                 Rotate3=270
+             Elsemn=
+                 RestoreCurrentImage=Yes   
+             EndIfmn=
+           
+           EndIfr3=
+         EndIfp2=
+EndIf8b=
+EndIfx=
+
+;If15=%F7!=ADF
+        C1=1
+        If16=%PN>0 
+            C2=%C2+1
+        EndIf16=
+        :74a=1
+        
+        ; do not validate ariel address
+        ;;;;;;;;;;;;#87a=1
+;EndIf15=
+    
+UpdateLogEntry1=Yes
+
+OCRClearRegistration2=Yes
+
+:57ta=
+
+;RestoreCurrentImage=Yes
+
+HourGlass=Off
+
+
+    
+[EDITBOX7] Reading Pullslip
+EditTitle=Reading Pullslip... Please wait.
+EditWindow=SX/2-200,SY/2-100,400,1
+;EditTopMost=Yes
+EditOnTopFaceLift=Yes
+
+;EditOnClose=Process13

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="ApplyAndClose_STR" xml:space="preserve">
+    <value>Apply &amp; Close</value>
+  <comment></comment></data>
+	<data name="Cancel_STR" xml:space="preserve">
+    <value>Cancel</value>
+  <comment></comment></data>
+	<data name="CanTAccessOriginalImageFile_STR" xml:space="preserve">
+    <value>Can't access original image file</value>
+  <comment></comment></data>
+	<data name="Close_STR" xml:space="preserve">
+    <value>Close</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_Description_STR" xml:space="preserve">
+    <value>Despeckle Mask Size:</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_FormTitle_STR" xml:space="preserve">
+    <value>Despeckle</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_Options_STR" xml:space="preserve">
+    <value>Despeckle Options:</value>
+  <comment></comment></data>
+	<data name="Enabled_STR" xml:space="preserve">
+    <value>Enabled</value>
+  <comment></comment></data>
+	<data name="IpDlg_ApplyTo_STR" xml:space="preserve">
+    <value>Apply To:</value>
+  <comment></comment></data>
+	<data name="IpDlg_BackgroundRemoval_STR" xml:space="preserve">
+    <value>Background Removal</value>
+  <comment></comment></data>
+	<data name="IpDlg_BbRemoval_STR" xml:space="preserve">
+    <value>Black Border Removal</value>
+  <comment></comment></data>
+	<data name="IpDlg_DespeckleMask_STR" xml:space="preserve">
+    <value>Despeckle Mask:</value>
+  <comment></comment></data>
+	<data name="IpDlg_FormTitle_STR" xml:space="preserve">
+    <value>Image Processing</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupDespeckle_STR" xml:space="preserve">
+    <value>Despeckle</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupInvert_STR" xml:space="preserve">
+    <value>Invert</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupRotation_STR" xml:space="preserve">
+    <value>Rotation</value>
+  <comment></comment></data>
+	<data name="IpDlg_Rotation_STR" xml:space="preserve">
+    <value>Rotation:</value>
+  <comment></comment></data>
+	<data name="Ok_STR" xml:space="preserve">
+    <value>OK</value>
+  <comment></comment></data>
+	<data name="CanTAccessReducedImageFile_STR" xml:space="preserve">
+    <value>Can't access reduced image file</value>
+  <comment></comment></data>
+	<data name="CanTAccessPreviewFile_STR" xml:space="preserve">
+    <value>Can't access preview file</value>
+  <comment></comment></data>
+	<data name="ScanID_STR" xml:space="preserve">
+    <value>Scan ID: </value>
+  <comment></comment></data>
+	<data name="BaseName_STR" xml:space="preserve">
+    <value>Base Name: </value>
+  <comment></comment></data>
+	<data name="Created_STR" xml:space="preserve">
+    <value>Created: </value>
+  <comment></comment></data>
+	<data name="BookPart_STR" xml:space="preserve">
+    <value>Book Part: </value>
+  <comment></comment></data>
+	<data name="Brightness_STR" xml:space="preserve">
+    <value>Brightness: </value>
+  <comment></comment></data>
+	<data name="Contrast_STR" xml:space="preserve">
+    <value>Contrast: </value>
+  <comment></comment></data>
+	<data name="Gamma_STR" xml:space="preserve">
+    <value>Gamma: </value>
+  <comment></comment></data>
+	<data name="PageID_STR" xml:space="preserve">
+    <value>Page ID: </value>
+  <comment></comment></data>
+	<data name="CanTFindAnyActiveScanSets_STR" xml:space="preserve">
+    <value>Can't find any active Scan Sets!</value>
+  <comment></comment></data>
+	<data name="FrontCover_STR" xml:space="preserve">
+    <value>Front Cover</value>
+  <comment></comment></data>
+	<data name="SpineCover_STR" xml:space="preserve">
+    <value>Spine Cover</value>
+  <comment></comment></data>
+	<data name="RearCover_STR" xml:space="preserve">
+    <value>Rear Cover</value>
+  <comment></comment></data>
+	<data name="HeadEdge_STR" xml:space="preserve">
+    <value>Head Edge</value>
+  <comment></comment></data>
+	<data name="TailEdge_STR" xml:space="preserve">
+    <value>Tail Edge</value>
+  <comment></comment></data>
+	<data name="ForeEdge_STR" xml:space="preserve">
+    <value>Fore Edge</value>
+  <comment></comment></data>
+	<data name="FrontEndPapers_STR" xml:space="preserve">
+    <value>Front End Papers</value>
+  <comment></comment></data>
+	<data name="FrontPastdownEndPaper_STR" xml:space="preserve">
+    <value>Front Pastdown End Paper</value>
+  <comment></comment></data>
+	<data name="FrontFreeEndPaper_STR" xml:space="preserve">
+    <value>Front Free End Paper</value>
+  <comment></comment></data>
+	<data name="RearEndPapers_STR" xml:space="preserve">
+    <value>Rear End Papers</value>
+  <comment></comment></data>
+	<data name="RearFreeEndPaper_STR" xml:space="preserve">
+    <value>Rear Free End Paper</value>
+  <comment></comment></data>
+	<data name="RearPastdownEndPaper_STR" xml:space="preserve">
+    <value>Rear Pastdown End Paper</value>
+  <comment></comment></data>
+	<data name="Normal_STR" xml:space="preserve">
+    <value>Normal</value>
+  <comment></comment></data>
+	<data name="Other_STR" xml:space="preserve">
+    <value>Other</value>
+  <comment></comment></data>
+	<data name="None_STR" xml:space="preserve">
+    <value>None</value>
+  <comment></comment></data>
+	<data name="Unknown_STR" xml:space="preserve">
+    <value>Unknown</value>
+  <comment></comment></data>
+	<data name="NoRotation_STR" xml:space="preserve">
+    <value>No rotation.</value>
+  <comment></comment></data>
+	<data name="Rotation_STR" xml:space="preserve">
+    <value>90° rotation.</value>
+  <comment></comment></data>
+	<data name="Rotation2_STR" xml:space="preserve">
+    <value>180° rotation.</value>
+  <comment></comment></data>
+	<data name="DespeckleAppliesToBitonalImagesOnly_STR" xml:space="preserve">
+    <value>Despeckle (applies to bitonal images only).</value>
+  <comment></comment></data>
+	<data name="Rotation3_STR" xml:space="preserve">
+    <value>270° rotation.</value>
+  <comment></comment></data>
+	<data name="BlackBorderRemovalAppliesToBitonalImagesOnly_STR" xml:space="preserve">
+    <value>Black border removal (applies to bitonal images only).</value>
+  <comment></comment></data>
+	<data name="BackgroundRemovalAppliesToColorAndGrayscale_STR" xml:space="preserve">
+    <value>Background removal (applies to color and grayscale images only).</value>
+  <comment></comment></data>
+	<data name="InvertFunction_STR" xml:space="preserve">
+    <value>Invert function.</value>
+  <comment></comment></data>
+	<data name="SelectToMoveImage_STR" xml:space="preserve">
+    <value>Select to move image</value>
+  <comment></comment></data>
+	<data name="SelectToChooseZoomInArea_STR" xml:space="preserve">
+    <value>Select to choose zoom in area</value>
+  <comment></comment></data>
+	<data name="SelectToChooseZoomOutArea_STR" xml:space="preserve">
+    <value>Select to choose zoom out area</value>
+  <comment></comment></data>
+	<data name="SelectToDynamiclyChangeZoom_STR" xml:space="preserve">
+    <value>Select to dynamicly change zoom</value>
+  <comment></comment></data>
+	<data name="SelectToBeAbleToSelectImageArea_STR" xml:space="preserve">
+    <value>Select to be able to select image area</value>
+  <comment></comment></data>
+	<data name="SelectToAllowTheCurrentPageSizeToBeChanged_STR" xml:space="preserve">
+    <value>Select to allow the current page size to be changed without affecting other page sizes.</value>
+  <comment></comment></data>
+	<data name="PressToMakeClipsOnCurrentImageTheSameSize_STR" xml:space="preserve">
+    <value>Press to make clips on current image the same size.</value>
+  <comment></comment></data>
+	<data name="SelectToAdjustContentClips_STR" xml:space="preserve">
+    <value>Select to adjust content clips</value>
+  <comment></comment></data>
+	<data name="SelectToAdjustBookFoldLeadingPoints_STR" xml:space="preserve">
+    <value>Select to adjust book fold leading points</value>
+  <comment></comment></data>
+	<data name="SelectToEditFingersZones_STR" xml:space="preserve">
+    <value>Select to edit finger zones</value>
+  <comment></comment></data>
+	<data name="ClickToChangeSettings_STR" xml:space="preserve">
+    <value>Click to change settings</value>
+  <comment></comment></data>
+	<data name="PressToDisplayFirstImage_STR" xml:space="preserve">
+    <value>Press to display first image</value>
+  <comment></comment></data>
+	<data name="PressToDisplayPreviousImage_STR" xml:space="preserve">
+    <value>Press to display previous image</value>
+  <comment></comment></data>
+	<data name="PressToDisplayNextImage_STR" xml:space="preserve">
+    <value>Press to display next image</value>
+  <comment></comment></data>
+	<data name="PressToDisplayLastImage_STR" xml:space="preserve">
+    <value>Press to display last image</value>
+  <comment></comment></data>
+	<data name="SelectToDisplayLeftPage_STR" xml:space="preserve">
+    <value>Select to display left page</value>
+  <comment></comment></data>
+	<data name="SelectToDisplayRightPage_STR" xml:space="preserve">
+    <value>Select to display right page</value>
+  <comment></comment></data>
+	<data name="PressToScanImage_STR" xml:space="preserve">
+    <value>Press to scan image</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage90_STR" xml:space="preserve">
+    <value>Press to rotate image 90º</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage180_STR" xml:space="preserve">
+    <value>Press to rotate image 180º</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage1_STR" xml:space="preserve">
+    <value>Press to rotate image -1º</value>
+  <comment></comment></data>
+	<data name="PressToRotateImagePlus1_STR" xml:space="preserve">
+    <value>Press to rotate image +1º</value>
+  <comment></comment></data>
+	<data name="PressToSeeOriginalSize_STR" xml:space="preserve">
+    <value>Press to see original size</value>
+  <comment></comment></data>
+	<data name="PressToFitImage_STR" xml:space="preserve">
+    <value>Press to fit image</value>
+  <comment></comment></data>
+	<data name="PressToFitWidth_STR" xml:space="preserve">
+    <value>Press to fit width</value>
+  <comment></comment></data>
+	<data name="PressToZoomIn_STR" xml:space="preserve">
+    <value>Press to zoom in</value>
+  <comment></comment></data>
+	<data name="PressToZoomOut_STR" xml:space="preserve">
+    <value>Press to zoom out</value>
+  <comment></comment></data>
+	<data name="ActualSize_STR" xml:space="preserve">
+    <value>Actual Size</value>
+  <comment></comment></data>
+	<data name="FitImage_STR" xml:space="preserve">
+    <value>Fit Image</value>
+  <comment></comment></data>
+	<data name="FitWidth_STR" xml:space="preserve">
+    <value>Fit Width</value>
+  <comment></comment></data>
+	<data name="ImageFilePath_STR" xml:space="preserve">
+    <value>Image file path</value>
+  <comment></comment></data>
+	<data name="IsInvalid_STR" xml:space="preserve">
+    <value>is invalid!</value>
+  <comment></comment></data>
+	<data name="BothBlackAndWhiteSpeckles_STR" xml:space="preserve">
+    <value>Both black and white speckles</value>
+  <comment></comment></data>
+	<data name="BlackSpecklesOnly_STR" xml:space="preserve">
+    <value>Black speckles only</value>
+  <comment></comment></data>
+	<data name="WhiteSpecklesOnly_STR" xml:space="preserve">
+    <value>White speckles only</value>
+  <comment></comment></data>
+</root>

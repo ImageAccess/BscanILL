@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ViewPane.ItResults.ItResultsImagePane"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:ViewPane"
+	xmlns:toolbar="clr-namespace:ViewPane.Toolbar"
+ 	xmlns:imageTreatmentUi="clr-namespace:ViewPane.ImageTreatmentUi"
+   Height="400" Width="800" x:ClassModifier="public" Loaded="Form_Loaded">
+	
+	<UserControl.Resources>
+		<Style x:Key="styleBullet" TargetType="{x:Type Rectangle}">
+			<Setter Property="Width" Value="20" />
+			<Setter Property="Height" Value="20" />
+			<Setter Property="Fill" Value="Green" />
+			<Setter Property="RadiusX" Value="10" />
+			<Setter Property="RadiusY" Value="10" />
+			<Setter Property="Stroke" Value="White" />
+		</Style>
+
+		<Style x:Key="styleBulletC" TargetType="{x:Type Rectangle}">
+			<Setter Property="Width" Value="20" />
+			<Setter Property="Height" Value="20" />
+			<Setter Property="Fill" Value="Red" />
+			<Setter Property="RadiusX" Value="10" />
+			<Setter Property="RadiusY" Value="10" />
+			<Setter Property="Stroke" Value="White" />
+		</Style>
+
+		<Storyboard x:Key="lockStoryboardKey">
+			<DoubleAnimation Storyboard.TargetName="r1" Storyboard.TargetProperty="Opacity" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r2" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.125" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r3" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.250" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r4" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.375" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r5" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.500" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r6" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.625" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r7" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.750" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+			<DoubleAnimation Storyboard.TargetName="r8" Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.875" From="1" To="0.3" Duration="0:0:1" AutoReverse="False" RepeatBehavior="Forever" />
+		</Storyboard>
+	</UserControl.Resources>
+	
+    <DockPanel >
+		<toolbar:Toolbar x:Name="toolbar" DockPanel.Dock="Top" />
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition Height="16"/>
+			</Grid.RowDefinitions>
+			<DockPanel Grid.Row="0">
+				<ScrollBar x:Name="vScroll" Orientation="Vertical" DockPanel.Dock="Right" Width="16"  Scroll="Scroll" HorizontalAlignment="Right" IsEnabled="False" />
+				<Grid x:Name="pictBox" SizeChanged="PictBox_Resize" ClipToBounds="True" MouseDown="Image_MouseDown" MouseMove="Image_MouseMove"  MouseUp="Image_MouseUp" MouseEnter="Image_MouseEnter" >
+					<Image x:Name="imageBox" Width="Auto" StretchDirection="Both" SnapsToDevicePixels="True" />
+					<Rectangle x:Name="mouseZoneRectangle" Stroke="Black" StrokeThickness="1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" SnapsToDevicePixels="True" />
+					<Grid x:Name="lockUiGrid" Visibility="Hidden" Background="#C8FFFFFF">
+						<Rectangle x:Name="r1" Style="{StaticResource styleBullet}" Margin="0,-80,0,0" Opacity="1"/>
+						<Rectangle x:Name="r2" Style="{StaticResource styleBullet}" Margin="57,-57,0,0" Opacity="0.9" />
+						<Rectangle x:Name="r3" Style="{StaticResource styleBullet}" Margin="80,0,0,0" Opacity="0.80" />
+						<Rectangle x:Name="r4" Style="{StaticResource styleBullet}" Margin="57,57,0,0" Opacity="0.7" />
+						<Rectangle x:Name="r5" Style="{StaticResource styleBullet}" Margin="0,80,0,0" Opacity="0.6" />
+						<Rectangle x:Name="r6" Style="{StaticResource styleBullet}" Margin="-57,57,0,0" Opacity="0.5" />
+						<Rectangle x:Name="r7" Style="{StaticResource styleBullet}" Margin="-80,0,0,0" Opacity="0.4" />
+						<Rectangle x:Name="r8" Style="{StaticResource styleBullet}" Margin="-57,-57,0,0" Opacity="0.3" />
+						<Grid x:Name="progressGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,0" Visibility="Hidden">
+							<ProgressBar x:Name="progressBar" Width="250" Height="20" />
+							<TextBlock x:Name="progressLabel" Text="0%" Margin="320,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" />
+						</Grid>
+					</Grid>
+				</Grid>
+			</DockPanel>
+			<ScrollBar x:Name="hScroll" Grid.Row="1" Orientation="Horizontal" Height="16" Margin="0,0,16,0" Scroll="Scroll" IsEnabled="False" />
+		</Grid>
+	</DockPanel>
+	
+</UserControl>

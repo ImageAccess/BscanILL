@@ -1,0 +1,167 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.ILLiad"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+	Height="440" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="TextBlock">
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style TargetType="TextBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+					<Style TargetType="ComboBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+					<Style TargetType="PasswordBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<CheckBox x:Name="checkBoxEnabled" Content="Enabled" IsChecked="{Binding Path=ILLiadEnabled, Mode=TwoWay}" ToolTip="Check to enable ILLiad functionality." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" HorizontalAlignment="Left" VerticalAlignment="Top" />
+		<Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+			<StackPanel Margin="16,8,16,8">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="24" />
+                    </Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="150"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="ILLiad Version:" Grid.Row="0" Margin="0,0,8,0" />
+					<TextBlock Text="Articles' File Format:" Grid.Row="1" Margin="0,0,8,0" />
+                    <TextBlock Text="Articles' Export File Name:" Grid.Row="2"  Margin="0,0,8,0"/>
+                    <ComboBox x:Name="comboExportName" SelectedIndex="{Binding Path=ExportNameIndex, Mode=TwoWay}" Grid.Row="2"  Grid.Column="1" Margin="0,1" Width="140" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="ILL Number" />
+                        <ComboBoxItem Content="Transaction Number" />
+                    </ComboBox>
+                    <TextBlock x:Name="textFileExportQuality" Text="File Export Quality:" Grid.Row="2" Grid.Column="1" Margin="0,0,55,0" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="comboFileExportQuality" SelectedItem="{Binding Path=FileExportQuality, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="0,0,0,0" Width="50" HorizontalAlignment="Right" />
+                    <Grid Grid.Row="0" Grid.Column="2" >
+						<ComboBox x:Name="comboVersion" SelectedItem="{Binding Path=ILLiadVersionSelectedItem, Mode=TwoWay}" Width="120" HorizontalAlignment="Left" SelectionChanged="ComboVersion_SelectionChanged" />
+						<Grid x:Name="gridAdditionalLines" HorizontalAlignment="Right" Visibility="Collapsed">
+							<TextBox Text="{Binding Path=UpdateExtraMenuItems, Mode=TwoWay}" DockPanel.Dock="Right" Width="40" HorizontalAlignment="Right"/>
+							<TextBlock Text="Additional Update Menu Lines:" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0,0,48,0" />
+						</Grid>
+					</Grid>
+                    <ComboBox x:Name="comboFileFormat" SelectedItem="{Binding Path=FileFormatSelectedItem, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Width="120" HorizontalAlignment="Left" SelectionChanged="ComboFileFormat_SelectionChanged" />
+                    <TextBlock x:Name="textFileExportColorMode" Text="File Color Mode:" Grid.Row="1" Grid.Column="1" Margin="0,0,95,0" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="comboFileExportColorMode" SelectedItem="{Binding Path=FileExportColorModeSelectedItem, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Width="90" HorizontalAlignment="Right" />
+                </Grid>
+
+				<GroupBox x:Name="groupBoxUpdateILLiad" Style="{StaticResource groupBoxWithCheckBox}" Margin="0,8,0,8" >
+					<GroupBox.Header>
+						<Grid Background="#01000000">
+							<CheckBox x:Name="checkExportToOdysseyHelper" IsChecked="{Binding Path=ExportToOdysseyHelper, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Update ILLiad" Checked="CheckExportToOdysseyHelper_CheckedChanged" Unchecked="CheckExportToOdysseyHelper_CheckedChanged" />
+						</Grid>
+					</GroupBox.Header>
+					<StackPanel x:Name="gridExportToOdysseyHelper" Margin="8,8,8,8" IsEnabled="False">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto" />
+								<ColumnDefinition/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<TextBlock Text="Export Directory:" VerticalAlignment="Center" />
+							<TextBox x:Name="textAvoidIP" Grid.Column="1" Text="{Binding Path=OdysseyHelperDir, Mode=TwoWay}" Margin="8,0" />
+							<Button Content="Browse..." Grid.Column="2" Width="75" Click="BrowseOdysseyHelperDir_Click" />
+						</Grid>
+					</StackPanel>
+				</GroupBox>
+
+				<GroupBox Style="{StaticResource groupBoxWithCheckBox}" Margin="0,8,0,8" >
+					<GroupBox.Header>
+						<Grid Background="#01000000">
+							<CheckBox x:Name="checkSql" IsChecked="{Binding Path=CheckSql, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Check Data in SQL Database" Checked="CheckSql_CheckedChanged" Unchecked="CheckSql_CheckedChanged" />
+						</Grid>
+					</GroupBox.Header>
+					<StackPanel x:Name="gridCheckSql" IsEnabled="False">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition Width="19" />
+								<ColumnDefinition Width="76" />
+								<ColumnDefinition Width="8" />
+								<ColumnDefinition Width="120" />
+								<ColumnDefinition Width="32" />
+								<ColumnDefinition Width="120" />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<TextBlock Text="SQL Server Name:" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,4" />
+							<TextBlock Text="Port:" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,4" />
+							<TextBlock Text="SQL Database:" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,6" />
+
+							<TextBox Text="{Binding Path=SqlServer, Mode=TwoWay}" Grid.Column="4" />
+							<TextBox Text="{Binding Path=Port, Mode=TwoWay}" Grid.Row="1" Grid.Column="4" />
+							<TextBox Text="{Binding Path=SqlDatabase, Mode=TwoWay}" Grid.Row="2" Grid.Column="4" />
+
+							<Button Content="Test Connection" Grid.Column="6" Click="TestConnection_Click" />
+
+							<CheckBox Content="Windows Credentials" IsChecked="{Binding Path=SqlWindowsCredentials, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Margin="0,2" />
+							<TextBlock Text="Username:" Grid.Row="4" Grid.Column="1" Margin="16,0,0,0" Grid.ColumnSpan="2" />
+							<TextBlock Text="Password:" Grid.Row="5" Grid.Column="1" Margin="16,0,0,0" Grid.ColumnSpan="2" />
+							<TextBox Text="{Binding Path=SqlUsername, Mode=TwoWay}" Grid.Row="4" Grid.Column="4" />
+							<TextBox Text="{Binding Path=SqlPassword, Mode=TwoWay}" Grid.Row="5" Grid.Column="4" />
+							<StackPanel  Grid.Column="6" Grid.Row="2" Grid.RowSpan="2">
+								<TextBox x:Name="textArticleId" Text="123456" TextAlignment="Right" />
+								<Button Content="Request Article" Grid.Row="0" Grid.Column="5" Click="RequestArticle_Click" />
+							</StackPanel>
+						</Grid>
+
+						<GroupBox Header="Pullslip" Style="{StaticResource groupBoxWithCheckBox}" Margin="0,8,0,8" FontSize="11" >
+							<Grid>
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition />
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto" />
+										<ColumnDefinition />
+										<ColumnDefinition Width="8" />
+										<ColumnDefinition Width="Auto" />
+										<ColumnDefinition Width="80" />
+										</Grid.ColumnDefinitions>
+									<TextBlock Text="Transaction # Orientation:" Grid.Row="0" Grid.Column="0" Margin="0,0,4,0" />
+									<TextBlock Text="Transaction # Zone [in]:" Grid.Row="1" Grid.Column="0" Margin="0,0,4,0" />
+									<TextBlock Text="Transaction # Min:" Grid.Row="0" Grid.Column="3" Margin="0,0,4,0" />
+									<TextBlock Text="Transaction # Max:" Grid.Row="1" Grid.Column="3" Margin="0,0,4,0" />
+
+									<ComboBox x:Name="comboPullslipTnOrientation" HorizontalAlignment="Stretch" SelectedItem="{Binding Path=PullslipTnOrientationSelectedItem, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" />
+									<TextBox Text="{Binding Path=PullslipTnZone, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" />
+									<TextBox Text="{Binding Path=PullslipTnMin, Mode=TwoWay}" Grid.Row="0" Grid.Column="4" />
+									<TextBox Text="{Binding Path=PullslipTnMax, Mode=TwoWay}" Grid.Row="1" Grid.Column="4" />
+								</Grid>
+
+							</Grid>
+						</GroupBox>			
+					
+					</StackPanel>
+				</GroupBox>
+			</StackPanel>
+		</Border>
+	</Grid>
+</local:PanelBase>

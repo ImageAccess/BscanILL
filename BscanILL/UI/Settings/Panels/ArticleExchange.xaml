@@ -1,0 +1,128 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.ArticleExchange"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+    Height="400" Width="500">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="ListViewItem">
+						<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style TargetType="CheckBox">
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style TargetType="TextBox">
+						<Setter Property="Margin" Value="0,1" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style TargetType="PasswordBox">
+						<Setter Property="Margin" Value="0,1" />
+					</Style>
+				</ResourceDictionary>
+
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid>
+		<CheckBox x:Name="checkBoxEnabled" Content="Enabled" IsChecked="{Binding Path=ArticleExchangeEnabled, Mode=TwoWay}" ToolTip="Check to let patrons send images using Article Exchange." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" HorizontalAlignment="Left" VerticalAlignment="Top" />
+		<Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+			<DockPanel Margin="8">
+				<Grid x:Name="gridExport" Margin="8,8,8,8" DockPanel.Dock="Bottom">
+					<Grid.RowDefinitions>
+                        <RowDefinition Height="24"/>
+                        <RowDefinition Height="24"/>                        
+						<RowDefinition Height="22"/>
+						<RowDefinition Height="22"/>
+					</Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Articles' File Format:" Grid.Row="0" />
+                    <ComboBox x:Name="comboFileFormat" SelectedItem="{Binding Path=FileFormatSelectedItem, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" Width="120" HorizontalAlignment="Left" SelectionChanged="ComboFileFormat_SelectionChanged" />
+                    <TextBlock x:Name="textFileExportColorMode" Text="File Color Mode:" Grid.Row="0" Grid.Column="1" Margin="0,0,95,0" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="comboFileExportColorMode" SelectedItem="{Binding Path=FileExportColorModeSelectedItem, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" Width="90" HorizontalAlignment="Right" />
+                    <TextBlock x:Name="textFileExportQuality" Text="File Export Quality:" Grid.Row="1" Grid.Column="1" Margin="0,0,55,0" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="comboFileExportQuality" SelectedItem="{Binding Path=FileExportQuality, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,0" Width="50" HorizontalAlignment="Right" />
+                    <TextBlock Text="Articles' Export File Name:" Grid.Row="1" />
+                    <ComboBox x:Name="comboExportName" SelectedIndex="{Binding Path=ExportNameIndex, Mode=TwoWay}" Grid.Row="1"  Grid.Column="1" Width="140" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="ILL Number" />
+                        <ComboBoxItem Content="Transaction Number" />
+                    </ComboBox>
+                    <CheckBox x:Name="checkUpdateILLiad" Grid.Row="2" Grid.ColumnSpan="2" IsChecked="{Binding Path=UpdateILLiad, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Update ILLiad" Checked="CheckUpdateILLiad_CheckedChanged" Unchecked="CheckUpdateILLiad_CheckedChanged" />
+					<CheckBox x:Name="checkChangeStatusToRequestFinished" Margin="24,0,0,0" Content="Change Status to Request Finished" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" IsChecked="{Binding Path=ChangeStatusToRequestFinished, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="Check to change status to request finished." IsEnabled="False" />
+				</Grid>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Autho:" Grid.Row="0" VerticalAlignment="Top" Margin="0,4,0,1"  />
+					<TextBlock Text="Password:" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <TextBlock Text="Confirmation E-mail Address Specification:" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center" Margin="0,10,8,3" FontWeight="Bold" />
+                    <TextBlock Text="Current Default Address:" Grid.Row="3" VerticalAlignment="Center" Margin="0,0,8,0" />
+					<TextBlock Grid.Row="4" VerticalAlignment="Top" Margin="0,2,8,0"  >
+						<TextBlock>Confirmation E-mail<LineBreak/>Recipients List:</TextBlock>
+					</TextBlock>
+
+					<TextBox Text="{Binding Path=Autho, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,1" Width="150" Grid.Row="0" Grid.Column="1" />
+					<PasswordBox x:Name="passwordBoxPassword" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="150" Margin="0,1" PasswordChanged="PasswordBoxPassword_PasswordChanged" />
+                    <TextBox Text="{Binding Path=ConfirmEmailAddress, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,1" Width="285" Grid.Row="3" Grid.Column="1" ToolTip="Type or select from the recipients list a default confirmation E-mail address." />
+                    <DockPanel Grid.Row="4" Grid.Column="2" >
+                        <Grid>
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                          </Grid.RowDefinitions>
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100"/>
+                          </Grid.ColumnDefinitions>
+                          <ScrollViewer Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" >
+                                <ListBox x:Name="listBoxRecipients" ItemsSource="{Binding ConfirmationRecipients, Mode=OneWay}" ToolTip="a List of predefined E-mail addresses to select a default confirmation E-mail address from." >
+							</ListBox>
+						  </ScrollViewer>
+
+                            <Button Grid.Row="0" Grid.Column="1" Margin="8,2,8,0" Content="Edit..." Width="75" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Edit_Click" ToolTip="Click to edit the list of confirmation E-mail recepients."/>
+                            <Button Grid.Row="0" Grid.Column="1" Margin="8,32,8,0" Content="Set Default..." Width="75" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Click="SetDefault_Click" ToolTip="Click to set selected E-mail address from the list as a default confirmation E-mail address."/>
+                        </Grid>
+                    </DockPanel>
+
+                    <CheckBox x:Name="resetDefaultConfirmAddress" Grid.Row="5" Grid.ColumnSpan="2" Margin="0,0,0,10" IsChecked="{Binding Path=ResetConfirmEmailAddress, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Reset Confirmation Email Address For Every Article" ToolTip="Check to reset a confirmation email address with a default confirmation address for every article before exporting."/>
+					<TextBlock Text="Message Subject:" Grid.Row="6" />
+					<TextBlock Grid.Row="7" VerticalAlignment="Top" >
+						Message Body:<LineBreak/>
+						<TextBlock FontSize="10" Margin="8,0,0,0">{ID} - Article ID</TextBlock><LineBreak/>
+						<TextBlock FontSize="10" Margin="8,0,0,0">{PA} - Patron</TextBlock><LineBreak/>
+						<TextBlock FontSize="10" Margin="8,0,0,0">{URL} - Download Link</TextBlock><LineBreak/>
+						<TextBlock FontSize="10" Margin="8,0,0,0">{PASS} - Download Password</TextBlock>
+					</TextBlock>
+					<TextBox x:Name="textMessageSubject" Grid.Row="6" Grid.Column="1" Text="{Binding Path=ExportMessageSubject, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" ToolTip="Confirmation email subject." />
+					<TextBox x:Name="textMessageBody" Grid.Row="7" Grid.Column="1" VerticalAlignment="Stretch" Text="{Binding Path=ExportMessageBody, Mode=TwoWay}" HorizontalAlignment="Stretch" ToolTip="Confirmation email body." TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+
+				</Grid>
+
+
+			</DockPanel>
+		</Border>
+	</Grid>
+</local:PanelBase>

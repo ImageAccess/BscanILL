@@ -1,0 +1,23 @@
+﻿<toolbar:ToolbarBase x:Class="ViewPane.Toolbar.ToolbarScan"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+ 	xmlns:toolbar="clr-namespace:ViewPane.Toolbar"
+    xmlns:resources="clr-namespace:ViewPane"
+	xmlns:languages="clr-namespace:ViewPane.Languages"
+	mc:Ignorable="d" 
+	x:ClassModifier="internal" 
+	>
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="ToolbarResources.xaml" />
+	</UserControl.Resources>
+
+	<UserControl Style="{StaticResource toolbarStyle}">
+		<StackPanel Orientation="Horizontal">
+			<toolbar:ToolbarButton x:Name="buttonScan" Image="/ViewPane3;component/images/Scan.png" ToolTip="{x:Static languages:UiStrings.PressToScanImage_STR}" Click="Scan_Click" />
+		</StackPanel>
+	</UserControl>
+
+</toolbar:ToolbarBase>

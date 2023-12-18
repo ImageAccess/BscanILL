@@ -1,0 +1,50 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Dialogs.ExportDialog.Email"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Dialogs.ExportDialog"
+	xmlns:settingsPanels="clr-namespace:BscanILL.UI.Settings.Panels"
+	Height="240" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary Source="./PanelsResources.xaml" />
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<Border x:Name="groupBox" Style="{StaticResource groupBorderStyle}" >
+			<Grid x:Name="gridExport" Margin="16,8,16,8" VerticalAlignment="Top">
+				<Grid.RowDefinitions>
+                    <RowDefinition Height="24"/>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="130"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Article File Format:" Grid.Row="1" />
+				<TextBlock Text="Include Pullslip:" Grid.Row="2" />
+				<TextBlock Text="Recipient:" Grid.Row="3" />
+				<TextBlock Text="Message Subject:" Grid.Row="4" />
+				<TextBlock Text="Message Body:" Grid.Row="5" />
+
+                <TextBlock Text="File Name Prefix:" Grid.Row="0" VerticalAlignment="Center" />
+                <TextBox Text="{Binding Path=FileNamePrefix, Mode=TwoWay}" Margin="0,1" Grid.Row="0" Grid.Column="1" Width="140" HorizontalAlignment="Left" />
+                <local:FileFormatControl x:Name="fileformatCtrl" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+				<CheckBox x:Name="checkIncludePullslip" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Path=IncludePullslip, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" />
+                <local:FileParamControl x:Name="fileparamCtrl" Grid.Row="2" Margin="0,0" Grid.Column="1" HorizontalAlignment="Right" />
+				<TextBox x:Name="textRecipient" Grid.Row="3" Grid.Column="1" Text="{Binding Path=Recipient, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" ToolTip="Email recipient." />
+                <TextBox x:Name="textMessageSubject" Grid.Row="4" Grid.Column="1" Text="{Binding Path=MessageSubject, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" ToolTip="Enter the subject of the emails sent to the requestor with the article or instructions on how to retrieve it." />
+                <TextBox x:Name="textMessageBody" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1" Text="{Binding Path=MessageBody, Mode=TwoWay}" ToolTip="Enter the body of the message that the requestor will receive with the article or instructions on how to retrieve it." TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+
+				<CheckBox x:Name="checkUpdateILLiad" Grid.Row="6" Grid.ColumnSpan="2" IsChecked="{Binding Path=UpdateILLiad, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Content="Update ILLiad" Checked="CheckUpdateILLiad_CheckedChanged" Unchecked="CheckUpdateILLiad_CheckedChanged" />
+				<CheckBox x:Name="checkChangeStatusToRequestFinished" Margin="24,4,0,4" Content="Change Status to Request Finished" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" IsChecked="{Binding Path=ChangeStatusToRequestFinished, Mode=TwoWay}" HorizontalAlignment="Left" ToolTip="Check to change status to request finished." IsEnabled="False" />
+
+			</Grid>
+		</Border>
+	</Grid>
+</local:PanelBase>

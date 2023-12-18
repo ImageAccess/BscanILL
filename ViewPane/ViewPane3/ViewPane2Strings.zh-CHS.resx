@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="ApplyAndClose_STR" xml:space="preserve">
+    <value>应用科技关闭</value>
+  <comment></comment></data>
+	<data name="Cancel_STR" xml:space="preserve">
+    <value>取消</value>
+  <comment></comment></data>
+	<data name="CanTAccessOriginalImageFile_STR" xml:space="preserve">
+    <value>无法访问原始图像文件</value>
+  <comment></comment></data>
+	<data name="Close_STR" xml:space="preserve">
+    <value>关闭</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_Description_STR" xml:space="preserve">
+    <value>去斑面膜大小：</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_FormTitle_STR" xml:space="preserve">
+    <value>去斑</value>
+  <comment></comment></data>
+	<data name="DespeckleDlg_Options_STR" xml:space="preserve">
+    <value>去斑的选项：</value>
+  <comment></comment></data>
+	<data name="Enabled_STR" xml:space="preserve">
+    <value>已启用</value>
+  <comment></comment></data>
+	<data name="IpDlg_ApplyTo_STR" xml:space="preserve">
+    <value>适用于：</value>
+  <comment></comment></data>
+	<data name="IpDlg_BackgroundRemoval_STR" xml:space="preserve">
+    <value>背景去除</value>
+  <comment></comment></data>
+	<data name="IpDlg_BbRemoval_STR" xml:space="preserve">
+    <value>去除黑色边框</value>
+  <comment></comment></data>
+	<data name="IpDlg_DespeckleMask_STR" xml:space="preserve">
+    <value>去斑掩码：</value>
+  <comment></comment></data>
+	<data name="IpDlg_FormTitle_STR" xml:space="preserve">
+    <value>图像处理</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupDespeckle_STR" xml:space="preserve">
+    <value>去斑</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupInvert_STR" xml:space="preserve">
+    <value>反相</value>
+  <comment></comment></data>
+	<data name="IpDlg_GroupRotation_STR" xml:space="preserve">
+    <value>旋转</value>
+  <comment></comment></data>
+	<data name="IpDlg_Rotation_STR" xml:space="preserve">
+    <value>旋转：</value>
+  <comment></comment></data>
+	<data name="Ok_STR" xml:space="preserve">
+    <value>还行</value>
+  <comment></comment></data>
+	<data name="CanTAccessReducedImageFile_STR" xml:space="preserve">
+    <value>减少的图像文件无法访问</value>
+  <comment></comment></data>
+	<data name="CanTAccessPreviewFile_STR" xml:space="preserve">
+    <value>无法访问文件预览</value>
+  <comment></comment></data>
+	<data name="ScanID_STR" xml:space="preserve">
+    <value>扫描 ID：</value>
+  <comment></comment></data>
+	<data name="BaseName_STR" xml:space="preserve">
+    <value>基名称：</value>
+  <comment></comment></data>
+	<data name="Created_STR" xml:space="preserve">
+    <value>创建：</value>
+  <comment></comment></data>
+	<data name="BookPart_STR" xml:space="preserve">
+    <value>本书第部分：</value>
+  <comment></comment></data>
+	<data name="Brightness_STR" xml:space="preserve">
+    <value>亮度：</value>
+  <comment></comment></data>
+	<data name="Contrast_STR" xml:space="preserve">
+    <value>对比：</value>
+  <comment></comment></data>
+	<data name="Gamma_STR" xml:space="preserve">
+    <value>Gamma：</value>
+  <comment></comment></data>
+	<data name="PageID_STR" xml:space="preserve">
+    <value>页面 ID：</value>
+  <comment></comment></data>
+	<data name="CanTFindAnyActiveScanSets_STR" xml:space="preserve">
+    <value>找不到任何积极的扫描集 ！</value>
+  <comment></comment></data>
+	<data name="FrontCover_STR" xml:space="preserve">
+    <value>前盖</value>
+  <comment></comment></data>
+	<data name="SpineCover_STR" xml:space="preserve">
+    <value>脊柱盖</value>
+  <comment></comment></data>
+	<data name="RearCover_STR" xml:space="preserve">
+    <value>后盖</value>
+  <comment></comment></data>
+	<data name="HeadEdge_STR" xml:space="preserve">
+    <value>头边缘</value>
+  <comment></comment></data>
+	<data name="TailEdge_STR" xml:space="preserve">
+    <value>尾部边缘</value>
+  <comment></comment></data>
+	<data name="ForeEdge_STR" xml:space="preserve">
+    <value>Fore 边缘</value>
+  <comment></comment></data>
+	<data name="FrontEndPapers_STR" xml:space="preserve">
+    <value>前年底论文</value>
+  <comment></comment></data>
+	<data name="FrontPastdownEndPaper_STR" xml:space="preserve">
+    <value>前 Pastdown 结束纸</value>
+  <comment></comment></data>
+	<data name="FrontFreeEndPaper_STR" xml:space="preserve">
+    <value>前自由端纸</value>
+  <comment></comment></data>
+	<data name="RearEndPapers_STR" xml:space="preserve">
+    <value>后端论文</value>
+  <comment></comment></data>
+	<data name="RearFreeEndPaper_STR" xml:space="preserve">
+    <value>后方免费的结束纸</value>
+  <comment></comment></data>
+	<data name="RearPastdownEndPaper_STR" xml:space="preserve">
+    <value>后方 Pastdown 结束纸</value>
+  <comment></comment></data>
+	<data name="Normal_STR" xml:space="preserve">
+    <value>正常</value>
+  <comment></comment></data>
+	<data name="Other_STR" xml:space="preserve">
+    <value>其他</value>
+  <comment></comment></data>
+	<data name="None_STR" xml:space="preserve">
+    <value>无</value>
+  <comment></comment></data>
+	<data name="Unknown_STR" xml:space="preserve">
+    <value>未知</value>
+  <comment></comment></data>
+	<data name="NoRotation_STR" xml:space="preserve">
+    <value>不进行旋转。</value>
+  <comment></comment></data>
+	<data name="Rotation_STR" xml:space="preserve">
+    <value>90 ° 旋转。</value>
+  <comment></comment></data>
+	<data name="Rotation2_STR" xml:space="preserve">
+    <value>180 ° 旋转。</value>
+  <comment></comment></data>
+	<data name="DespeckleAppliesToBitonalImagesOnly_STR" xml:space="preserve">
+    <value>去斑 (仅适用于黑白图像）。</value>
+  <comment></comment></data>
+	<data name="Rotation3_STR" xml:space="preserve">
+    <value>270 ° 旋转。</value>
+  <comment></comment></data>
+	<data name="BlackBorderRemovalAppliesToBitonalImagesOnly_STR" xml:space="preserve">
+    <value>去除黑色边框 （仅适用于黑白图像）。</value>
+  <comment></comment></data>
+	<data name="BackgroundRemovalAppliesToColorAndGrayscale_STR" xml:space="preserve">
+    <value>（仅适用于彩色和灰度图像） 的背景去除。</value>
+  <comment></comment></data>
+	<data name="InvertFunction_STR" xml:space="preserve">
+    <value>反转功能。</value>
+  <comment></comment></data>
+	<data name="SelectToMoveImage_STR" xml:space="preserve">
+    <value>选择要移动图像</value>
+  <comment></comment></data>
+	<data name="SelectToChooseZoomInArea_STR" xml:space="preserve">
+    <value>选择此选项可在区域中选择缩放</value>
+  <comment></comment></data>
+	<data name="SelectToChooseZoomOutArea_STR" xml:space="preserve">
+    <value>选择此选项可以选择面积缩小</value>
+  <comment></comment></data>
+	<data name="SelectToDynamiclyChangeZoom_STR" xml:space="preserve">
+    <value>选择此选项可以动态更改缩放</value>
+  <comment></comment></data>
+	<data name="SelectToBeAbleToSelectImageArea_STR" xml:space="preserve">
+    <value>选择此选项可将无法选择图像区域</value>
+  <comment></comment></data>
+	<data name="SelectToAllowTheCurrentPageSizeToBeChanged_STR" xml:space="preserve">
+    <value>选择以允许当前的页面大小，要更改而不影响其它页面大小。</value>
+  <comment></comment></data>
+	<data name="PressToMakeClipsOnCurrentImageTheSameSize_STR" xml:space="preserve">
+    <value>按键以使剪辑上当前图像的大小相同。</value>
+  <comment></comment></data>
+	<data name="SelectToAdjustContentClips_STR" xml:space="preserve">
+    <value>选择要调整内容的剪辑</value>
+  <comment></comment></data>
+	<data name="SelectToAdjustBookFoldLeadingPoints_STR" xml:space="preserve">
+    <value>选择此选项可调整书籍折页领先点</value>
+  <comment></comment></data>
+	<data name="SelectToEditFingersZones_STR" xml:space="preserve">
+    <value>选择要编辑的手指区</value>
+  <comment></comment></data>
+	<data name="ClickToChangeSettings_STR" xml:space="preserve">
+    <value>要更改设置，请单击</value>
+  <comment></comment></data>
+	<data name="PressToDisplayFirstImage_STR" xml:space="preserve">
+    <value>按键以显示第一幅图像</value>
+  <comment></comment></data>
+	<data name="PressToDisplayPreviousImage_STR" xml:space="preserve">
+    <value>按键以显示前一个图像</value>
+  <comment></comment></data>
+	<data name="PressToDisplayNextImage_STR" xml:space="preserve">
+    <value>按键以显示下一张图像</value>
+  <comment></comment></data>
+	<data name="PressToDisplayLastImage_STR" xml:space="preserve">
+    <value>按键以显示最后的图像</value>
+  <comment></comment></data>
+	<data name="SelectToDisplayLeftPage_STR" xml:space="preserve">
+    <value>选择要显示的左的页</value>
+  <comment></comment></data>
+	<data name="SelectToDisplayRightPage_STR" xml:space="preserve">
+    <value>选择要显示的右页</value>
+  <comment></comment></data>
+	<data name="PressToScanImage_STR" xml:space="preserve">
+    <value>按下以扫描图像</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage90_STR" xml:space="preserve">
+    <value>按可旋转图像 90 º</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage180_STR" xml:space="preserve">
+    <value>按可旋转图像 180º</value>
+  <comment></comment></data>
+	<data name="PressToRotateImage1_STR" xml:space="preserve">
+    <value>按可旋转图像-大厦 1</value>
+  <comment></comment></data>
+	<data name="PressToRotateImagePlus1_STR" xml:space="preserve">
+    <value>按该按钮可旋转图像 + 大厦 1</value>
+  <comment></comment></data>
+	<data name="PressToSeeOriginalSize_STR" xml:space="preserve">
+    <value>记者看到原始大小</value>
+  <comment></comment></data>
+	<data name="PressToFitImage_STR" xml:space="preserve">
+    <value>记者以适合图像</value>
+  <comment></comment></data>
+	<data name="PressToFitWidth_STR" xml:space="preserve">
+    <value>记者以适合宽度</value>
+  <comment></comment></data>
+	<data name="PressToZoomIn_STR" xml:space="preserve">
+    <value>按可放大</value>
+  <comment></comment></data>
+	<data name="PressToZoomOut_STR" xml:space="preserve">
+    <value>新闻要缩小</value>
+  <comment></comment></data>
+	<data name="ActualSize_STR" xml:space="preserve">
+    <value>实际大小</value>
+  <comment></comment></data>
+	<data name="FitImage_STR" xml:space="preserve">
+    <value>图像尺寸调整</value>
+  <comment></comment></data>
+	<data name="FitWidth_STR" xml:space="preserve">
+    <value>适应的宽度</value>
+  <comment></comment></data>
+	<data name="ImageFilePath_STR" xml:space="preserve">
+    <value>图像的文件路径</value>
+  <comment></comment></data>
+	<data name="IsInvalid_STR" xml:space="preserve">
+    <value>无效 ！</value>
+  <comment></comment></data>
+	<data name="BothBlackAndWhiteSpeckles_STR" xml:space="preserve">
+    <value>这两个白色和黑色的斑点</value>
+  <comment></comment></data>
+	<data name="BlackSpecklesOnly_STR" xml:space="preserve">
+    <value>黑色斑只</value>
+  <comment></comment></data>
+	<data name="WhiteSpecklesOnly_STR" xml:space="preserve">
+    <value>白只斑</value>
+  <comment></comment></data>
+</root>

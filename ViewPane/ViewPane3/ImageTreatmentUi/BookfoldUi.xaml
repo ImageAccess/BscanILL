@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="ViewPane.ImageTreatmentUi.BookfoldUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:ClassModifier="internal"
+	xmlns:local="clr-namespace:ViewPane"
+	xmlns:localUi="clr-namespace:ViewPane.ImageTreatmentUi"
+    Height="300" Width="300" >
+
+	<Grid x:Name="mainGrid">
+		<localUi:CurveUi x:Name="curveUiT" />
+		<localUi:CurveUi x:Name="curveUiB" />
+	</Grid>
+	
+</UserControl>

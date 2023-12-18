@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ViewPane.ImageTreatmentUi.OpticsUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:ClassModifier="internal"
+    Height="18" Width="300" Cursor="ScrollNS" SnapsToDevicePixels="True">
+    
+	<Grid MouseMove="Mouse_Move" MouseLeftButtonDown="Mouse_LeftButtonDown" MouseLeftButtonUp="Mouse_LeftButtonUp">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="18"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Rectangle Fill="Black" Stroke="#DCDCDC" Height="3" Grid.Column="0" />
+		<Rectangle Fill="Black" Stroke="#DCDCDC" Height="3" Grid.Column="2" />
+		<Grid Grid.Column="1" Background="#01FFFFFF">
+			<Polygon Points="1,7 17,7 17,1 4,1 1,4" Fill="#80CCCCCC" VerticalAlignment="Top" Stroke="Black" />
+			<Rectangle Width="1" Height="2" Fill="Black" VerticalAlignment="Top" Margin="0,9,0,0"/>
+			<Rectangle Width="1" Height="2" Fill="Black" VerticalAlignment="Top" Margin="0,13,0,0"/>
+			<Rectangle Width="18" Height="2" Fill="Black" VerticalAlignment="Bottom" />
+		</Grid>
+	</Grid>
+	
+</UserControl>

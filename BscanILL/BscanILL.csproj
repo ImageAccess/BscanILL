@@ -1,0 +1,1621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E348B3EC-4A7E-4550-AF52-EDB17D9298E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BscanILL</RootNamespace>
+    <AssemblyName>BscanILL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ProgramsDebug\BscanILL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ProgramsRelease\BscanILL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ProgramsDebug\BscanILL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\ProgramsRelease\BscanILL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ARSoft.Tools.Net, Version=2.2.9.0, Culture=neutral, PublicKeyToken=1940454cd762ec57, processorArchitecture=MSIL">
+      <HintPath>..\packages\ARSoft.Tools.Net.2.2.9\lib\net45\ARSoft.Tools.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ArticleExchangeWrapper, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\ArticleExchangeWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="BIP, Version=3.8.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\BIP.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bscan, Version=2.0.4.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\Bscan.dll</HintPath>
+    </Reference>
+    <Reference Include="ClickDLL, Version=11.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\ClickDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="FTPClientConnector">
+      <HintPath>..\Shared\FTPClientConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Shared\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\Shared\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media">
+      <HintPath>..\Shared\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT">
+      <HintPath>..\Shared\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\Shared\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="jbig2_1.4, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\jbig2_1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Jscape.Ftp">
+      <HintPath>..\Shared\Jscape.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Jscape.Licensing">
+      <HintPath>..\Shared\Jscape.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Jscape.Ssh">
+      <HintPath>..\Shared\Jscape.Ssh.dll</HintPath>
+    </Reference>
+    <Reference Include="Jscape.Util">
+      <HintPath>..\Shared\Jscape.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="KssFolderAPIClientNS, Version=2.0.7076.14307, Culture=neutral, PublicKeyToken=562e6c3644cca616, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\KssFolderAPIClientNS.dll</HintPath>
+    </Reference>
+    <Reference Include="OCREngineLibrary, Version=5.0.7.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\OCREngineLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="SmartAssembly.Attributes, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\SmartAssembly.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TwainApp, Version=2.6.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared\TwainApp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="yeti.mmedia">
+      <HintPath>..\Shared\yeti.mmedia.dll</HintPath>
+    </Reference>
+    <Reference Include="yeti.mp3">
+      <HintPath>..\Shared\yeti.mp3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DB\Database.cs" />
+    <Compile Include="Export\AdditionalInfo\AdditionalInfoClasses.cs" />
+    <Compile Include="Export\AdditionalInfo\IAdditionalInfo.cs" />
+    <Compile Include="Export\AE\ArticleExchange.cs" />
+    <Compile Include="Export\AudioZoning\Zone.cs" />
+    <Compile Include="Export\AudioZoning\ZonesImage.cs" />
+    <Compile Include="Export\Enums.cs" />
+    <Compile Include="Export\ExportFiles\Abbyy.cs" />
+    <Compile Include="Export\ExportFiles\AudioCreator.cs" />
+    <Compile Include="Export\ExportFiles\ExportFiles.cs" />
+    <Compile Include="Export\ExportFiles\ExportFilesBasics.cs" />
+    <Compile Include="Export\ExportFiles\Iris.cs" />
+    <Compile Include="Export\ExportFiles\ITextSharp.cs" />
+    <Compile Include="Export\ExportFiles\Misc.cs" />
+    <Compile Include="Export\ExportFiles\MultiTiffCreator.cs" />
+    <Compile Include="Export\ExportTempUnit.cs" />
+    <Compile Include="Export\ExportTempUnits.cs" />
+    <Compile Include="Export\Rapido\Rapido.cs" />
+    <Compile Include="Export\Tipasa\Tipasa.cs" />
+    <Compile Include="Export\WorldShareILL\WorldShareILL.cs" />
+    <Compile Include="FileSystem\ImageImport.cs" />
+    <Compile Include="FileSystem\ImportedImage.cs" />
+    <Compile Include="FileSystem\PdfExtractor.cs" />
+    <Compile Include="Export\ExportFiles\PdfsBuilder.cs" />
+    <Compile Include="Export\ExportFiles\TextFileCreator.cs" />
+    <Compile Include="Export\Ariel\Ariel3_X.cs" />
+    <Compile Include="Export\Ariel\Ariel4_X.cs" />
+    <Compile Include="Export\ExportUnits.cs" />
+    <Compile Include="Export\ILL\ArielAddressBookExtractor\AddressBookItem.cs" />
+    <Compile Include="Export\ILL\ArielAddressBookExtractor\ArielAddressBookExtractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\ILL\ArielAddressBookExtractor\ArielAddressBookExtractorForm.Designer.cs">
+      <DependentUpon>ArielAddressBookExtractorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ILL\ArielAddressBookExtractor\DatabaseSql.cs" />
+    <Compile Include="Export\Ariel\ArielBasics.cs" />
+    <Compile Include="Export\ILLiad\Enums.cs" />
+    <Compile Include="Export\Printing\Enums.cs" />
+    <Compile Include="Export\Printing\IIllPrinter.cs" />
+    <Compile Include="Export\Printing\IInputBin.cs" />
+    <Compile Include="Export\Printing\IllPrintableArea.cs" />
+    <Compile Include="Export\Printing\IllPrinters.cs" />
+    <Compile Include="Export\Printing\IPaperSize.cs" />
+    <Compile Include="Export\Printing\PrintBatch.cs" />
+    <Compile Include="Export\Printing\PrinterProfile.cs" />
+    <Compile Include="Export\Printing\PrinterProfiles.cs" />
+    <Compile Include="Export\Printing\PrintingOptions.cs" />
+    <Compile Include="Export\Printing\PrintOption.cs" />
+    <Compile Include="Export\Printing\PrintOptions.cs" />
+    <Compile Include="Export\Printing\PrintPageElement.cs" />
+    <Compile Include="Export\Printing\PrintPaginator.cs" />
+    <Compile Include="Export\Printing\PrintTestSheetPaginator.cs" />
+    <Compile Include="Export\Printing\StreamString.cs" />
+    <Compile Include="Export\Printing\Win32\IllInputBin.cs" />
+    <Compile Include="Export\Printing\Win32\IllPaperSize.cs" />
+    <Compile Include="Export\Printing\Win32\IllPrinter.cs" />
+    <Compile Include="Export\Printing\Win32\IllPrinters.cs" />
+    <Compile Include="Export\Printing\Xps\IllInputBin.cs" />
+    <Compile Include="Export\Printing\Xps\IllPaperSize.cs" />
+    <Compile Include="Export\Printing\Xps\IllPrinter.cs" />
+    <Compile Include="Export\Printing\Xps\IllPrinters.cs" />
+    <Compile Include="Export\Printing\Xps\PrintPageElement.cs" />
+    <Compile Include="Export\Printing\Xps\PrintPaginator.cs" />
+    <Compile Include="Export\Printing\Xps\PrintTestSheetPaginator.cs" />
+    <Compile Include="FP\FormsProcessing.cs" />
+    <Compile Include="FP\FormsProcessingResult.cs" />
+    <Compile Include="Hierarchy\SessionBatch.cs" />
+    <Compile Include="Misc\EmailValidator.cs" />
+    <Compile Include="Misc\EmailValidatorHttp.cs" />
+    <Compile Include="Misc\Printing.cs" />
+    <Compile Include="Misc\RapidoDllsLoader.cs" />
+    <Compile Include="Properties\FrameEdit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>FrameEdit.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Hierarchy\Article.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQL7_2.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQL7_3.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQL7_4.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQL8_1.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQL8_1_4_0.cs" />
+    <Compile Include="Export\ILLiad\DatabaseSQLBase.cs" />
+    <Compile Include="Export\ILL\DataProtector.cs" />
+    <Compile Include="Export\ILLiad\DsIlliad.cs">
+      <DependentUpon>DsIlliad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ILLiad\DsIlliad.Designer.cs">
+      <DependentUpon>DsIlliad.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Export\Email\EmailExport.cs" />
+    <Compile Include="Export\ExportUnit.cs" />
+    <Compile Include="Export\Exporter.cs" />
+    <Compile Include="Export\FTP\FtpThruFileSystem.cs" />
+    <Compile Include="Export\FTP\FtpServer.cs" />
+    <Compile Include="Export\Ariel\IAriel.cs" />
+    <Compile Include="Export\ILLiad\IDatabaseSQL.cs" />
+    <Compile Include="Export\ILLiad\IILLiad.cs" />
+    <Compile Include="Export\ILL\IllException.cs" />
+    <Compile Include="Export\ILLiad\ILLiad7_1_8_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad7_2_0_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad7_3_0_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad7_4_0_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad8_0_0_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad8_1_0_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiad8_1_4_0.cs" />
+    <Compile Include="Export\ILLiad\ILLiadBasics.cs" />
+    <Compile Include="Export\ILL\ImDataParser.cs" />
+    <Compile Include="Export\ILL\IniFile.cs" />
+    <Compile Include="Export\ILL\Odyssey.cs" />
+    <Compile Include="Export\ILL\PullslipReader\BookPullslipParser.cs" />
+    <Compile Include="Export\ILL\PullslipReader\IPullslip.cs" />
+    <Compile Include="Export\ILL\PullslipReader\JournalPullslipParser.cs" />
+    <Compile Include="Export\ILL\PullslipReader\MainClass.cs" />
+    <Compile Include="Export\ILL\PullslipReader\Pullslip.cs" />
+    <Compile Include="Export\ILL\PullslipReader\RapidParser.cs" />
+    <Compile Include="Export\ILL\PullslipReader\WordXmlParserTexas.cs" />
+    <Compile Include="Export\ILL\PullslipReader\WordXmlParserUniversal.cs" />
+    <Compile Include="Export\FileSystem\SaveOnDisk.cs" />
+    <Compile Include="Export\ILL\TransactionPair.cs" />
+    <Compile Include="Export\Email\DlsgEmail.cs" />
+    <Compile Include="Export\Email\Email.cs" />
+    <Compile Include="Export\ExportBasics.cs" />
+    <Compile Include="Export\ExportType.cs" />
+    <Compile Include="Export\FTP\FtpLogin.cs" />
+    <Compile Include="Export\ExportFiles\ExportBasics.cs" />
+    <Compile Include="Export\ExportFiles\ExportFile.cs" />
+    <Compile Include="Export\IP\ExportFileCreator.cs" />
+    <Compile Include="Export\ExportFiles\ExportFilesCreator.cs" />
+    <Compile Include="Export\Misc.cs" />
+    <Compile Include="Hierarchy\IllPages.cs" />
+    <Compile Include="Hierarchy\IllPage.cs" />
+    <Compile Include="Hierarchy\IllImage.cs" />
+    <Compile Include="Hierarchy\IllImages.cs" />
+    <Compile Include="Hierarchy\IllPdf.cs" />
+    <Compile Include="Hierarchy\Misc.cs" />
+    <Compile Include="IP\IllImageOperations.cs" />
+    <Compile Include="IP\ImageFileSizeReducer.cs" />
+    <Compile Include="IP\PreviewCreator.cs" />
+    <Compile Include="IP\Resizing.cs" />
+    <Compile Include="Misc\CleanUp.cs" />
+    <Compile Include="Misc\DataProtector.cs" />
+    <Compile Include="Misc\ErrorCodes.cs" />
+    <Compile Include="Misc\FileEncryption.cs" />
+    <Compile Include="Misc\IllException.cs" />
+    <Compile Include="Misc\Io.cs" />
+    <Compile Include="Misc\Licensing.cs" />
+    <Compile Include="Misc\MemoryManagement.cs" />
+    <Compile Include="Misc\Misc.cs" />
+    <Compile Include="Misc\Zipping.cs" />
+    <Compile Include="Scan\Misc.cs" />
+    <Compile Include="Scan\ScannersManager.cs" />
+    <Compile Include="SETTINGS\ScanSettings.cs" />
+    <Compile Include="SETTINGS\ScanSettingsPullSlips.cs" />
+    <Compile Include="SETTINGS\Settings.cs" />
+    <Compile Include="UI\Buttons\BigFunctionButton.cs" />
+    <Compile Include="UI\Buttons\ControlButton.cs" />
+    <Compile Include="UI\Buttons\DialogButton.cs" />
+    <Compile Include="UI\Buttons\RadioWithHole.cs" />
+    <Compile Include="UI\Buttons\TurnPagesButton.cs" />
+    <Compile Include="UI\Controls\ArticleControl.xaml.cs">
+      <DependentUpon>ArticleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ArticleControlSmall.xaml.cs">
+      <DependentUpon>ArticleControlSmall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\CleanUpControl.xaml.cs">
+      <DependentUpon>CleanUpControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\FastKeysControl.xaml.cs">
+      <DependentUpon>FastKeysControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Adf\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\ClickMiniControl.xaml.cs">
+      <DependentUpon>ClickMiniControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\BrightnessContrastControl.xaml.cs">
+      <DependentUpon>BrightnessContrastControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\ScanModeControl.xaml.cs">
+      <DependentUpon>ScanModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\ColorModeControl.xaml.cs">
+      <DependentUpon>ColorModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\DpiRollingControl.xaml.cs">
+      <DependentUpon>DpiRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\FileFormatControl.xaml.cs">
+      <DependentUpon>FileFormatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ClickMini\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\ClickControl.xaml.cs">
+      <DependentUpon>ClickControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\BookEdgeControl.xaml.cs">
+      <DependentUpon>BookEdgeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\AdfControl.xaml.cs">
+      <DependentUpon>AdfControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\BrightnessContrastControl.xaml.cs">
+      <DependentUpon>BrightnessContrastControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\ScanModeControl.xaml.cs">
+      <DependentUpon>ScanModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\ScanPageControl.xaml.cs">
+      <DependentUpon>ScanPageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\ColorModeControl.xaml.cs">
+      <DependentUpon>ColorModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\DpiRollingControl.xaml.cs">
+      <DependentUpon>DpiRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\FileFormatControl.xaml.cs">
+      <DependentUpon>FileFormatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Click\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\Enums.cs" />
+    <Compile Include="UI\Controls\ScannerControls\PullslipAdfControl.xaml.cs">
+      <DependentUpon>PullslipAdfControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\PullslipBookEdgeControl.xaml.cs">
+      <DependentUpon>PullslipBookEdgeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\PullslipClickControl.xaml.cs">
+      <DependentUpon>PullslipClickControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\PullslipClickMiniControl.xaml.cs">
+      <DependentUpon>PullslipClickMiniControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\PullslipS2NControl.xaml.cs">
+      <DependentUpon>PullslipS2NControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\PullslipScannersControl.xaml.cs">
+      <DependentUpon>PullslipScannersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\PageSplittingControl.xaml.cs">
+      <DependentUpon>PageSplittingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\PageSplittingStartPageControl.xaml.cs">
+      <DependentUpon>PageSplittingStartPageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\ScannersControl.xaml.cs">
+      <DependentUpon>ScannersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2NControl.xaml.cs">
+      <DependentUpon>S2NControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\BitonalThresholdControl.xaml.cs">
+      <DependentUpon>BitonalThresholdControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\BrightnessContrastControl.xaml.cs">
+      <DependentUpon>BrightnessContrastControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\ColorModeControl.xaml.cs">
+      <DependentUpon>ColorModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\DocModeControlControl.xaml.cs">
+      <DependentUpon>DocModeControlControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\DespeckleControl.xaml.cs">
+      <DependentUpon>DespeckleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\DocSizeControl.xaml.cs">
+      <DependentUpon>DocSizeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\DpiModeControl.xaml.cs">
+      <DependentUpon>DpiModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\DpiRollingControl.xaml.cs">
+      <DependentUpon>DpiRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\FileFormatControl.xaml.cs">
+      <DependentUpon>FileFormatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\GammaRollingControl.xaml.cs">
+      <DependentUpon>GammaRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\JpegQualityRollingControl.xaml.cs">
+      <DependentUpon>JpegQualityRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\RotationControl.xaml.cs">
+      <DependentUpon>RotationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\S2N\SharpenControl.xaml.cs">
+      <DependentUpon>SharpenControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\S2N\TiffCompressionControl.xaml.cs">
+      <DependentUpon>TiffCompressionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Twain\BrightnessContrastControl.xaml.cs">
+      <DependentUpon>BrightnessContrastControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Twain\ColorModeControl.xaml.cs">
+      <DependentUpon>ColorModeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\BookEdge\PageControl.xaml.cs">
+      <DependentUpon>PageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\BookEdge\ScannerControlBase.cs" />
+    <Compile Include="UI\Controls\ScannerControls\Adf\DuplexControl.xaml.cs">
+      <DependentUpon>DuplexControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Twain\DpiRollingControl.xaml.cs">
+      <DependentUpon>DpiRollingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\Twain\FileFormatControl.xaml.cs">
+      <DependentUpon>FileFormatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScannerControls\GridLengthAnimation.cs" />
+    <Compile Include="UI\Controls\ScannerControls\IScannerControl.cs" />
+    <Compile Include="UI\Controls\ScannerControls\Twain\ScannerControlBase.cs" />
+    <Compile Include="UI\Converters\Converters.cs" />
+    <Compile Include="UI\Converters\TabConverters.cs" />
+    <Compile Include="UI\Dialogs\DependencyDlg.xaml.cs">
+      <DependentUpon>DependencyDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\FileParamControl.xaml.cs">
+      <DependentUpon>FileParamControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\Rapido.xaml.cs">
+      <DependentUpon>Rapido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\Tipasa.xaml.cs">
+      <DependentUpon>Tipasa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\WorldShareILL.xaml.cs">
+      <DependentUpon>WorldShareILL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ImportFromDiskDlg.xaml.cs">
+      <DependentUpon>ImportFromDiskDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\PrintOptionDlg.xaml.cs">
+      <DependentUpon>PrintOptionDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\Scanning\S2NAdditionalSettingsDlg.xaml.cs">
+      <DependentUpon>S2NAdditionalSettingsDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\IFrameBase.cs" />
+    <Compile Include="UI\Frames\ItResults\ControlPanel.xaml.cs">
+      <DependentUpon>ControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\ItResults\FrameItResults.cs" />
+    <Compile Include="UI\Frames\ItResults\FrameItResultsUi.xaml.cs">
+      <DependentUpon>FrameItResultsUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\ItResults\ItExecution.cs" />
+    <Compile Include="UI\Frames\Edit\SkipItExecution.cs" />
+    <Compile Include="UI\Frames\Resend\ArticleLocal.cs" />
+    <Compile Include="UI\Frames\Resend\ArticlesLocalComparer.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanAdf.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanClickMini.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanS2N.cs" />
+    <Compile Include="UI\Frames\Shared\FrameClickMini.cs" />
+    <Compile Include="UI\Frames\Shared\FrameClick.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartAdf.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartClickMini.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartS2N.cs" />
+    <Compile Include="UI\ItSettings\Panels\ImageDependency.xaml.cs">
+      <DependentUpon>ImageDependency.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItSettings\Panels\PanelBase.cs" />
+    <Compile Include="UI\ItSettings\Panels\ContentLocation.xaml.cs">
+      <DependentUpon>ContentLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItSettings\ItSettingsDlg.xaml.cs">
+      <DependentUpon>ItSettingsDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\AlertDlg.xaml.cs">
+      <DependentUpon>AlertDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ArticleDlg.xaml.cs">
+      <DependentUpon>ArticleDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ComboItems.cs" />
+    <Compile Include="UI\Dialogs\ExportDialog\Ariel.xaml.cs">
+      <DependentUpon>Ariel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\BoolToStringConverter.cs" />
+    <Compile Include="UI\Dialogs\ExportDialog\ArticleExchange.xaml.cs">
+      <DependentUpon>ArticleExchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\FileFormatControl.xaml.cs">
+      <DependentUpon>FileFormatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\ExportDlg.xaml.cs">
+      <DependentUpon>ExportDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\Ftp.xaml.cs">
+      <DependentUpon>Ftp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\FtpDir.xaml.cs">
+      <DependentUpon>FtpDir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\FtpLoginControl.xaml.cs">
+      <DependentUpon>FtpLoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\ILLiad.xaml.cs">
+      <DependentUpon>ILLiad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\IPanel.cs" />
+    <Compile Include="UI\Dialogs\ExportDialog\Odyssey.xaml.cs">
+      <DependentUpon>Odyssey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\PanelBase.cs" />
+    <Compile Include="UI\Dialogs\ExportDialog\Printer.xaml.cs">
+      <DependentUpon>Printer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\ExportDialog\SaveOnDisk.xaml.cs">
+      <DependentUpon>SaveOnDisk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DialogBase.cs" />
+    <Compile Include="UI\Dialogs\TransactionNumberDlg.xaml.cs">
+      <DependentUpon>TransactionNumberDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\AutoItControl.xaml.cs">
+      <DependentUpon>AutoItControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\AutoItExecution.cs" />
+    <Compile Include="UI\Frames\Edit\ControlPanel.xaml.cs">
+      <DependentUpon>ControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\AutoItFloatingPanel.xaml.cs">
+      <DependentUpon>AutoItFloatingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\FrameEdit.cs" />
+    <Compile Include="UI\Frames\Edit\FrameEditUi.xaml.cs">
+      <DependentUpon>FrameEditUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\ItExecution.cs" />
+    <Compile Include="UI\Frames\Edit\ManualItControl.xaml.cs">
+      <DependentUpon>ManualItControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Edit\ManualItExecution.cs" />
+    <Compile Include="UI\Frames\Export\ProgressPanel.xaml.cs">
+      <DependentUpon>ProgressPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Export\FrameExportUi.xaml.cs">
+      <DependentUpon>FrameExportUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Export\FrameExport.cs" />
+    <Compile Include="UI\Frames\FrameBase.cs" />
+    <Compile Include="UI\Frames\Help\FrameHelpUi.xaml.cs">
+      <DependentUpon>FrameHelpUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Help\FrameHelp.cs" />
+    <Compile Include="UI\Frames\StartUp\StartUpUi.xaml.cs">
+      <DependentUpon>StartUpUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Resend\FrameResendUi.xaml.cs">
+      <DependentUpon>FrameResendUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Resend\FrameResend.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanTwain.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScan.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanClick.cs" />
+    <Compile Include="UI\Frames\Scan\FrameScanUi.xaml.cs">
+      <DependentUpon>FrameScanUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Start\FrameStart.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartClick.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartTwain.cs" />
+    <Compile Include="UI\Frames\Start\FrameStartUi.xaml.cs">
+      <DependentUpon>FrameStartUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frames\Scan\IFrameScanScanner.cs" />
+    <Compile Include="UI\Frames\Start\IFrameStartScanner.cs" />
+    <Compile Include="UI\Misc.cs" />
+    <Compile Include="UI\Settings\AddIllUsbDriveDlg.xaml.cs">
+      <DependentUpon>AddIllUsbDriveDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Controls\PrintFunctionalityPanel.xaml.cs">
+      <DependentUpon>PrintFunctionalityPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\ArticleExchangeRecipientsDlg.xaml.cs">
+      <DependentUpon>ArticleExchangeRecipientsDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\ArticleForm.xaml.cs">
+      <DependentUpon>ArticleForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\FtpServerDlg.xaml.cs">
+      <DependentUpon>FtpServerDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\LicenseRequestDlg.xaml.cs">
+      <DependentUpon>LicenseRequestDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\PrinterDlg.xaml.cs">
+      <DependentUpon>PrinterDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Dialogs\PrintFunctionalityDlg.xaml.cs">
+      <DependentUpon>PrintFunctionalityDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItSettings\Panels\Deskew.xaml.cs">
+      <DependentUpon>Deskew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItSettings\Panels\BookfoldCorrection.xaml.cs">
+      <DependentUpon>BookfoldCorrection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Ariel.xaml.cs">
+      <DependentUpon>Ariel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ArticleExchange.xaml.cs">
+      <DependentUpon>ArticleExchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\BoolToStringConverter.cs" />
+    <Compile Include="UI\Settings\Panels\CloudAndSmartDock.xaml.cs">
+      <DependentUpon>CloudAndSmartDock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\CleanUp.xaml.cs">
+      <DependentUpon>CleanUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\FormsProcessing.xaml.cs">
+      <DependentUpon>FormsProcessing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Ftp.xaml.cs">
+      <DependentUpon>Ftp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\FtpDir.xaml.cs">
+      <DependentUpon>FtpDir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\NotifsAndStats.xaml.cs">
+      <DependentUpon>NotifsAndStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Odyssey.xaml.cs">
+      <DependentUpon>Odyssey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\PreferredDelivery.xaml.cs">
+      <DependentUpon>PreferredDelivery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Rapido.xaml.cs">
+      <DependentUpon>Rapido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\SaveOnDisk.xaml.cs">
+      <DependentUpon>SaveOnDisk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ILLiad.xaml.cs">
+      <DependentUpon>ILLiad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItSettings\Panels\FingerRemoval.xaml.cs">
+      <DependentUpon>FingerRemoval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Export.xaml.cs">
+      <DependentUpon>Export.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\General.xaml.cs">
+      <DependentUpon>General.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\PanelBase.cs" />
+    <Compile Include="UI\Settings\Panels\PasswordBoxAssistant.cs" />
+    <Compile Include="UI\Settings\Panels\Printer.xaml.cs">
+      <DependentUpon>Printer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Printers.xaml.cs">
+      <DependentUpon>Printers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Scanner.xaml.cs">
+      <DependentUpon>Scanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ScannerAddOn.xaml.cs">
+      <DependentUpon>ScannerAddOn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ScannerClickMini.xaml.cs">
+      <DependentUpon>ScannerClickMini.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ScannerRebel.xaml.cs">
+      <DependentUpon>ScannerRebel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ScannerS2N.xaml.cs">
+      <DependentUpon>ScannerS2N.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\ScannerTwain.xaml.cs">
+      <DependentUpon>ScannerTwain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\SharedDisk.xaml.cs">
+      <DependentUpon>SharedDisk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\Tipasa.xaml.cs">
+      <DependentUpon>Tipasa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\Panels\WorldShareILL.xaml.cs">
+      <DependentUpon>WorldShareILL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\SettingsDlg.xaml.cs">
+      <DependentUpon>SettingsDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\SettingsDlg.functions.cs" />
+    <Compile Include="UI\Windows\ItResultsWindow.xaml.cs">
+      <DependentUpon>ItResultsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SecondWindow.xaml.cs">
+      <DependentUpon>SecondWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Dialogs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ArticleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ArticleControlSmall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\CleanUpControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\FastKeysControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMiniControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMini\BrightnessContrastControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMini\ScanModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMini\ColorModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMini\DpiRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickMini\FileFormatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ClickControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\BookEdgeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\AdfControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\BrightnessContrastControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\ScanModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\ScanPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\ColorModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\DpiRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Click\FileFormatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipAdfControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipBookEdgeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipClickControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipClickMiniControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipS2NControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\PullslipScannersControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\PageSplittingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\PageSplittingStartPageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ScannersControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2NControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\BitonalThresholdControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\BrightnessContrastControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\ColorModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\DocModeControlControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\DespeckleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\DocSizeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\DpiModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\DpiRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\FileFormatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\GammaRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\JpegQualityRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\RotationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\SharpenControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\S2N\TiffCompressionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Twain\BrightnessContrastControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Twain\ColorModeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\BookEdge\PageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Adf\DuplexControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Twain\DpiRollingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\Twain\FileFormatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ScannerControls\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\DependencyDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\FileParamControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Rapido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Tipasa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\WorldShareILL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\ImportFromDiskDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\PrintOptionDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\Scanning\S2NAdditionalSettingsDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\ItResults\ControlPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\ItResults\FrameItResultsUi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\ImageDependency.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\PanelsResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\ContentLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\ItSettingsDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\AlertDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ArticleDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Ariel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\ArticleExchange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\FileFormatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Email.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\ExportDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Ftp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\FtpDir.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\FtpLoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\ILLiad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Odyssey.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\PanelsResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\Printer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\ExportDialog\SaveOnDisk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\TransactionNumberDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Edit\AutoItControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Edit\ControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Edit\AutoItFloatingPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\Edit\FrameEditUi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\Edit\ManualItControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Export\ProgressPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\Export\FrameExportUi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\Help\FrameHelpUi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Frames\StartUp\StartUpUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Resend\FrameResendUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Scan\FrameScanUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Frames\Start\FrameStartUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResourceDictionaries\WindowDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\AddIllUsbDriveDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Controls\PrintFunctionalityPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\ArticleExchangeRecipientsDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\ArticleForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\FtpServerDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\LicenseRequestDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\PrinterDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Dialogs\PrintFunctionalityDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\Deskew.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\BookfoldCorrection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Ariel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ArticleExchange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\CloudAndSmartDock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\CleanUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Email.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\FormsProcessing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Ftp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\FtpDir.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\NotifsAndStats.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Odyssey.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\PreferredDelivery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Rapido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\Panels\SaveOnDisk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ILLiad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ItSettings\Panels\FingerRemoval.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Export.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\General.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\PanelsResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Printer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Printers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Scanner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ScannerAddOn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ScannerClickMini.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ScannerRebel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ScannerS2N.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\ScannerTwain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\SharedDisk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Settings\Panels\Tipasa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\Panels\WorldShareILL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Settings\SettingsDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Export.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ModalDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\ItResultsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\SecondWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\Notifications.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Export\ILL\ArielAddressBookExtractor\ArielAddressBookExtractorForm.resx">
+      <DependentUpon>ArielAddressBookExtractorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\BscanILLData.db3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="data\data12634.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="data\data12635.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Export\ILLiad\DsIlliad.xsc">
+      <DependentUpon>DsIlliad.xsd</DependentUpon>
+    </None>
+    <None Include="Export\ILLiad\DsIlliad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsIlliad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Export\ILLiad\DsIlliad.xss">
+      <DependentUpon>DsIlliad.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\FrameEdit.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>FrameEdit.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="RequiredFiles\FormsProcessing\Apps\ILLScan.bsa">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="RequiredFiles\FormsProcessing\Lib\Default\Default-ID.bsf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="RequiredFiles\FormsProcessing\Lib\Default\Default-Reg-FormA.bsf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="RequiredFiles\FormsProcessing\Lib\Default\Default.bsa">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sRGB.profile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ico430.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BscanILLData\BscanILLData.csproj">
+      <Project>{aa460e66-a963-4e3e-ad4a-d865abe9ab86}</Project>
+      <Name>BscanILLData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scanners\Scanners.csproj">
+      <Project>{7F8324C1-9926-4E95-A726-48AFA843FE82}</Project>
+      <Name>Scanners</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewPane\ViewPane3\ViewPane3.csproj">
+      <Project>{E8BF8977-7624-4DCB-9892-4DA9C8691E4A}</Project>
+      <Name>ViewPane3</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileUtilities.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Scanner\ClickMini.png" />
+    <Resource Include="Images\Scanner\Height60\ClickMini.png" />
+    <Resource Include="Images\TabsControl\Tabs.png" />
+    <Resource Include="Images\TabsControl\TabsCleanUp.png" />
+    <Resource Include="Images\TabsControl\TabsScan.png" />
+    <Resource Include="Images\TabsControl\TabsSend.png" />
+    <Resource Include="Images\TabsControl\TabsShort.png" />
+    <Resource Include="Images\TabsControl\TabsShortHelp.png" />
+    <Resource Include="Images\TabsControl\TabsShortResend.png" />
+    <Resource Include="Images\TabsControl\TabsNew.png" />
+    <Resource Include="Images\Frames\Frame Send Bottom Left.png" />
+    <Resource Include="Images\Logos\BSCAN ILL_Logo_LARGE.png" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_01.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_02.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_03.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_04.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_05.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_06.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_07.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_08.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_09.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_10.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_11.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_12.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_13.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_14.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_15.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_16.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_17.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_18.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_19.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_20.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_21.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_22.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_23.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_24.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_25.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_26.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_27.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_28.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_29.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_30.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_31.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_32.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_33.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_34.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_35.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_36.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_37.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_38.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_39.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_40.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_41.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_42.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_43.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_44.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_45.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_46.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_47.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_48.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_49.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_50.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_51.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_52.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_53.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_54.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_55.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_56.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_57.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_58.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_59.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_60.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_61.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_62.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_63.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_64.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_65.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_66.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_67.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_68.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_69.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_70.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_71.jpg" />
+    <Resource Include="Images\Manual\BSCAN ILL User Guide Version 3_Page_72.jpg" />
+    <Resource Include="Images\Scanner\Bookeye2.png" />
+    <Resource Include="Images\Scanner\Bookeye3.png" />
+    <Resource Include="Images\Scanner\Click.png" />
+    <Resource Include="Images\Scanner\FB6080E.png" />
+    <Resource Include="Images\Scanner\FB6280E.png" />
+    <Resource Include="Images\Scanner\KodakI1120.png" />
+    <Resource Include="Images\Scanner\KodakI1405.png" />
+    <Resource Include="Images\Scanner\Widetek.png" />
+    <Resource Include="Images\Scanner\Bookeye4.png" />
+    <Resource Include="Images\Scanner\Height60\Bookeye2.png" />
+    <Resource Include="Images\Scanner\Height60\Bookeye3.png" />
+    <Resource Include="Images\Scanner\Height60\Bookeye4.png" />
+    <Resource Include="Images\Scanner\Height60\Click.png" />
+    <Resource Include="Images\Scanner\Height60\FB6080E.png" />
+    <Resource Include="Images\Scanner\Height60\FB6280E.png" />
+    <Resource Include="Images\Scanner\Height60\KodakI1120.png" />
+    <Resource Include="Images\Scanner\Height60\KodakI1405.png" />
+    <Resource Include="Images\Scanner\Height60\Widetek.png" />
+    <Resource Include="Images\Scanner\ClickMini2.png" />
+    <Resource Include="Images\Scanner\Height60\ClickMini2.png" />
+    <Content Include="lame_enc.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PerformaxCom.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="UI\Resources\BookeyePattern.BMP" />
+    <Resource Include="UI\Controls\ScannerControls\Twain\images\Brightness.png" />
+    <Resource Include="UI\Controls\ScannerControls\Twain\images\Contrast.png" />
+    <Resource Include="UI\Controls\ScannerControls\S2N\images\Brightness.png" />
+    <Resource Include="UI\Controls\ScannerControls\S2N\images\Contrast.png" />
+    <Resource Include="UI\Controls\ScannerControls\Click\images\Brightness.png" />
+    <Resource Include="UI\Controls\ScannerControls\Click\images\Contrast.png" />
+    <Resource Include="UI\Controls\ScannerControls\ClickMini\images\Brightness.png" />
+    <Resource Include="UI\Controls\ScannerControls\ClickMini\images\Contrast.png" />
+    <Content Include="WpdLibrary32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\EDSDK.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\EdsImage.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\EDSDK.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\EdsImage.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zxing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Dialogs\Licensing\" />
+    <Folder Include="UI\ItSettings\Controls\" />
+    <Folder Include="UI\ItSettings\Dialogs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,62 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.Odyssey"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+   Height="420" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../../Themes/Settings.xaml" />
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+
+				<ResourceDictionary>
+					<Style TargetType="TextBox">
+						<Setter Property="Margin" Value="0,2" />
+					</Style>
+					<Style TargetType="PasswordBox">
+						<Setter Property="Margin" Value="0,2" />
+					</Style>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<Grid>
+		<CheckBox x:Name="checkBoxEnabled" Content="Enabled" IsChecked="{Binding Path=OdysseyEnabled, Mode=TwoWay}" ToolTip="Check to enable ariel functionality." Checked="Enabled_CheckedChanged" Unchecked="Enabled_CheckedChanged" HorizontalAlignment="Left" VerticalAlignment="Top" />
+		<Border x:Name="groupBox"  Style="{StaticResource groupBorderStyle}" >
+			<Grid Margin="16,8,16,8">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Articles' File Format:" Grid.Row="1" VerticalAlignment="Center" />
+					<TextBlock Text="Export Directory:" Grid.Row="0" VerticalAlignment="Top" Margin="0,4,0,1"  />
+
+                    <ComboBox x:Name="comboFileFormat" SelectedItem="{Binding Path=FileFormatSelectedItem, Mode=TwoWay}" Margin="0,1" Grid.Row="1" Grid.Column="1" Width="120" HorizontalAlignment="Left" SelectionChanged="ComboFileFormat_SelectionChanged" />
+                    <DockPanel Grid.Row="0" Grid.Column="2" >
+                        <Button Content="Browse..." Margin="8,1,0,1" Width="75" DockPanel.Dock="Right" Click="BrowseExe_Click" />
+                        <TextBox Text="{Binding Path=ExportDirectory, Mode=TwoWay}" Margin="0,1" />
+                    </DockPanel>
+                    <TextBlock x:Name="textFileExportColorMode" Text="File Color Mode:" Grid.Row="2" />
+                    <ComboBox x:Name="comboFileExportColorMode" SelectedItem="{Binding Path=FileExportColorModeSelectedItem, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Width="120" HorizontalAlignment="Left" />
+                    <TextBlock x:Name="textFileExportQuality" Text="File Export Quality:" Grid.Row="2" Grid.Column="1" Margin="0,0,55,0" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="comboFileExportQuality" SelectedItem="{Binding Path=FileExportQuality, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="0,0,0,0" Width="50" HorizontalAlignment="Right" />                    
+                    <TextBlock Text="Articles' Export File Name:" Grid.Row="3" />
+                    <ComboBox x:Name="comboExportName" SelectedIndex="{Binding Path=ExportNameIndex, Mode=TwoWay}" Grid.Row="3"  Grid.Column="1" Margin="0,1" Width="140" HorizontalAlignment="Left" >
+                        <ComboBoxItem Content="ILL Number" />
+                        <ComboBoxItem Content="Transaction Number" />
+                    </ComboBox>
+                </Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</local:PanelBase>

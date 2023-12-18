@@ -1,0 +1,39 @@
+﻿<Window x:Class="BscanILL.UI.Dialogs.DependencyDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Image Dependency" Height="380" Width="439" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Form_Loaded">
+    
+	<Grid>
+		<StackPanel>
+			<GroupBox Header="Image Selection" Height="Auto" VerticalAlignment="Top" Margin="16">
+				<StackPanel>
+					<RadioButton x:Name="radioRangeAll" Content="All" IsChecked="True" Margin="16,16,0,5"/>
+					<RadioButton x:Name="radioRangeFromCurrent" Content="From Current Image to the end"  Margin="16,5,0,5" />
+					<RadioButton x:Name="radioRangeRange" Content="Range"  Margin="16,5,0,5" />
+					<StackPanel Orientation="Horizontal" Margin="48,0,5,5">
+						<TextBlock Text="From:" VerticalAlignment="Center" />
+						<TextBox x:Name="textBlockFrom" Text="1" Width="50" TextAlignment="Left" VerticalAlignment="Center" Margin="8,0" Padding="1" TextChanged="PageRangeBox_TextChanged" />
+						<TextBlock Text="To:" VerticalAlignment="Center" />
+						<TextBox x:Name="textBlockTo" Text="999" Width="50" VerticalAlignment="Center" Margin="8,0" Padding="1" TextChanged="PageRangeBox_TextChanged" />
+					</StackPanel>
+				</StackPanel>
+			</GroupBox>
+			
+			<GroupBox Header="Filter Selection" Height="Auto" VerticalAlignment="Top" Margin="16,0,16,16">
+				<StackPanel>
+					<RadioButton x:Name="radioFilterAllSizes" Content="Apply to all image sizes" IsChecked="True" Margin="16,16,0,5"/>
+					<RadioButton x:Name="radioFilterPortrait" Content="Apply to portrait images only"  Margin="16,5,0,5" />
+					<RadioButton x:Name="radioFilterLandscape" Content="Apply to landscape images only"  Margin="16,5,0,5" />
+				</StackPanel>
+			</GroupBox>
+			
+			<Grid Margin="16,0,16,16">
+				<Button Content="Cancel" Width="75" Height="32" Click="Cancel_Click" HorizontalAlignment="Right" />
+				<Button Content="Make Dependent" Width="120" Height="32" HorizontalAlignment="Left" Click="Dependent_Click" />
+				<Button Content="Make Independent" Width="120" Height="32" HorizontalAlignment="Left" Margin="136,0,0,0" Click="Independent_Click" />
+			</Grid>
+		</StackPanel>
+		
+	</Grid>
+	
+</Window>

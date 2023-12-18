@@ -1,0 +1,84 @@
+﻿<dialogs:DialogBase x:Class="BscanILL.UI.Dialogs.ExportDialog.ExportDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:dialogs="clr-namespace:BscanILL.UI.Dialogs"
+	xmlns:panels="clr-namespace:BscanILL.UI.Dialogs.ExportDialog"
+    Title="Output"  Width="640" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen"
+	Icon="/BscanILL;component/App.ico" Topmost="False" ResizeMode="NoResize" SizeToContent="Height"
+	Loaded="Form_Loaded">
+	
+	<Window.Resources>
+		<Style x:Key="panelStyle" TargetType="UserControl">
+			<Setter Property="Margin" Value="24,24,24,8" />
+			<Setter Property="Width" Value="Auto" />
+			<Setter Property="Height" Value="Auto" />
+		</Style>
+	</Window.Resources>
+    
+	<Grid>
+		<Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="Auto"  />
+			<RowDefinition Height="32" />
+		</Grid.RowDefinitions>
+
+        <Grid Margin="40,10,40,0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="articleNumber" Text="Article:" Margin="0,10,0,10" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Center" />
+            <TextBlock Text="TN:" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" />
+            <TextBox x:Name="boxTN" Text="{Binding Path=TNValue, Mode=OneWay}" Margin="0,1" Grid.Row="1" Grid.Column="1" Width="Auto" IsEnabled="False" HorizontalAlignment="Left" />
+            <TextBlock Text="ILL Number:" FontWeight="Bold" Grid.Row="2" VerticalAlignment="Center" />
+            <TextBox x:Name="boxILL" Text="{Binding Path=ILLValue, Mode=OneWay}" Margin="0,1" Grid.Row="2" Grid.Column="1" Width="Auto" IsEnabled="False" HorizontalAlignment="Left" />
+            <TextBlock Text="Patron:" FontWeight="Bold" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" />
+            <TextBox x:Name="boxPatron" Text="{Binding Path=PatronValue, Mode=OneWay}" Margin="0,1" Grid.Row="1" Grid.Column="4" Width="Auto" IsEnabled="False" HorizontalAlignment="Left" />
+            <TextBlock Text="Address:" FontWeight="Bold" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" />
+            <TextBox x:Name="boxAddress" Text="{Binding Path=AddressValue, Mode=OneWay}" Margin="0,1" Grid.Row="2" Grid.Column="4" Width="Auto" IsEnabled="False" HorizontalAlignment="Left" />            
+        </Grid>
+        
+        <Grid Margin="0,16,0,0" Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<TextBlock Text="Output Method:" Margin="8,0" VerticalAlignment="Center" HorizontalAlignment="Right" />
+			<ComboBox x:Name="comboOutputMethod" SelectedItem="{Binding Path=ExportTypeItem, Mode=TwoWay}" Grid.Column="1" VerticalAlignment="Center" Width="200" />
+		</Grid>
+		
+		<Grid Margin="8,8,8,0" Grid.Row="2" Height="Auto" >
+			<panels:Ariel x:Name="panelAriel" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:ILLiad x:Name="panelILLiad" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:Odyssey x:Name="panelOdyssey" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:Email x:Name="panelEmail" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:Ftp x:Name="panelFtp" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:FtpDir x:Name="panelFtpDirectory" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:Printer x:Name="panelPrinter" Style="{StaticResource panelStyle}" Width="Auto" Height="Auto" Visibility="Collapsed" />
+			<panels:SaveOnDisk x:Name="panelSaveOnDisk" Style="{StaticResource panelStyle}" Width="Auto" VerticalAlignment="Top"  />
+			<panels:ArticleExchange x:Name="panelArticleExchange" Style="{StaticResource panelStyle}" Width="Auto" VerticalAlignment="Top" Visibility="Collapsed"  />
+            <panels:Tipasa x:Name="panelTipasa" Style="{StaticResource panelStyle}" Width="Auto" VerticalAlignment="Top" Visibility="Collapsed"  />
+            <panels:WorldShareILL x:Name="panelWorldShareILL" Style="{StaticResource panelStyle}" Width="Auto" VerticalAlignment="Top" Visibility="Collapsed"  />
+            <panels:Rapido x:Name="panelRapido" Style="{StaticResource panelStyle}" Width="Auto" VerticalAlignment="Top" Visibility="Collapsed"  />
+		</Grid>
+		
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3" >
+            <Button x:Name="buttonGoToPrevious" Content="Previous" Width="85" Height="23" Click="Prev_Click" />
+            <Button x:Name="buttonSendCurrent" Content="Next" Width="85" Height="23" Margin="8,0,0,0" IsDefault="True" Click="Ok_Click" />
+            <Button x:Name="buttonSendAll" Content="Finish" Width="85" Height="23" Margin="8,0,0,0" Click="YesAll_Click" />
+			<Button Content="Cancel" Width="85" Height="23" Margin="8,0,32,0" IsCancel="True" />
+		</StackPanel>
+		
+	</Grid>
+	
+</dialogs:DialogBase>

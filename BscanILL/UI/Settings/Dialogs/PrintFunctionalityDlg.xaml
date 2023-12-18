@@ -1,0 +1,47 @@
+﻿<Window x:Class="BscanILL.UI.Settings.Dialogs.PrintFunctionalityDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ 	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	Title="Printing Functionality Used" Height="280" Width="400" 
+	WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True"
+	Loaded="Window_Loaded">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="32"/>
+		</Grid.RowDefinitions>
+		<StackPanel>
+			<StackPanel Margin="8,8,8,0">
+				<TextBlock TextWrapping="Wrap" >
+					XPS is new printing functionality introduced in Microsoft .NET. It makes printing faster, and it is preferred 
+					printing method. However, it does not fully support some of the old printers. Use Win32 printing only if your 
+					desired printer input bin is not displayed while XPS printing functionality is selected.
+				</TextBlock>
+				<TextBlock TextWrapping="Wrap" >
+					For the compatibility reason, if you decide to change printing functionality, all the predefined printers 
+					will be deleted from Bscan ILL printers queue.
+				</TextBlock>
+			</StackPanel>
+			<Grid Margin="8,16,8,8" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="8"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Printing Functionality:" VerticalAlignment="Center" />
+
+				<ComboBox x:Name="combo" Grid.Row="0" Margin="0,2" Grid.Column="2" HorizontalAlignment="Left" SelectedIndex="0" VerticalAlignment="Center" SelectionChanged="Combo_SelectionChanged">
+					<ComboBoxItem Content="XPS (Windows Vista, 7)" />
+					<ComboBoxItem Content="Win32 (XP)" />
+				</ComboBox>		
+			</Grid>
+		</StackPanel>
+
+		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+			<Button x:Name="buttonOk" Content="OK" Width="75" Height="23" VerticalAlignment="Top" IsDefault="True" IsEnabled="False" Click="Ok_Click" />
+			<Button Content="Cancel" Width="75" Height="23" VerticalAlignment="Top" Margin="8,0,8,0" IsCancel="True" />
+		</StackPanel>
+	</Grid>
+
+</Window>

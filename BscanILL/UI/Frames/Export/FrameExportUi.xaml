@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="BscanILL.UI.Frames.Export.FrameExportUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:buttons="clr-namespace:BscanILL.UI.Buttons"
+	xmlns:controls="clr-namespace:BscanILL.UI.Controls"
+	xmlns:viewPane="clr-namespace:ViewPane;assembly=ViewPane3"
+	xmlns:local="clr-namespace:BscanILL.UI.Frames.Export"
+    mc:Ignorable="d" 
+    d:DesignHeight="800" d:DesignWidth="1300">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../ResourceDictionaries/WindowDictionary.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid>
+        <DockPanel>
+            <Grid DockPanel.Dock="Top" Height="50" Margin="0,0,0,1">
+                <Image HorizontalAlignment="Left" Source="/BscanILL;component/Images/TabsControl/TabsSend.png" />
+                <Button Margin="10,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToStart_Click" Style="{StaticResource blindTabButton}" />
+                <Button Margin="210,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToScan_Click" Style="{StaticResource blindTabButton}" />
+                <Button Margin="401,0,0,0" HorizontalAlignment="Left" Width="240" Click="GoToIt_Click" Style="{StaticResource blindTabButton}" />
+                <Image HorizontalAlignment="Right" Source="/BscanILL;component/Images/TabsControl/TabsShort.png" />
+                <Button Margin="0,0,240,0" HorizontalAlignment="Right" Width="180" Click="GoToResend_Click" Style="{StaticResource blindTabButton}" />
+                <Button Margin="0,0,40,0" HorizontalAlignment="Right" Width="180" Click="Help_Click" Style="{StaticResource blindTabButton}" />
+            </Grid>
+            <Grid DockPanel.Dock="Left" Width="340" >
+                <StackPanel >
+                    <buttons:BigFunctionButton x:Name="buttonExport" Click="ExportAll_Click" FontSize="11" Margin="8" Height="120">
+                        <TextBlock x:Name="buttonExportName">Send All</TextBlock>
+                    </buttons:BigFunctionButton>
+                    <buttons:BigFunctionButton x:Name="buttonExportCurrent" Click="ExportCurrent_Click" Margin="8" FontSize="11" Height="120" >
+                        <TextBlock>Send One</TextBlock>
+                    </buttons:BigFunctionButton>
+                    <controls:ArticleControl x:Name="articleControl" Margin="8"  />
+                </StackPanel>
+
+                <Grid VerticalAlignment="Bottom">
+                    <Image Source="/BscanILL;component/Images/Frames/Frame%20Send%20Bottom%20Left.png" Stretch="Uniform" />
+                </Grid>
+            </Grid>
+            <Grid Width="auto" Height ="20" DockPanel.Dock="Bottom" Margin="150,4,150,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="5.5*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="F1:" Grid.Column="0" Style="{StaticResource styleHelpTextLeft}" />
+                <TextBlock Text="F12:" Grid.Column="3" Style="{StaticResource styleHelpTextLeft}" />
+
+                <TextBlock Grid.Column="2" Style="{StaticResource styleHelpTextRight}">
+					<Hyperlink Click="Help_Click" TextDecorations="None" >Help</Hyperlink>
+                </TextBlock>
+                <TextBlock Grid.Column="5" Style="{StaticResource styleHelpTextRight}">
+					<Hyperlink Click="Print_Click" TextDecorations="None" >Print</Hyperlink>
+                </TextBlock>                
+            </Grid>
+            <Grid>
+                <viewPane:ViewPanel x:Name="viewPanel" Width="Auto" Height="Auto" Margin="2,0,0,0"/>
+            </Grid>
+        </DockPanel>
+        <Grid>
+			<local:ProgressPanel x:Name="progressPanel" Width="Auto" Height="Auto" Visibility="Hidden" />
+		</Grid>
+	</Grid>
+</UserControl>

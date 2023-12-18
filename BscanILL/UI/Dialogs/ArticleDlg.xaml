@@ -1,0 +1,65 @@
+﻿<Window x:Class="BscanILL.UI.Dialogs.ArticleDlg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:my="clr-namespace:BscanILL.DB" 
+	Title="Article" Height="260" Width="411" mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+	
+	<Window.Resources>
+		<Style TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="Arial" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+		</Style>
+		
+		<Style TargetType="TextBox">
+			<Setter Property="FontFamily" Value="Arial" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Margin" Value="0,1" />
+		</Style>
+
+		<Style TargetType="ComboBox">
+			<Setter Property="FontFamily" Value="Arial" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Margin" Value="0,1" />
+		</Style>
+	</Window.Resources>
+
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Bottom" Height="32" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="OK" IsCancel="False" Width="75" Height="23" Click="OK_Click" />
+			<Button Content="Cancel" IsCancel="True" Width="75" Height="23" Margin="8,0" />
+		</StackPanel>
+		<Grid Margin="8" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="23" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="63*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="8" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<TextBlock x:Name="textBlockId" Text="ID:" Grid.Row="0" HorizontalAlignment="Right" />
+			<TextBlock Text="Patron:" Grid.Row="1" HorizontalAlignment="Right" />
+			<TextBlock Text="Address:" Grid.Row="2" HorizontalAlignment="Right" />
+			<TextBlock Text="ILL #:" Grid.Row="3" HorizontalAlignment="Right" />
+			<TextBlock Text="Transaction #:" Grid.Row="4" HorizontalAlignment="Right" />
+			<TextBlock Text="Delivery Method:" Grid.Row="5" HorizontalAlignment="Right" />
+      <Rectangle x:Name="flagAddressErr" Margin="0,1,0,1" Grid.Row="2" Grid.Column="1" Width="6" Fill="Red" />
+
+			<TextBlock x:Name="textId" Grid.Row="0" Grid.Column="2" />
+			<TextBox x:Name="textPatron" Grid.Row="1" Grid.Column="2" />
+			<TextBox  x:Name="textAddress" Grid.Row="2" Grid.Column="2" />
+			<TextBox  x:Name="textIllNumber" Grid.Row="3" Grid.Column="2" />
+			<TextBox  x:Name="textTransactionNumber" Grid.Row="4" Grid.Column="2" />
+			<ComboBox  x:Name="comboDeliveryMethod" Grid.Row="5" Grid.Column="2" />
+		</Grid>
+	</DockPanel>
+</Window>

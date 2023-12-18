@@ -1,0 +1,42 @@
+﻿<local:PanelBase x:Class="BscanILL.UI.Settings.Panels.CleanUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:BscanILL.UI.Settings.Panels"
+	xmlns:settingsControls="clr-namespace:BscanILL.UI.Settings.Controls"
+    Height="200" Width="500">
+
+	<local:PanelBase.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="./PanelsResources.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</local:PanelBase.Resources>
+
+	<StackPanel>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="8"/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="27" />
+				<RowDefinition Height="27" />
+				<RowDefinition Height="27" />
+				<RowDefinition  />
+			</Grid.RowDefinitions>
+			<TextBlock Text="Keep Articles For:" Grid.Row="1" Grid.Column="0"/>
+			<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" >
+				<TextBox x:Name="textKeepArticlesFor" Width="60" Text="{Binding Path=KeepArticlesFor, Mode=TwoWay}" />
+				<TextBlock Text="days" Margin="8,0,0,0" />
+			</StackPanel>
+		</Grid>
+
+		<TextBlock x:Name="textDescription" />
+		<ProgressBar x:Name="progressBar" Maximum="100" Height="16" Margin="0,0,0,8"/>
+		<Button Content="Clean Up Now" Width="100" Height="23" Click="CleanUp_Click" />
+
+	</StackPanel>
+	
+</local:PanelBase>

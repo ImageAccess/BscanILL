@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="BscanILL.UI.Frames.Resend.FrameResendUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:buttons="clr-namespace:BscanILL.UI.Buttons"
+	xmlns:controls="clr-namespace:BscanILL.UI.Controls"
+	xmlns:converters="clr-namespace:BscanILL.UI.Converters"
+    mc:Ignorable="d" 
+    d:DesignHeight="550" d:DesignWidth="1300">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../ResourceDictionaries/WindowDictionary.xaml" />
+				<ResourceDictionary>
+					<converters:IntDataConverter x:Key="intFormatter" />
+					<converters:BoolToCollapsedConverter x:Key="boolToCollapsedConverter" />
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
+	<DockPanel>
+		<Grid DockPanel.Dock="Top" Height="50" Margin="0,0,0,1">
+			<Image HorizontalAlignment="Left" Source="/BscanILL;component/Images/TabsControl/Tabs.png" />
+			<Button Margin="10,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToStart_Click" Style="{StaticResource blindTabButton}" />
+			<Button Margin="210,0,0,0" HorizontalAlignment="Left" Width="180" Click="GoToScan_Click" Style="{StaticResource blindTabButton}" />
+			<Button Margin="401,0,0,0" HorizontalAlignment="Left" Width="240" Click="GoToIt_Click" Style="{StaticResource blindTabButton}" />
+			<Image HorizontalAlignment="Right" Source="/BscanILL;component/Images/TabsControl/TabsShortResend.png" />
+			<Button Margin="0,0,40,0" HorizontalAlignment="Right" Width="180" Click="Help_Click" Style="{StaticResource blindTabButton}" />
+		</Grid>
+		<Grid DockPanel.Dock="Left" Width="140" >
+			<StackPanel Margin="8">
+				<TextBlock Text="Click on individual articles to select" TextWrapping="Wrap" FontSize="14" TextAlignment="Center" />
+
+				<buttons:BigFunctionButton x:Name="buttonOpenInScan" Click="OpenInScan_Click" Margin="0,8" Height="70" IsEnabled="False" >
+					<TextBlock>Open in<LineBreak/>Scan</TextBlock>
+				</buttons:BigFunctionButton>
+				<buttons:BigFunctionButton x:Name="buttonOpenInCleanUp" Click="OpenInCleanUp_Click" Margin="0,8" Height="70" IsEnabled="False" >
+					<TextBlock>Open in<LineBreak/>Clean Up</TextBlock>
+				</buttons:BigFunctionButton>
+				<buttons:BigFunctionButton x:Name="buttonOpenInExport" Click="OpenInSend_Click" Margin="0,8" Height="70" IsEnabled="False" >
+					<TextBlock>Open in<LineBreak/>Send</TextBlock>
+				</buttons:BigFunctionButton>
+				<buttons:BigFunctionButton x:Name="buttonSend" Content="Send" Click="Send_Click" Margin="0,8" Height="50" IsEnabled="False" Visibility="Collapsed" />
+				<buttons:BigFunctionButton x:Name="buttonRemove" Content="Remove" Click="Remove_Click" Margin="0,8" Background="Red" Height="50" IsEnabled="False" />
+			</StackPanel>
+		</Grid>
+		<Grid>
+			<ListView x:Name="listView" ScrollViewer.HorizontalScrollBarVisibility="Visible" ItemsSource="{Binding}" SelectionChanged="ListView_SelectionChanged">
+				<ListView.ItemsPanel>
+					<ItemsPanelTemplate>
+						<VirtualizingStackPanel>
+							
+						</VirtualizingStackPanel>
+					</ItemsPanelTemplate>
+				</ListView.ItemsPanel>
+				<ListView.View>
+					<GridView>
+						<GridViewColumn Width="50" DisplayMemberBinding="{Binding Id}" >
+							<GridViewColumnHeader x:Name="headerId" Content=" ID " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Width="Auto" DisplayMemberBinding="{Binding Tn}">
+							<GridViewColumnHeader x:Name="headerTn" Content=" Transaction # " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Width="Auto" DisplayMemberBinding="{Binding IllNumber}">
+							<GridViewColumnHeader x:Name="headerIllNumber" Content=" ILL Number " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Width="Auto" DisplayMemberBinding="{Binding Created}" >
+							<GridViewColumnHeader x:Name="headerCreated" Content=" Created " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Width="Auto" DisplayMemberBinding="{Binding LastSent}">
+							<GridViewColumnHeader x:Name="headerSent" Content=" Last Sent " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Width="Auto" DisplayMemberBinding="{Binding Patron}">
+							<GridViewColumnHeader x:Name="headerPatron" Content=" Patron " Click="Header_Click" />
+						</GridViewColumn>
+                        <GridViewColumn Width="Auto" DisplayMemberBinding="{Binding Address}">
+                            <GridViewColumnHeader x:Name="headerAddress" Content=" Address " Click="Header_Click" />
+                        </GridViewColumn>
+                        <GridViewColumn Width="Auto" DisplayMemberBinding="{Binding ExportType}">
+							<GridViewColumnHeader x:Name="headerDelivery" Content=" Delivery Method " Click="Header_Click" />
+						</GridViewColumn>
+						<GridViewColumn Header=" Scans " Width="Auto" >
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Grid>
+										<TextBlock Text="{Binding Path=ScansCount, Converter={StaticResource intFormatter}}" />
+										<Grid Background="White" Visibility="{Binding Path=IsScansComputed, Converter={StaticResource boolToCollapsedConverter}}" >
+											<TextBlock Foreground="Red" Text="Computing..." />
+										</Grid>
+									</Grid>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn Header=" Pages " Width="Auto" >
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Grid>
+										<TextBlock Text="{Binding Path=PagesCount, Converter={StaticResource intFormatter}}" />
+										<Grid Background="White" Visibility="{Binding Path=IsPagesComputed, Converter={StaticResource boolToCollapsedConverter}}" >
+											<TextBlock Foreground="Red" Text="Computing..." />
+										</Grid>
+									</Grid>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<!--<GridViewColumn Width="50">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<TextBlock Text="edit..." Foreground="blue" HorizontalAlignment="Stretch" TextAlignment="Right" TextDecorations="Underline" MouseDown="Edit_MouseDown" Cursor="Hand" />
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn Width="54">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<TextBlock Text="delete..." Foreground="blue" HorizontalAlignment="Stretch" TextAlignment="Center" TextDecorations="Underline" MouseDown="Delete_MouseDown" Cursor="Hand" />
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>-->
+					</GridView>
+				</ListView.View>
+			</ListView>
+		</Grid>
+	</DockPanel>
+</UserControl>

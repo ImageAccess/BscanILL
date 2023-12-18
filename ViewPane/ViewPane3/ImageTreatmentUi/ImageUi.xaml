@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ViewPane.ImageTreatmentUi.ImageUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:imageTreatmentUi="clr-namespace:ViewPane.ImageTreatmentUi"
+	x:ClassModifier="internal"
+    Height="300" Width="300" >
+	
+    <Grid x:Name="mainGrid" Background="Transparent" MouseLeftButtonDown="LeftMouse_Down" Cursor="Cross" PreviewMouseMove="Mouse_Move">
+		<Grid x:Name="visibleGrid">
+			<Path x:Name="path" Fill="#50000000" />
+			<imageTreatmentUi:PageUi x:Name="pageUiL" HorizontalAlignment="Left" VerticalAlignment="Top" />
+			<imageTreatmentUi:PageUi x:Name="pageUiR" HorizontalAlignment="Left" VerticalAlignment="Top" />
+			<imageTreatmentUi:OpticsUi x:Name="opticsUi" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" />
+		</Grid>
+	</Grid>
+	
+</UserControl>

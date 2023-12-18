@@ -1,0 +1,45 @@
+﻿<toolbar:ToolbarBase x:Class="ViewPane.Toolbar.ToolbarBookInfo"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+ 	xmlns:toolbar="clr-namespace:ViewPane.Toolbar"
+	xmlns:languages="clr-namespace:ViewPane.Languages"
+	xmlns:it="clr-namespace:ViewPane.IT"
+	mc:Ignorable="d" 
+	x:ClassModifier="internal" 
+	>
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="ToolbarResources.xaml" />
+	</UserControl.Resources>
+
+	<UserControl Style="{StaticResource toolbarStyle}">
+		<StackPanel Orientation="Horizontal">
+			<toolbar:ToolbarComboBox x:Name="comboBookPage" Width="Auto" Margin="2,0,4,0" VerticalAlignment="Center" SelectionChanged="ComboBookPage_SelectionChanged" SelectedIndex="4" >
+				<toolbar:ToolbarComboBox.Items>
+					<ComboBoxItem Tag="{x:Static it:BookPartType.FrontCover}" Content="{x:Static languages:UiStrings.FrontCover_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.SpineCover}" Content="{x:Static languages:UiStrings.SpineCover_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.RearCover}" Content="{x:Static languages:UiStrings.RearCover_STR}" />
+					<Separator />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.HeadEdge}" Content="{x:Static languages:UiStrings.HeadEdge_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.TailEdge}" Content="{x:Static languages:UiStrings.TailEdge_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.ForeEdge}" Content="{x:Static languages:UiStrings.ForeEdge_STR}" />
+					<Separator />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.FrontEndPapers}" Content="{x:Static languages:UiStrings.FrontEndPapers_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.FrontPastdownEndPaper}" Content="{x:Static languages:UiStrings.FrontPastdownEndPaper_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.FrontFreeEndPaper}" Content="{x:Static languages:UiStrings.FrontFreeEndPaper_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.RearEndPapers}" Content="{x:Static languages:UiStrings.RearEndPapers_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.RearFreeEndPaper}" Content="{x:Static languages:UiStrings.RearFreeEndPaper_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.RearPastdownEndPaper}" Content="{x:Static languages:UiStrings.RearPastdownEndPaper_STR}" />
+					<Separator />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.Normal}" Content="{x:Static languages:UiStrings.Normal_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.Other}" Content="{x:Static languages:UiStrings.Other_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.None}" Content="{x:Static languages:UiStrings.None_STR}" />
+					<ComboBoxItem Tag="{x:Static it:BookPartType.Unknown}" Content="{x:Static languages:UiStrings.Unknown_STR}" />
+				</toolbar:ToolbarComboBox.Items>
+			</toolbar:ToolbarComboBox>
+		</StackPanel>
+	</UserControl>
+
+</toolbar:ToolbarBase>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="BscanILL.UI.Windows.SecondWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:viewPane="clr-namespace:ViewPane.ImagePanel;assembly=ViewPane3"
+	Title="Image Window" Height="200" Width="800" WindowStyle="None" ShowInTaskbar="False" WindowState="Normal" Topmost="True" 
+	PreviewKeyDown="Form_PreviewKeyDown" 
+	Loaded="Form_Loaded" Closing="Form_Closing">
+	
+    <Grid>
+		<viewPane:ImagePane x:Name="imagePanel" Width="Auto" Height="Auto" Margin="2,0,0,0" />
+	</Grid>
+</Window>

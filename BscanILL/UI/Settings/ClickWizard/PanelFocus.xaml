@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="BscanILL.UI.Settings.ClickWizard.PanelFocus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="400">
+	
+	<UserControl.Resources>
+		<ResourceDictionary Source="./WizardDictionary.xaml" />
+	</UserControl.Resources>
+
+	<DockPanel>
+		<Grid DockPanel.Dock="Bottom">
+			<Button Click="Back_Click" Style="{StaticResource styleButtonBack}" />
+			<Button Click="Skip_Click" Style="{StaticResource styleButtonSkip}" />
+		</Grid>
+		<StackPanel HorizontalAlignment="Center" Orientation="Vertical" SnapsToDevicePixels="True">
+			<TextBlock Text="Finding Focus..." Style="{StaticResource styleHeader}" />
+			<Image Width="300" Height="213" Stretch="UniformToFill" StretchDirection="Both" SnapsToDevicePixels="True" Source="/BscanILL;component/UI/Settings/ClickWizard/images/ClickBoardFocus.png" />
+			<Button Style="{StaticResource styleButtonAction}" Click="Find_Click" >
+				<TextBlock>Find<LineBreak/>Focus</TextBlock>
+			</Button>
+		</StackPanel>
+	</DockPanel>
+</UserControl>

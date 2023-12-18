@@ -1,0 +1,15 @@
+﻿<!-- not used -->
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+		<session-factory name="sqliteProjectDB">
+			<property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+			<property name="connection.driver_class">NHibernate.Driver.SQLite20Driver</property>
+			<property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+			<property name="query.substitutions">true=1;false=0</property>
+			<property name="connection.connection_string">data source=.\Data\KIC_Lite.db3</property>
+			<property name="show_sql">true</property>
+			<mapping assembly="BscanILLData" />
+		</session-factory>
+	</hibernate-configuration>
+</configuration>
