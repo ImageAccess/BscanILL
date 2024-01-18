@@ -1,1 +1,2 @@
-small commit
+version 4.3.28.1 (2024-01-18)
+- SQLite version update to fix problem on Bob's Win11 workstation

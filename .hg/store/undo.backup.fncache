@@ -1,11 +1,10 @@
 data/Shared/EdsImage.dll.i
 data/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.xml.i
 data/Shared/EdsImage.dll.d
-data/ProgramsDebug/ViewPane/SmartAssembly.Attributes.dll.i
+data/ViewPane/ViewPane3App/App.xaml.cs.i
 data/BscanILL/Images/Manual/30.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/PageControl.xaml.i
 data/BscanILL/UI/Frames/Export/FrameExport.cs.i
-data/BscanILLData/x86/SQLite.Interop.dll.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl5/System.Threading.Tasks.dll.i
 data/WpfTester/App.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/images/Contrast.png.i
@@ -19,10 +18,11 @@ data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.IO.xml.i
 data/ViewPane/ViewPane3/CursorZoomOut.cur.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL/UI/Dialogs/TransactionNumberDlg.xaml.cs.i
-data/ViewPane/ViewPane3App/App.xaml.cs.i
+data/ProgramsDebug/ViewPane/SmartAssembly.Attributes.dll.i
 data/BscanILL/Export/ILLiad/DatabaseSQL7_2.cs.i
 data/BscanILL/Export/ILL/IAriel.cs.i
 data/BscanILL/UI/Frames/Start/FrameStart.cs.i
+data/BscanILL/UI/Settings/Panels/Rapido.xaml.i
 data/BscanILL/Settings/ScanSettings.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_46.jpg.i
 data/BscanILL/UI/Settings/Dialogs/LicenseRequestDlg.xaml.cs.i
@@ -55,6 +55,7 @@ data/ViewPane/ViewPane3/Resources/Cursors/ZoomIn.cur.i
 data/ViewPane/ViewPane3/images/DownNew.png.i
 data/ViewPane/ViewPane3/images/FingerRemoval.png.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/System.Runtime.xml.i
+data/BscanILL/UI/Settings/Dialogs/ArticleForm.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.dll.i
 data/BscanILL/Images/Tab Control/ScanS.png.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/System.IO.dll.i
@@ -63,7 +64,7 @@ data/ViewPane/ViewPane3/Toolbar/ToolbarScan.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Click/FileFormatControl.xaml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelInit.xaml.cs.i
 data/BscanILL/Images/Manual/13.jpg.i
-data/Shared/IKVM.OpenJDK.Media.dll.i
+data/ViewPane/ViewPane3App/app.config.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4-windowsphone71/System.IO.xml.i
 data/BscanILL/Images/Manual/14.jpg.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.xml.i
@@ -82,21 +83,20 @@ data/BscanILL/UI/Settings/Panels/ScannerTwain.xaml.cs.i
 data/ScannersTester/MainWindow.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8+wp8+wpa81/System.IO.xml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_62.jpg.i
-data/BscanILL/Export/ExportFiles/ExportFilesBasics.cs.i
+data/ViewPane/ViewPane3/Toolbar/Toolbar.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2NControl.xaml.cs.i
 data/ViewPane/ViewPane3App/Properties/Resources.Designer.cs.i
 data/BscanILL/Images/Tab Control/TabsShort.psd.i
 data/Scanners/Settings.cs.i
 data/Scanners/S2N/Settings/DocumentSizeSetting.cs.i
-data/BscanILL/UI/Controls/ScannerControls/ClickMiniControl.xaml.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/DespeckleDisabled.png.i
 data/BscanILLData/Models/Helpers/NewDbExportFile.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarPostProcessing.xaml.i
-data/images/scanners/Widetek.png.i
+data/BscanILL/UI/Frames/Start/FrameStartUi.xaml.cs.i
 data/ScannersTester/Licensing.cs.i
 data/BscanILL/Export/ILL/ProgressUi.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/FileFormatControl.xaml.i
-data/BscanILL/UI/Dialogs/ExportDialog/Email.xaml.i
+data/Scanners/Click/Settings/FocusSetting.cs.i
 data/BscanILL/Export/Printing/IllPrinters.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/wpa81/Microsoft.Threading.Tasks.Extensions.dll.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml.i
@@ -111,7 +111,7 @@ data/Scanners/Click/ClickMiniSettings.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelWhiteBalanceProgress.xaml.i
 data/BscanILL/UI/Settings/Panels/ScannerS2N.xaml.i
 data/BscanILL/Export/Ariel/IAriel.cs.i
-data/packages/Microsoft.Bcl.1.1.7/content/portable-net45+win8+wpa81/_._.i
+data/BscanILL/UI/Frames/Edit/ManualItExecution.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_10.jpg.i
 data/BscanILL/Themes/Dialogs.xaml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml.i
@@ -122,8 +122,6 @@ data/BscanILL/FP/FormsProcessingResult.cs.i
 data/BscanILL/DPPLibCom.dll.i
 data/BscanILL/Export/Printing/PrintingOptions.cs.i
 data/Scanners/S2N/ScannerS2NWrapper.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_37.jpg.i
-data/packages/NHibernate.4.0.4.4000/NHibernate.releasenotes.txt.i
 data/Scanners/Twain/Settings/ContrastSetting.cs.i
 data/BscanILL/UI/Controls/ScannerControls/DpiRollingControl.xaml.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_56.jpg.i
@@ -135,16 +133,15 @@ data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4/Microsoft.Threading.Tasks.xml.
 data/ViewPane/ViewPane3/ItResults/ItResultsPanel.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/net45/_._.i
 data/Scanners/Click/Settings/BrightnessSetting.cs.i
-data/BscanILL/UI/Dialogs/ArticleDlg.xaml.i
+data/ViewPane/ViewPane3App/Properties/Settings.settings.i
 data/BscanILL/UI/Controls/FastKeysControl.xaml.cs.i
-data/Shared/ICSharpCode.SharpZipLib.dll.i
 data/BscanILL/UI/Settings/Panels/CloudAndSmartDock.xaml.i
 data/BscanILL/UI/Frames/Edit/FrameEditUi.xaml.cs.i
 data/BscanILL/Export/ExportTempUnit.cs.i
 data/Scanners/app.config.i
 data/ViewPane/ViewPane3App/ViewPane3App.csproj.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarNavigation.xaml.cs.i
-data/BscanILL/UI/Controls/ScannerControls/ClickMini/ScannerControlBase.cs.i
+data/BscanILL/Images/Scanner/FB6080E.png.i
 data/Bscan-bridge/ConsoleTestApp/ConsoleTestApp.csproj.i
 data/BscanILL/UI/Frames/Shared/FrameClickMini.cs.i
 data/ViewPane/ViewPane3/ImagePanel/IViewImage.cs.i
@@ -163,7 +160,6 @@ data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/FireBird.cfg.xml.i
 data/Shared/BIP.dll.d
 data/UpgradeLog6.XML.i
 data/packages/Ninject.3.2.2.0/Ninject.3.2.2.0.nupkg.d
-data/BscanILL/UI/Controls/ScannerControls/BookEdge/ColorModeControl.xaml.i
 data/BscanILL/Shared/TransportController.dll.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml.i
 data/packages/Microsoft.Bcl.1.1.10/Microsoft.Bcl.1.1.10.nupkg.d
@@ -181,7 +177,7 @@ data/BscanILLData/packages.config.i
 data/Bscan-bridge/ConsoletestSimple/ConsoletestSimple.csproj.i
 data/BscanILL/UI/Buttons/ControlButton.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4/Microsoft.Threading.Tasks.Extensions.xml.i
-data/BscanILL/Misc/Misc.cs.i
+data/BscanILL/UI/Converters/TabConverters.cs.i
 data/BscanILL/app.config.i
 data/BscanILL/UI/Frames/FrameScanUi.xaml.i
 data/packages/ARSoft.Tools.Net.2.2.9/ARSoft.Tools.Net.2.2.9.nupkg.d
@@ -190,24 +186,24 @@ data/BscanILL/Export/ILLiad/Enums.cs.i
 data/BscanILL/Images/Tab Control/TabsShort.png.i
 data/packages/Ninject.3.2.2.0/lib/net35/Ninject.xml.i
 data/BscanILL/UI/Frames/FrameStartUi.xaml.i
-data/Scanners/S2N/S2NSettings/DpiModeSetting.cs.i
+data/BscanILL/lame_enc.dll.d
 data/BscanILL/Export/FTP/FtpServerDlg.cs.i
 data/BscanILL/UI/Frames/Export/ProgressPanel.xaml.i
 data/Shared/Copier Interface Testbed.exe.i
 data/Bscan-bridge/UpgradeLog.XML.i
 data/BscanILL.UnitTests/Export/AE/ArticleExchangeTests.cs.i
 data/WpfTester/WpfTester.csproj.i
-data/Bscan-bridge/Bscan/BinaryBuffer.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.xml.i
+data/BscanILL/Export/ILL/ILLiad7_4_0_0.cs.i
+data/BscanILL/RequiredFiles/FormsProcessing/ND-SHOW-Reg-FormA.bsf.i
 data/Scanners/S2N/S2NSettings/ScanMode.cs.i
-data/Bscan-bridge/Bscan/BC/BarcodeCheckDigitItem.cs.i
+data/Scanners/S2N/S2NSettings/TiffCompressionSetting.cs.i
 data/BscanILL/Export/Printing/Win32/IllPrinters.cs.i
 data/BscanILL/IP/ImageFileSizeReducer.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml.i
 data/BscanILL/Export/ILL/ILLiad8_1_4_0.cs.i
 data/BscanILL/WpdLibrary32.dll.i
-data/BscanILLData/FluentMappings/SQLite/DbArticleFullMap.cs.i
+data/BscanILL/Export/ILLiad/DsIlliad.xss.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarNavigation.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/wpa81/Microsoft.Threading.Tasks.Extensions.xml.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl2/Ninject.Extensions.Conventions.xml.i
@@ -219,11 +215,11 @@ data/BscanILL/Shared/EdsImage.dll.i
 data/BscanILL/Misc/Printing.cs.i
 data/Scanners/MODELS/Enums.cs.i
 data/BscanILL/UI/Controls/ScannerControls/AdfControl.xaml.cs.i
-data/BscanILL/FP/FormsProcessing.cs.i
+data/BscanILL/UI/Frames/Edit/AutoItExecution.cs.i
 data/images/scanners/Height40/Bookeye3.jpg.i
-data/packages/NHibernate.4.0.4.4000/NHibernate.4.0.4.4000.nupkg.i
+data/BscanILLTester/app.config.i
 data/BscanILL/UI/Frames/Start/FrameStartTwain.cs.i
-data/BscanILL/Images/Tab Control/NewU.png.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_31.jpg.d
 data/BscanILL/Images/Scanner/Bookeye3.png.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/ScanModeControl.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll.i
@@ -259,6 +255,7 @@ data/Shared/KssFolderAPIClientNS.dll.d
 data/BscanILL/Export/Printing/PrintPageElement.cs.i
 data/Shared/KssFolderAPIClientNS.dll.i
 data/BscanILL/UI/Frames/ItResults/FrameItResults.cs.i
+data/Shared/Interop.FREngine.dll.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_29.jpg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_29.jpg.i
 data/WpfTester/app.config.i
@@ -289,11 +286,9 @@ data/Shared/Bscan.dll.i
 data/Scanners.UnitTests/Scanners.UnitTests.csproj.i
 data/BscanILL/UI/Controls/ScannerControls/JpegQualityRollingControl.xaml.cs.i
 data/BscanILL/Export/ILLiad/ILLiad8_1_4_0.cs.i
-data/packages/AutoMapper.2.2.1/AutoMapper.2.2.1.nupkg.i
 data/Shared/IdrsWrapper3.dll.i
 data/packages/Microsoft.Bcl.1.1.7/content/portable-net451+win81/_._.i
 data/ViewPane/ViewPane3/ImagePanel/ViewImageGeneric.cs.i
-data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml.i
 data/BscanILL/Export/ILL/TransactionPair.cs.i
 data/BscanILL/Shared/SmartAssembly.Attributes.dll.i
 data/BscanILL/UI/Settings/Panels/PanelsResources.xaml.i
@@ -306,7 +301,7 @@ data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_57.jpg.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net45/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILL/UI/Settings/Panels/FtpDir.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4/Microsoft.Threading.Tasks.Extensions.dll.i
-data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl3/Ninject.Extensions.Conventions.dll.i
+data/ViewPane/ViewPane3/Toolbar/ToolbarItTransforms.xaml.i
 data/BscanILL/Export/Printing/PrinterProfiles.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_08.jpg.d
@@ -318,6 +313,7 @@ data/BscanILL/UI/Controls/ScannerControls/JpegQualityRollingControl.xaml.i
 data/Scanners/Twain/Settings/ColorModeSetting.cs.i
 data/BscanILL/Export/Printing/Win32/IllInputBin.cs.i
 data/BscanILL/Export/Printing/Xps/PrintPaginator.cs.i
+data/BscanILL/data/data12634.data.i
 data/BscanILL/UI/Controls/ScannerControls/Click/DpiRollingControl.xaml.cs.i
 data/Scanners/Click/ClickWrapper.cs.i
 data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/SybaseASE.cfg.xml.i
@@ -349,7 +345,7 @@ data/packages/Microsoft.Bcl.1.1.7/lib/net40/System.Threading.Tasks.xml.i
 data/Scanners/S2N/S2NSettings/FileFormatSetting.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl5/System.IO.dll.i
 data/BscanILL/Export/Printing/Enums.cs.i
-data/packages/Microsoft.Bcl.1.1.10/lib/monoandroid/_._.i
+data/ViewPane/ViewPane3App/Window1.xaml.i
 data/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll.i
 data/BscanILL/Export/Printing/Xps/IllPaperSize.cs.i
 data/Scanners/Twain/Misc.cs.i
@@ -368,8 +364,9 @@ data/packages/Microsoft.Bcl.Build.1.0.21/build/Microsoft.Bcl.Build.targets.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net45+win8+wpa81/_._.i
 data/BscanILLData/Helpers/NHibernateHelper.cs.i
 data/Scanners/Enums.cs.i
-data/images/scanners/From Diana/2013_Bookeye 4-V2-Basic_No Monitor.png.d
+data/BscanILL/UI/Controls/ScannerControls/ColorModeControl.xaml.i
 data/ViewPane/ViewPane3/IP/PreviewCreator.cs.i
+data/BscanILL/DB/PageDb.cs.i
 data/BscanILL/UI/Frames/ItResults/FrameItResultsUi.xaml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_50.jpg.d
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml.i
@@ -389,12 +386,13 @@ data/BscanILL/Export/Printing/PrintPaginator.cs.i
 data/Scanners/Twain/TwainBase.cs.i
 data/BscanILL/UI/Controls/FastKeysControl.xaml.i
 data/ViewPane/ViewPane3App/App.xaml.i
+data/Shared/Interop.FREngine.dll.d
 data/packages/NHibernate.4.0.4.4000/lib/net40/NHibernate.dll.i
 data/packages/NHibernate.4.0.4.4000/lib/net40/NHibernate.dll.d
 data/packages/Microsoft.Bcl.1.1.7/content/win8/_._.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/System.IO.dll.i
 data/ViewPane/ViewPane3/IT/ItResults/ItResultsImagePane.xaml.i
-data/BscanILL/Export/ExportFiles/Abbyy.cs.i
+data/packages/ARSoft.Tools.Net.2.2.9/NOTICE.i
 data/BscanILL/Images/Manual/09.jpg.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarPostProcessing.xaml.cs.i
 data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/SybaseSQLAnywhere.cfg.xml.i
@@ -433,7 +431,7 @@ data/BscanILL/Export/Printing/StreamString.cs.i
 data/BscanILL/UI/Dialogs/DependencyDlg.xaml.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_27.jpg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_27.jpg.i
-data/BscanILLData/FluentMappings/SQLite/DbArticleMap.cs.i
+data/BscanILL/UI/Controls/ScannerControls/Click/ColorModeControl.xaml.i
 data/images/ClickBoard Focus.png.i
 data/packages/FluentNHibernate.2.0.3.0/FluentNHibernate.2.0.3.0.nupkg.d
 data/packages/Ninject.3.2.0.0/lib/net40/Ninject.dll.i
@@ -450,7 +448,7 @@ data/BscanILL/UI/Settings/Dialogs/ClickCalibrationDlg.xaml.i
 data/packages/BouncyCastle.1.8.1/BouncyCastle.1.8.1.nupkg.d
 data/packages/BouncyCastle.1.8.1/BouncyCastle.1.8.1.nupkg.i
 data/BscanILL/UI/Controls/ArticleControlSmall.xaml.cs.i
-data/BscanILL/UI/Dialogs/ExportDialog/ArticleExchange.xaml.cs.i
+data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.Runtime.dll.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate90Unchecked.png.i
 data/Shared/Jscape.Ssh.dll.i
 data/ArticleExchangeWrapper/ArticleExchangeWrapper/AEWrapper.cs.i
@@ -486,10 +484,10 @@ data/Shared/Ucs32P.dll.i
 data/packages/Microsoft.Bcl.1.1.7/content/portable-net45+win8+wp8+wpa81/_._.i
 data/BscanILL/UI/Settings/Panels/Email.xaml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_25.jpg.d
-data/BscanILL/UI/Controls/ScannerControls/Click/BrightnessContrastControl.xaml.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_25.jpg.i
+data/BscanILLData/Configurators/DataNinjectConfigurator.cs.i
+data/packages/NHibernate.4.0.4.4000/NHibernate.readme.html.i
 data/ViewPane/ViewPane3/ItResults/StripPane.xaml.i
-data/BscanILL/SCANSETTINGS/SETTINGS/BookedgePageSetting.cs.i
+data/BscanILL/UI/Dialogs/ExportDialog/ArticleExchange.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net451+win81+wpa81/_._.i
 data/BscanILL/Images/Scanner/ScannerSettings.png.i
 data/BscanILL/FileSystem/PdfExtractor.cs.i
@@ -500,9 +498,9 @@ data/Scanners/S2N/S2NSettings/DocumentModeSetting.cs.i
 data/images/scanners/Height40/Click.jpg.i
 data/BscanILL/UI/Dialogs/ComboItems.cs.i
 data/BscanILLData/Data/KICS20060414_log.ldf.d
-data/BscanILL/Export/ILL/ArielAddressBookExtractor/AddressBookItem.cs.i
+data/ProgramsRelease/ViewPane/BIP.dll.d
 data/ProgramsRelease/ViewPane/BIP.dll.i
-data/BscanILL/UI/Controls/ArticleControlSmall.xaml.i
+data/BscanILL/UI/Settings/Panels/Export.xaml.cs.i
 data/BscanILL/UI/Frames/FrameScanUi.xaml.cs.i
 data/Scanners/S2N/Bookeye4Wrapper.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net40/Microsoft.Threading.Tasks.xml.i
@@ -510,31 +508,31 @@ data/BscanILL/Export/ILLiad/ILLiad7_3_0_0.cs.i
 data/BscanILL/UI/Settings/Panels/PreferredDelivery.xaml.cs.i
 data/BscanILL/UI/Settings/Dialogs/ArticleExchangeRecipientsDlg.xaml.i
 data/BscanILL/Export/AudioZoning/ZonesImage.cs.i
-data/BscanILL/UI/Frames/Resend/FrameResendUi.xaml.i
 data/BscanILL/data/data12635.data.i
 data/Scanners/S2N/ScannerS2N.cs.i
 data/WpfTester/Properties/Settings.Designer.cs.i
 data/BscanILL/UI/Settings/Panels/Ariel.xaml.cs.i
-data/Scanners/S2N/IS2NScanner.cs.i
-data/BscanILL/UI/Settings/Controls/PrintFunctionalityPanel.xaml.i
+data/BscanILL/Images/Manual/21.jpg.i
+data/packages/NHibernate.4.0.0.4000/NHibernate.releasenotes.txt.i
 data/packages/Ninject.3.2.0.0/lib/sl4-windowsphone71/Ninject.dll.i
 data/Bscan-bridge/Bscan/OCR/BGW_ARRAY_SEGMENT_STRUCT.cs.i
 data/packages/FluentNHibernate.2.0.3.0/lib/net40/FluentNHibernate.XML.i
 data/BscanILL/UI/Dialogs/ExportDialog/WorldShareILL.xaml.i
-data/images/ClickBoard.psd.i
+data/data/BscanILLData.db3.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_17.jpg.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_17.jpg.d
+data/Shared/DPPDLL.dll.i
 data/ViewPane/ViewPane3/ImagePanel/ViewBitmap.cs.i
-data/BscanILL/UI/Controls/ScannerControls/Twain/images/Brightness.png.i
-data/ViewPane/ViewPane3/Thumbnails/Thumbnail.cs.i
+data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.dll.d
+data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl5/Ninject.Extensions.Conventions.dll.i
 data/BscanILL/Hierarchy/IllPdf.cs.i
 data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.dll.i
 data/Scanners/S2N/S2NSettings/LightSetting.cs.i
 data/BscanILL/UI/Controls/ScannerControls/GammaRollingControl.xaml.i
-data/BscanILL/UI/Settings/ClickWizard/PanelTest.xaml.cs.i
+data/BscanILL/Export/ILL/ArticleForm.cs.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/images/Brightness.png.i
-data/Scanners/Click/Settings/Click/ScanModeSetting.cs.i
+data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll.i
 data/ScannersTester/Properties/Resources.resx.i
 data/packages/Microsoft.Bcl.1.1.10/lib/win8/_._.i
 data/packages/Ninject.3.2.2.0/lib/sl4-windowsphone71/Ninject.xml.i
@@ -543,23 +541,23 @@ data/BscanILL/Export/Printing/PrintBatch.cs.i
 data/Bscan-bridge/Bscan/BC/SumBytesStructure.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate90Checked.png.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_63.jpg.i
-data/Shared/DPPDLL.dll.i
+data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate180Disabled.png.i
 data/BscanILL/DB/DbScan.cs.i
 data/packages/Ninject.3.2.2.0/lib/sl4-windowsphone71/Ninject.dll.i
 data/Shared/DPPDLL.dll.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_63.jpg.d
 data/BscanILL/Images/Manual/20.jpg.i
 data/ViewPane/ViewPane3/ImageTreatmentUi/BookfoldUi.xaml.cs.i
-data/Scanners/S2N/TestS2N.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll.i
 data/Scanners.UnitTests/Scanners.nunit.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/DespeckleControl.xaml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_52.jpg.d
 data/Bscan-bridge/UpgradeLog2.XML.i
+data/Bscan-bridge/Bscan/BscanCache.cs.i
 data/BscanILL/Export/AudioZoning/Zone.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_52.jpg.i
 data/BscanILL/UI/Frames/Export/ProgressPanel.xaml.cs.i
 data/packages/ARSoft.Tools.Net.2.2.9/lib/net45/ARSoft.Tools.Net.xml.i
+data/Scanners/S2N/Settings/SpeedSetting.cs.i
 data/BscanILL/UI/Frames/Start/FrameStartUi.xaml.i
 data/BscanILLTester/Properties/Resources.Designer.cs.i
 data/Bscan-bridge/FormTester/Form1.resx.i
@@ -573,11 +571,12 @@ data/BscanILL/UI/Windows/ItResultsWindow.xaml.i
 data/ViewPane/ViewPane3/Toolbar/DeleteControl.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Click/ScanPageControl.xaml.i
 data/Bscan-bridge/FormTester/FormTester.csproj.i
-data/BscanILL/UI/Controls/ScannerControls/S2N.xaml.cs.i
+data/BscanILL/Images/TabsControl/TabsShortResend.png.i
 data/BscanILL/UI/Settings/Panels/FormsProcessing.xaml.i
 data/BscanILL/DB/DBExportFile.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/net40/ensureRedirect.xml.i
 data/packages/Ninject.3.2.2.0/lib/sl2/Ninject.dll.i
+data/BscanILL/UI/Settings/Panels/WorldShareILL.xaml.i
 data/packages/Ninject.3.2.0.0/lib/net45-full/Ninject.dll.i
 data/BscanILL/UI/Settings/Panels/ScannerClickMini.xaml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelFocusResult.xaml.i
@@ -585,22 +584,21 @@ data/BscanILL/DB/Model1.Designer.cs.i
 data/BscanILL/Export/Printing/PrintOption.cs.i
 data/BscanILL/Export/ExportFiles/Iris.cs.i
 data/packages/Microsoft.Bcl.Build.1.0.14/content/net40/_._.i
-data/BscanILL/UI/Dialogs/ExportDialog/Tipasa.xaml.cs.i
 data/ViewPane/ViewPane3/images/ClipsSameSize.png.i
 data/BscanILL/Newtonsoft.Json.dll.d
 data/BscanILL/UI/Controls/ScannerControls/S2N/BrightnessContrastControl.xaml.cs.i
 data/BscanILL/Shared/WpdLibrary64.dll.i
 data/BscanILL/UI/Controls/NavigationControl.xaml.i
 data/BscanILL/Newtonsoft.Json.dll.i
-data/packages/AutoMapper.2.2.1/lib/net40/AutoMapper.dll.i
+data/BscanILL/Export/ILL/FinalReport.resx.i
 data/BscanILL/Images/BscanILLBigLogo.png.i
-data/BscanILL/Export/ILL/ArticleForm.Designer.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/wpa81/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/Themes/ModalDialog.xaml.i
+data/Scanners/S2N/IS2NWrapper.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/PageSplittingControl.xaml.i
 data/Scanners/S2N/S2NSettings/Light.cs.i
 data/BscanILLData/Models/DbPageFull.cs.i
-data/Shared/ClickCommon.dll.i
+data/BscanILL/Settings/ScanSettingsPullSlips.cs.i
 data/images/scanners/From Diana/Click-BSCAN ILL.png.i
 data/packages/NUnit.3.0.1/lib/net40/nunit.framework.xml.i
 data/BscanILL/UI/ResourceDictionaries/WindowDictionary.xaml.i
@@ -615,17 +613,18 @@ data/packages/Ninject.3.2.2.0/lib/net45-full/Ninject.dll.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8/ensureRedirect.xml.i
 data/Scanners/Click/Settings/ContrastSetting.cs.i
 data/ArticleExchangeWrapper/ArticleExchangeWrapper.sln.i
-data/packages/Microsoft.Bcl.1.1.7/lib/portable-win81+wp81+wpa81/_._.i
 data/ViewPane/ViewPane3/Dialogs/IpDlg.xaml.i
 data/ViewPane/ViewPane3/ViewPane3.csproj.i
-data/BscanILL/DB/Model1.Context.cs.i
+data/Bscan-bridge/Bscan-bridge.sdf.d
 data/BscanILL/UI/Dialogs/ExportDialog/FileFormatControl.xaml.cs.i
 data/BscanILL/Export/ILL/EnterTransactionNumberDlg.resx.i
 data/BscanILL/Properties/FrameEdit.settings.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/images/Brightness.png.i
+data/BscanILL/SCANSETTINGS/SETTINGS/BookedgePageSetting.cs.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_38.jpg.d
 data/ViewPane/ViewPane3/images/FitWidth.gif.i
-data/BscanILL/UI/Frames/Start/FrameStartUi.xaml.cs.i
-data/BscanILL/UI/Controls/ScannerControls/Click/ScannerControlBase.cs.i
+data/images/scanners/Widetek.png.i
+data/Scanners/S2N/Settings/BooleanSetting.cs.i
 data/BscanILL/Export/Exporter.cs.i
 data/packages/EntityFramework.6.1.3/tools/about_EntityFramework.help.txt.i
 data/BscanILL/Export/ExportFiles/MultiTiffCreator.cs.i
@@ -641,14 +640,12 @@ data/Shared/Google.GData.Extensions.dll.i
 data/BscanILL/UI/Dialogs/ExportDialog/ILLiad.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/DespeckleControl.xaml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_09.jpg.i
-data/Scanners/S2N/S2NSettings/TiffCompressionSetting.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_09.jpg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_07.jpg.d
 data/ViewPane/ViewPane3/Themes/Generic.xaml.i
 data/BscanILL/UI/ItSettings/Panels/BookfoldCorrection.xaml.cs.i
-data/Scanners/Click/Settings/FocusSetting.cs.i
+data/BscanILL/UI/Dialogs/ExportDialog/Email.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/Click/ScanPageControl.xaml.cs.i
-data/BscanILL/Images/Tab Control/TabsCleanUp.png.i
 data/images/scanners/Height40/KodakI1405.jpg.i
 data/BscanILL/Misc/Licensing.cs.i
 data/BscanILL/Images/Tab Control/ResendS.png.i
@@ -660,7 +657,7 @@ data/images/scanners/Bookeye3.png.i
 data/images/scanners/FB6280E.png.i
 data/BscanILL/UI/Buttons/DialogButton.cs.i
 data/images/scanners/FB6280E.png.d
-data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/FireBird.cfg.xml.i
+data/Scanners/Twain/Settings/TransferCountSetting.cs.i
 data/BscanILL/UI/Frames/Edit/SkipItExecution.cs.i
 data/BscanILL/Shared/CassiniDev4-lib.dll.i
 data/BscanILL/App.xaml.cs.i
@@ -672,18 +669,16 @@ data/ViewPane/ViewPane3/images/Rotate180.gif.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.Extensions.dll.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/System.IO.dll.i
 data/Shared/Jscape.Util.dll.i
-data/BscanILL/UI/Frames/Edit/AutoItControl.xaml.i
+data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.xml.i
 data/ViewPane/ViewPane3/Hierarchy/VpImage.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_45.jpg.d
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4/System.Threading.Tasks.xml.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_05.jpg.i
 data/BscanILLData/Models/DbArticleFull.cs.i
 data/BscanILL/Export/ILL/ProgressesUi.designer.cs.i
 data/BscanILL/Shared/FTPClientConnector.dll.i
 data/ScannersTester/Properties/Settings.settings.i
 data/Bscan-bridge/Bscan/OCR/BGW_ARRAY_STRUCT.cs.i
-data/BscanILL/UI/Controls/ScannerControls/Click/BrightnessContrastControl.xaml.i
 data/Shared/Ucs32P.zip.i
 data/Shared/Ucs32P.zip.d
 data/BscanILL/UI/Controls/ScannerControls/S2N/RotationControl.xaml.i
@@ -694,7 +689,6 @@ data/packages/Ninject.3.2.2.0/lib/sl2/Ninject.xml.i
 data/packages/NHibernate.4.0.0.4000/nhibernate-configuration.xsd.i
 data/images/scanners/Bookeye2.png.i
 data/BscanILLData/Models/Helpers/NewDbArticle.cs.i
-data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl3/Ninject.Extensions.Conventions.xml.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl4-windowsphone71/Ninject.Extensions.Conventions.dll.i
 data/BscanILL/Images/Tab Control/TabShort.psd.i
 data/BscanILL/x64/EDSDK.dll.d
@@ -710,22 +704,23 @@ data/BscanILL/Images/Manual/24.jpg.i
 data/BscanILL/Export/Enums.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelLightDistResult.xaml.cs.i
 data/BscanILL/Images/TabsControl/TabsSend.png.i
+data/BscanILL/RequiredFiles/FormsProcessing/ILLScan.bsa.i
 data/BscanILL/UI/Controls/ScannerControls/Bookeye4.xaml.i
 data/ViewPane/ViewPane3/IT/ItResults/Thumbnail.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/net40/System.Threading.Tasks.dll.i
 data/Scanners/Twain/Settings/DocSizeSetting.cs.i
-data/ViewPane/ViewPane3/IT/ItResults/StripPane.xaml.cs.i
 data/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll.d
 data/packages/NHibernate.4.0.4.4000/nhibernate-configuration.xsd.i
 data/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll.i
 data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/MySql.cfg.xml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelRegPoints.xaml.i
 data/ViewPane/ViewPane3/IT/ItProcessing.cs.i
-data/packages/Microsoft.Bcl.1.1.10/lib/sl4/System.IO.xml.i
+data/BscanILL/Images/TabsControl/TabsNew.png.i
 data/BscanILL/Themes/Export.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/Click/ScanModeControl.xaml.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarBookInfo.xaml.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarScan.xaml.i
+data/BscanILL/UI/Settings/ClickWizard/PanelLaser.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8/System.Threading.Tasks.xml.i
 data/Scanners/Twain/Settings/Bookedge/ScanPageSetting.cs.i
 data/BscanILL/UI/ItSettings/Panels/Deskew.xaml.cs.i
@@ -733,14 +728,15 @@ data/BscanILL/UI/Controls/ScannerControls/Twain/FileFormatControl.xaml.cs.i
 data/BscanILL/Images/Manual/32.jpg.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/CheckBoxes.psd.i
 data/BscanILL/UI/Controls/ScannerControls/DocSizeControl.xaml.i
+data/Bscan-bridge/ConsoleTestApp/Properties/AssemblyInfo.cs.i
 data/ViewPane/ViewPane3/Thumbnails/Thumbnail.xaml.cs.i
 data/Bscan-bridge/ConsoletestSimple/Program.cs.i
 data/BscanILL/UI/Settings/ClickWizard/WizardDictionary.xaml.i
-data/BscanILLData/Configurators/DataNinjectConfigurator.cs.i
+data/BscanILL/UI/Controls/ScannerControls/Click/BrightnessContrastControl.xaml.cs.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_02.jpg.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarPages.xaml.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarItTransforms.xaml.cs.i
-data/packages/NUnit.3.0.0-alpha-4/lib/net40/nunit.framework.xml.i
-data/packages/NHibernate.4.0.4.4000/NHibernate.readme.html.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_25.jpg.i
 data/BscanILLTester/Properties/Resources.resx.i
 data/packages/Microsoft.Bcl.Build.1.0.14/tools/Microsoft.Bcl.Build.targets.i
 data/BscanILL/FormsProcessing/FormsProcessingResult.cs.i
@@ -748,7 +744,7 @@ data/Bscan-bridge/Bscan/BC/BarcodeWriter.cs.i
 data/Scanners/S2N/S2NSettings/DocumentSize.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/FileFormatControl.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/ScannerControlBase.cs.i
-data/packages/Microsoft.Bcl.Build.1.0.14/tools/Uninstall.ps1.i
+data/BscanILL/UI/Settings/ClickWizard/images/ClickBoardFocus.png.i
 data/ViewPane/ViewPane3/ImageTreatmentUi/BfPointUi.xaml.cs.i
 data/BscanILLData/Models/DbExport.cs.i
 data/ViewPane/ViewPane3/Resources/Cursors/ZoomDynamic.cur.i
@@ -759,8 +755,8 @@ data/packages/NUnit.3.0.1/lib/net45/nunit.framework.xml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml.i
 data/BscanILLData/AutoMapping/AutoMapperAdapter.cs.i
 data/BscanILL/UI/Controls/ScannerControls/FileFormatControl.xaml.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_02.jpg.d
 data/packages/Microsoft.Bcl.Build.1.0.21/build/Microsoft.Bcl.Build.Tasks.dll.i
+data/packages/NUnit.3.0.0-alpha-4/lib/net35/nunit.framework.dll.i
 data/ViewPane/ViewPane3/Copy of ViewPane2Strings.resx.i
 data/BscanILL/Export/Printing/Xps/PrintPageElement.cs.i
 data/Scanners/ScannersEx.cs.i
@@ -771,7 +767,6 @@ data/BscanILL/UI/Frames/FrameScan.cs.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipClickControl.xaml.cs.i
 data/images/scanners/Height40 Transparent/Click.png.i
 data/BscanILL/Export/Email/DlsgEmail.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_05.jpg.d
 data/Scanners.UnitTests/packages.config.i
 data/Scanners.UnitTests/Properties/AssemblyInfo.cs.i
 data/BscanILL/Export/DlsgEmail.cs.i
@@ -799,23 +794,22 @@ data/BscanILL/Export/ExportFiles/ExportFilesCreator.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.dll.i
 data/BscanILL/Export/Tipasa/Tipasa.cs.i
 data/packages/BouncyCastle.1.8.1/lib/BouncyCastle.Crypto.dll.d
+data/Shared/yeti.mp3.dll.i
 data/BscanILL/UI/Settings/Panels/PasswordBoxAssistant.cs.i
 data/packages/AutoMapper.2.2.1/lib/net40/AutoMapper.xml.i
 data/BscanILL/Images/Manual/25.jpg.i
 data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.xml.i
-data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll.i
 data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.xml.d
-data/BscanILL/RequiredFiles/FormsProcessing/ILLScan.bsa.i
-data/data/BscanILLData.db3.i
+data/Scanners/S2N/IS2NScanner.cs.i
+data/images/ClickBoard.psd.i
 data/ViewPane/ViewPane3/ImageTreatmentUi/CurveUi.xaml.cs.i
-data/ViewPane/ViewPane3/Toolbar/ToolbarComboBox.cs.i
 data/BscanILL/Export/ILLiad/DsIlliad.xsc.i
 data/packages/Microsoft.Bcl.Build.1.0.14/content/sl4/_._.i
 data/BscanILL/Export/ILL/DataProtector.cs.i
 data/BscanILL/Images/Manual/16.jpg.i
 data/BscanILL.UnitTests/Properties/AssemblyInfo.cs.i
 data/ViewPane/ViewPane3/images/Waiting.psd.d
-data/BscanILLData/Models/DbArticle.cs.i
+data/ViewPane/ViewPane3/images/NavigationFirst.png.i
 data/ViewPane/ViewPane3/images/Waiting.psd.i
 data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/Oracle.cfg.xml.i
 data/BscanILL/Export/Printing/Xps/IllPrinter.cs.i
@@ -824,7 +818,7 @@ data/packages/Microsoft.Bcl.Async.1.0.165/lib/net45/Microsoft.Threading.Tasks.Ex
 data/BscanILL/UI/Frames/Edit/FrameEditUi.xaml.i
 data/BscanILL/Shared/Jscape.Ftp.dll.i
 data/Bscan-bridge/Bscan/BscanIris.cs.i
-data/Scanners/S2N/Settings/BooleanSetting.cs.i
+data/BscanILL/UI/Controls/ScannerControls/Click/ScannerControlBase.cs.i
 data/Scanners/S2N/Settings/RangeSetting.cs.i
 data/ViewPane/ViewPane3/images/Rotate90.gif.i
 data/BscanILL/Shared/Jscape.Ftp.dll.d
@@ -832,27 +826,28 @@ data/ViewPane/ViewPane3.sln.i
 data/BscanILL/Images/Scanner/FB6280E.png.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml.i
 data/Scanners/S2N/Settings/DpiModeSetting.cs.i
-data/ProgramsRelease/ViewPane/BIP.dll.d
+data/BscanILL/Export/ILL/ArielAddressBookExtractor/AddressBookItem.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll.i
 data/BscanILL/UI/Settings/Dialogs/ClickSettingsDlg.xaml.cs.i
 data/BscanILL/Images/Tab Control/SendS.png.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml.i
 data/Shared/LightController.dll.i
 data/packages/Ninject.3.2.2.0/lib/sl4/Ninject.dll.i
-data/BscanILL/Images/TabsControl/TabsNew.png.i
-data/BscanILL/UI/Settings/Panels/Export.xaml.cs.i
-data/BscanILL/UI/Settings/ClickWizard/images/ClickBoardFocus.png.i
+data/packages/Microsoft.Bcl.1.1.10/lib/sl4/System.IO.xml.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_14.jpg.i
+data/BscanILL/UI/Controls/ArticleControlSmall.xaml.i
+data/packages/Microsoft.Bcl.Build.1.0.14/tools/Uninstall.ps1.i
 data/Shared/zxing.dll.i
 data/BscanILL.sdf.i
 data/BscanILL.sdf.d
 data/images/scanners/Height40/Bookeye2.jpg.i
 data/BscanILL/Export/ILL/FinalReport.cs.i
-data/BscanILL/Images/Scanner/Height60/KodakI1120.png.i
+data/BscanILL/UI/Controls/CleanUpControl.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/ResourceDictionary.xaml.i
 data/images/scanners/From Diana/Click Mini.png.d
 data/images/scanners/From Diana/Click Mini.png.i
 data/BscanILL/UI/Controls/ScannerControls/RotationControl.xaml.cs.i
-data/ViewPane/ViewPane3/IP/ItResultsCreator.cs.i
+data/packages/Microsoft.Bcl.1.1.7/lib/portable-net45+win8+wpa81/_._.i
 data/BscanILL/Images/Manual/19.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/net45/_._.i
 data/Shared/Copier2Serial.dll.i
@@ -864,7 +859,7 @@ data/BscanILL/UI/Settings/Panels/Odyssey.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/ScannersControl.xaml.i
 data/packages/EntityFramework.6.1.3/tools/init.ps1.i
 data/BscanILL/Themes/Generic.xaml.i
-data/BscanILL/SCANSETTINGS/SETTINGS/BrightnessSetting.cs.i
+data/BscanILL/UI/Frames/Start/IFrameStartScanner.cs.i
 data/BscanILL/UI/Controls/ScannerControls/DpiModeControl.xaml.i
 data/Scanners/S2N/Settings/EnumSetting.cs.i
 data/ViewPane/ViewPane3/images/RotateCCW.gif.i
@@ -874,11 +869,10 @@ data/BscanILL/Misc/IllException.cs.i
 data/BscanILL/Export/WorldShareILL/WorldShareILL.cs.i
 data/Scanners/Click/Misc.cs.i
 data/packages/Microsoft.Bcl.1.1.7/content/net45/_._.i
-data/BscanILL/Properties/DataSources/BscanILL.DB.BscanILLDataEntities.datasource.i
+data/BscanILL/Export/ExportFiles/Misc.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelWhiteBalance.xaml.i
 data/Scanners/Scanner.cs.i
 data/BscanILL/UI/Dialogs/ExportDialog/SaveOnDisk.xaml.i
-data/BscanILL/UI/Settings/Panels/ScannerAddOn.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl5/System.Runtime.dll.i
 data/BscanILL/UI/Settings/Panels/CleanUp.xaml.i
 data/BscanILL/Misc/CleanUp.cs.i
@@ -888,16 +882,16 @@ data/ViewPane/ViewPane3/ImagePanel/ImagePane.xaml.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarItSettings.xaml.cs.i
 data/BscanILL/SCANSETTINGS/SETTINGS/S2NScanModeSetting.cs.i
 data/Shared/TwainApp.dll.i
-data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.Runtime.dll.i
+data/BscanILL/UI/Controls/ScannerControls/ScannersControl.xaml.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate0Unchecked.png.i
 data/Shared/TwainApp.dll.d
 data/Bscan-bridge/Bscan/BC/BARCODE_LOCATION.cs.i
 data/BscanILL/Export/Printing/IInputBin.cs.i
-data/BscanILL/UI/Settings/Panels/Scanner.xaml.cs.i
+data/ViewPane/ViewPane3/images/PagesR.png.i
 data/BscanILL/UI/Settings/AddIllUsbDriveDlg.xaml.cs.i
 data/BscanILL/UI/Frames/Scan/FrameScanAdf.cs.i
-data/packages/NUnit.3.0.1/lib/net20/nunit.framework.xml.i
-data/BscanILL/UI/ItSettings/Panels/PanelsResources.xaml.i
+data/BscanILL/UI/Frames/Edit/AutoItFloatingPanel.xaml.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_59.jpg.d
 data/packages/Iesi.Collections.4.0.1.4000/lib/net40/Iesi.Collections.dll.i
 data/BscanILL/Export/ILL/ProgressesUi.cs.i
 data/BscanILL/Images/Scanner/Height60/ClickMini.png.i
@@ -915,22 +909,20 @@ data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl3-wp/Ninject.Extensio
 data/ViewPane/ViewPane3/images/Waiting.png.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_06.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8/System.Runtime.xml.i
-data/ViewPane/ViewPane3/images/NavigationNext.png.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8/Microsoft.Threading.Tasks.xml.i
 data/packages/Ninject.3.2.2.0/lib/sl3/Ninject.xml.i
 data/BscanILL/Export/ILL/SaveOnDisk.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelWhiteBalanceProgress.xaml.cs.i
 data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/SQLite.cfg.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml.i
-data/BscanILL/Images/Manual/21.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8/System.Threading.Tasks.xml.i
 data/BscanILL/UI/Settings/Panels/Printers.xaml.cs.i
-data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/MySql.cfg.xml.i
+data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml.i
 data/BscanILL/Export/ILL/IniFile.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll.i
-data/packages/EntityFramework.6.1.3/tools/migrate.exe.i
-data/BscanILL/Export/ILL/PullslipReader/BookPullslipParser.cs.i
+data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/Oracle.cfg.xml.i
 data/BscanILL/Export/FTP/Ftp.cs.i
-data/packages/NHibernate.4.0.0.4000/NHibernate.releasenotes.txt.i
+data/BscanILL/UI/Settings/Controls/PrintFunctionalityPanel.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/ScannerControlBase.cs.i
 data/Bscan-bridge/FormTester/Form1.cs.i
 data/BscanILL/sRGB.profile.i
@@ -946,7 +938,7 @@ data/Scanners/S2N/WrapperBase.cs.i
 data/packages/NUnit.3.0.1/NUnit.3.0.1.nupkg.d
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/DpiRollingControl.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/System.Threading.Tasks.dll.i
-data/WpfTester/Window1.xaml.i
+data/Bscan-bridge/Bscan/OCR/Ocr.cs.i
 data/ViewPane/ViewPane3/Resources/Move.gif.i
 data/BscanILL/UI/Frames/Start/FrameStartBE2BE3.cs.i
 data/BscanILL/Export/ILLiad/DatabaseSQLBase.cs.i
@@ -954,11 +946,13 @@ data/images/scanners/Bookeye3.jpg.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarTreatment.xaml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelInitResult.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/DpiRollingControl.xaml.cs.i
+data/BscanILL/Export/ILLiad/ILLiad7_1_8_0.cs.i
 data/BscanILL/RequiredFiles/FormsProcessing/ND-SHOW.bsa.i
 data/BscanILL/UI/Controls/ScannerControls/images/Contrast.png.i
-data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/System.Runtime.dll.i
+data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.IO.dll.i
 data/packages/NHibernate.4.0.0.4000/NHibernate.readme.html.i
 data/Scanners/S2N/S2NSettings/Despeckle.cs.i
+data/Bscan-bridge/Bscan/BC/BarcodeCheckDigitItem.cs.i
 data/BscanILL/UI/Settings/Panels/Odyssey.xaml.cs.i
 data/ViewPane/ViewPane3/Dialogs/DespeckleDlg.xaml.i
 data/images/scanners/Height40/KodakI1120.jpg.i
@@ -972,19 +966,21 @@ data/Scanners/S2N/Bookeye4Settings.cs.i
 data/BscanILL/UI/Settings/ClickWizard/ClickDlg.xaml.i
 data/BscanILL/UI/Settings/Dialogs/FtpServerDlg.xaml.i
 data/BscanILL/UI/Settings/Panels/ILLiad.xaml.i
-data/BscanILL/Export/ExportFiles/Misc.cs.i
+data/BscanILL/Properties/DataSources/BscanILL.DB.BscanILLDataEntities.datasource.i
 data/BscanILL/Images/Tab Control/CleanUpU.png.i
+data/BscanILL/UI/Dialogs/ExportDialog/Odyssey.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/DpiRollingControl.xaml.cs.i
 data/BscanILL/Properties/AssemblyInfo.cs.i
+data/BscanILL/UI/Frames/Edit/AutoItControl.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4/System.IO.dll.i
 data/Shared/MLib.dll.i
 data/BscanILL/Export/ILL/ILLiad7_3_0_0.cs.i
 data/Shared/Jscape.Licensing.dll.i
 data/BscanILL/Export/ExportUnit.cs.i
-data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.dll.d
+data/BscanILL/UI/Controls/ScannerControls/Twain/images/Brightness.png.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_13.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/win8/_._.i
-data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl5/Ninject.Extensions.Conventions.dll.i
+data/ViewPane/ViewPane3/Thumbnails/Thumbnail.cs.i
 data/ScannersTester/app.config.i
 data/ViewPane/ViewPane3/Misc/MemoryManagement.cs.i
 data/BscanILL/Export/ILL/PullslipReader/IPullslip.cs.i
@@ -996,7 +992,7 @@ data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_37.jpg.d
 data/BscanILL/Images/Manual/old.zip.d
 data/ViewPane/ViewPane3/IT/ItResults/StripPane.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8/Microsoft.Threading.Tasks.dll.i
-data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/System.Threading.Tasks.xml.i
+data/packages/Microsoft.Bcl.1.1.7/content/sl5/_._.i
 data/BscanILL/Images/Manual/old.zip.i
 data/BscanILLPostBuild/PostBuildCode.cs.i
 data/BscanILL/FileSystem/ImageImport.cs.i
@@ -1024,17 +1020,19 @@ data/Scanners/Twain/Settings/DpiSetting.cs.i
 data/BscanILL/DB/ExportDb.cs.i
 data/ViewPane/ViewPane3/IT/ItResults/ItResultsImage.cs.i
 data/ViewPane/ViewPane3/images/NoImage.jpg.i
-data/packages/Iesi.Collections.4.0.0.4000/Iesi.Collections.4.0.0.4000.nupkg.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll.i
 data/BscanILL/Export/ILL/IDatabaseSQL.cs.i
+data/ViewPane/ViewPane3/images/PostProcessingToolbar/InvertDisabled.png.i
 data/BscanILL/UI/Settings/Panels/CleanUp.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll.i
 data/BscanILL/UI/Settings/ClickWizard/PanelRegPoints.xaml.cs.i
 data/BscanILL/Misc/MemoryManagement.cs.i
-data/BscanILL/UI/Controls/ScannerControls/S2N/RotationControl.xaml.cs.i
+data/Shared/System.Data.SQLite.Linq.dll.i
 data/BscanILL/Shared/Jscape.Licensing.dll.i
+data/Bscan-bridge/FormTester/Program.cs.i
 data/BscanILL/Export/Printing/Win32/KicPrinter.cs.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl5/Ninject.Extensions.Conventions.xml.i
-data/BscanILL/Export/ILL/ArticleForm.cs.i
+data/BscanILL/UI/Settings/ClickWizard/PanelTest.xaml.cs.i
 data/BscanILL/x86/EdsImage.dll.i
 data/BscanILL/Shared/itextsharp.dll.i
 data/BscanILL/x86/EdsImage.dll.d
@@ -1055,33 +1053,33 @@ data/BscanILL/Export/AE/ArticleExchange.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/InvertChecked.png.i
 data/ViewPane/ViewPane3/ImagePanel/ViewImage.cs.i
 data/Bscan-bridge/Bscan/OCR/OCR_REMOVELINE_STRUCT.cs.i
-data/BscanILL/UI/Settings/Panels/ScannerRebel.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll.i
 data/Scanners/S2N/S2NSettings/Autofocus.cs.i
 data/packages/Ninject.3.2.0.0/lib/net35/Ninject.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.165/License-Stable.rtf.i
+data/Scanners/S2N/S2NSettings/BitonalThresholdSetting.cs.i
 data/Bscan-bridge/Bscan/ADJUSTMENTS_STRUCT.cs.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipS2NControl.xaml.i
 data/WpfTester/Properties/Settings.settings.i
 data/BscanILL/UI/Controls/ScannerControls/GammaRollingControl.xaml.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/InvertUnchecked.png.i
-data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL/UI/Dialogs/Scanning/S2NAdditionalSettingsDlg.xaml.cs.i
 data/BscanILLTester/Properties/Settings.Designer.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelRegPointsResult.xaml.cs.i
-data/BscanILL/UI/Frames/Edit/ManualItExecution.cs.i
+data/packages/Microsoft.Bcl.1.1.7/content/portable-net45+win8+wpa81/_._.i
 data/BscanILL/Images/Tab Control/Tabs.png.i
 data/BscanILL/Export/ILL/DatabaseSQL7_4.cs.i
 data/ViewPane/ViewPane3/ImagePanel/ImagePane.xaml.i
 data/BscanILL/Export/ILL/DsIlliad.xsd.i
 data/BscanILL/Export/ILL/PullslipReader/WordXmlParserTexas.cs.i
-data/BscanILL/UI/Converters/TabConverters.cs.i
-data/BscanILL/lame_enc.dll.d
+data/BscanILL/Misc/Misc.cs.i
+data/Scanners/S2N/S2NSettings/DpiModeSetting.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarHeader.xaml.cs.i
-data/BscanILL/Export/ILL/ILLiad7_4_0_0.cs.i
+data/Bscan-bridge/Bscan/BinaryBuffer.cs.i
 data/BscanILL/lame_enc.dll.i
 data/ViewPane/ViewPane3/ImageTreatmentUi/BookfoldUi.xaml.i
-data/BscanILL/UI/Frames/Edit/AutoItExecution.cs.i
+data/BscanILL/FP/FormsProcessing.cs.i
 data/Shared/CanonCamera.dll.d
 data/BscanILL/IP/IllImageOperations.cs.i
 data/Shared/CanonCamera.dll.i
@@ -1108,12 +1106,12 @@ data/BscanILL/Images/Tab Control/TabsNew.png.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/net35/Ninject.Extensions.Conventions.dll.i
 data/BscanILL/Export/ILL/ArticleForm.resx.i
 data/BscanILLTester/Properties/Settings.settings.i
-data/BscanILL/Misc/Zipping.cs.i
+data/ViewPane/ViewPane3/Toolbar/ToolbarPages.xaml.cs.i
 data/Bscan-bridge/Bscan/Region.cs.i
 data/KIC 2.8.sdf.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_20.jpg.i
-data/Shared/System.Data.SQLite.zip.i
-data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate180Disabled.png.i
+data/BscanILL/UI/Controls/ScannerControls/S2N/DpiModeControl.xaml.i
+data/BscanILL/Export/ExportType.cs.i
 data/BscanILL/UI/Settings/Panels/Ariel.xaml.i
 data/ViewPane/ViewPane3/ViewPanel.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/FileFormatControl.xaml.cs.i
@@ -1128,7 +1126,7 @@ data/ViewPane/ViewPane3/CursorZoomIn.cur.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarPostProcessingRadio.cs.i
 data/BscanILL/UI/Controls/CleanUpControl.xaml.cs.i
 data/packages/EntityFramework.6.1.3/tools/EntityFramework.PowerShell.dll.i
-data/ViewPane/ViewPane3/images/PostProcessingToolbar/BlackBorderRemovalUnchecked.png.i
+data/Shared/System.Data.SQLite.zip.d
 data/BscanILL/EdsImage.dll.d
 data/Scanners/Twain/TwainSettings.cs.i
 data/ScannersTester/ScannersTester.csproj.i
@@ -1151,11 +1149,11 @@ data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_61.jpg.i
 data/BscanILL/UI/ItSettings/Panels/BookfoldCorrection.xaml.i
 data/Scanners/S2N/Settings/TiffCompressionSetting.cs.i
 data/BscanILL/Hierarchy/Misc.cs.i
-data/BscanILL/Settings/ScanSettingsPullSlips.cs.i
+data/Shared/ClickCommon.dll.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_61.jpg.d
 data/BscanILL/Misc/EmailValidator.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_06.jpg.d
-data/BscanILLData/Data/KICS20060414.mdf.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelFocus.xaml.cs.i
 data/BscanILL/Export/ILL/Ariel4_X.cs.i
 data/Scanners/S2N/S2NSettings/DespeckleSetting.cs.i
@@ -1165,13 +1163,12 @@ data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4/Microsoft.Threading.Tasks.Exte
 data/Scanners/Click/Settings/ClickMini/ScanModeSetting.cs.i
 data/BscanILL/Images/Tab Control/TabsScan.png.i
 data/Scanners/Properties/ScannersSettings.Designer.cs.i
-data/Scanners/Twain/Settings/TransferCountSetting.cs.i
+data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/FireBird.cfg.xml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl5/System.Runtime.xml.i
 data/Scanners/S2N/S2NSettings/UserUnitSetting.cs.i
 data/BscanILL/Export/ILL/ExportBasic.cs.i
 data/BscanILL/FormsProcessing/FormsProcessing.cs.i
 data/BscanILL/Images/Scanner/ClickMini.psd.d
-data/BscanILL/Images/Scanner/Height60/Bookeye2.png.i
 data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/SQLite.cfg.xml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml.i
 data/BscanILL/DPPDLL.dll.i
@@ -1190,13 +1187,13 @@ data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net40+sl4+win8+wp71+wpa81
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_48.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/ScannerControlBase.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/SharpenControl.xaml.cs.i
-data/BscanILL/UI/Dialogs/DialogBase.cs.i
+data/BscanILL/Images/Manual/08.jpg.d
 data/BscanILL/Export/ILL/PullslipReader/MainClass.cs.i
 data/BscanILL/Shared/RebelScanner.dll.i
 data/Bscan-bridge/Bscan/BscanMsgs.cs.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipClickControl.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4/System.Threading.Tasks.xml.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8/Microsoft.Threading.Tasks.xml.i
+data/ViewPane/ViewPane3/images/NavigationNext.png.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.dll.i
 data/BscanILL/UI/Frames/Edit/AutoItPanel.xaml.i
 data/packages/NUnit.3.0.0-alpha-4/lib/net45/nunit.framework.dll.i
@@ -1204,20 +1201,23 @@ data/BscanILL/App.xaml.i
 data/BscanILL/UI/Settings/Panels/WorldShareILL.xaml.cs.i
 data/ViewPane/ViewPane3App/ItResultsWindow.xaml.cs.i
 data/ViewPane/ViewPane3/ImageTreatmentUi/ImageUi.xaml.i
-data/BscanILL/UI/Settings/ClickWizard/PanelTest.xaml.i
+data/images/scanners/KodakI1120.jpg.i
 data/Scanners/S2N/S2NSettings/BitonalThreshold.cs.i
 data/ViewPane/ViewPane3/images/RotateCW.gif.i
 data/BscanILL/UI/ItSettings/Panels/ImageDependency.xaml.cs.i
 data/BscanILL/Export/ILLiad/DatabaseSQL7_4.cs.i
-data/packages/Microsoft.Bcl.1.1.7/lib/portable-net45+win8+wpa81/_._.i
+data/ViewPane/ViewPane3/IP/ItResultsCreator.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4-windowsphone71/System.Runtime.xml.i
 data/Scanners/S2N/Settings/FileFormatSetting.cs.i
+data/BscanILL/UI/Settings/Panels/SharedDisk.xaml.cs.i
 data/BscanILL/UI/Dialogs/ExportDialog/Odyssey.xaml.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/DisabledNew.png.i
 data/ViewPane/ViewPane3/Properties/Resources.en.resx.i
 data/Scanners/Click/Settings/ISetting.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BrightnessContrastControl.xaml.cs.i
+data/packages/Microsoft.Bcl.Build.1.0.14/content/portable-net40+win8+sl4+wp71+wpa81/_._.i
 data/BscanILL/packages.config.i
+data/Scanners/Click/Settings/Click/ScanModeSetting.cs.i
 data/BscanILLTester/App.xaml.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate270Checked.png.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/FileFormatControl.xaml.i
@@ -1225,18 +1225,18 @@ data/Scanners/S2N/S2NSettings/DocumentSizeSetting.cs.i
 data/BscanILL/Export/ILL/ILLiad7_2_0_0.cs.i
 data/BscanILLData/AutoMapping/IAutoMapper.cs.i
 data/BscanILL/UI/Frames/FrameStartTwain.cs.i
-data/BscanILL/Images/Manual/02.jpg.i
+data/BscanILL/UI/Controls/ScannerControls/S2N/BrightnessContrastControl.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4/System.IO.dll.i
 data/BscanILL/UI/Settings/Panels/ArticleExchange.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.xml.i
-data/BscanILL/UI/Frames/Edit/AutoItControl.xaml.cs.i
+data/Scanners.UnitTests/Scanners.VisualState.xml.i
 data/BscanILL/MainWindow.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/ColorModeControl.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/win8/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/Export/ILL/ProgressesUi.resx.i
 data/packages/Microsoft.Bcl.Async.1.0.168/Microsoft.Bcl.Async.1.0.168.nupkg.d
 data/packages/Ninject.3.2.0.0/lib/sl2/Ninject.dll.i
-data/Bscan-bridge/FormTester/Properties/AssemblyInfo.cs.i
+data/BscanILL/UI/Settings/ClickWizard/PanelLightDist.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.Threading.Tasks.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.168/Microsoft.Bcl.Async.1.0.168.nupkg.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate270Unchecked.png.i
@@ -1251,11 +1251,11 @@ data/BscanILL/Shared/Ucs32P.dll.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_53.jpg.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_53.jpg.d
 data/Scanners/S2N/S2NSettings/ColorMode.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_31.jpg.d
+data/BscanILL/Images/Tab Control/NewU.png.i
 data/BscanILL/Export/ILLiad/DsIlliad.Designer.cs.i
-data/BscanILL/RequiredFiles/FormsProcessing/Lib/Default/Default.bsa.i
+data/BscanILL/UI/Frames/Help/FrameHelpUi.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipBookEdgeControl.xaml.cs.i
-data/BscanILL/UI/Controls/ScannerControls/S2N/DpiModeControl.xaml.i
+data/Shared/System.Data.SQLite.zip.i
 data/BscanILL/Export/ILL/PullslipReader/WordXmlParserUniversal.cs.i
 data/packages/NHibernate.4.0.0.4000/NHibernate.license.txt.i
 data/Scanners/Click/Enums.cs.i
@@ -1263,7 +1263,7 @@ data/Shared/itextsharp.dll.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net45+win8+wp8+wpa81/_._.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4/System.Runtime.dll.i
 data/Shared/itextsharp.dll.d
-data/Shared/System.Data.SQLite.zip.d
+data/ViewPane/ViewPane3/images/PostProcessingToolbar/BlackBorderRemovalUnchecked.png.i
 data/BscanILL/UI/Dialogs/ExportDialog/FileFormatControl.xaml.i
 data/BscanILL/Images/Manual/11.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net451+win81/_._.i
@@ -1271,15 +1271,16 @@ data/BscanILL/Export/Printing/IIllPrinter.cs.i
 data/BscanILL/Export/FTP/Misc.cs.i
 data/BscanILL/Images/Manual/08.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipAdfControl.xaml.i
-data/BscanILL/Images/Manual/08.jpg.d
+data/BscanILL/UI/Dialogs/DialogBase.cs.i
 data/BscanILLData/Models/Helpers/NewDbExport.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.168/lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml.i
+data/packages/NUnit.3.0.0-alpha-4/lib/sl50/nunit.framework.dll.i
 data/Scanners/Twain/TwainScanner.cs.i
 data/ViewPane/ViewPane3/IT/ItResults/ItResultsPanel.xaml.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.168/lib/win8/Microsoft.Threading.Tasks.Extensions.dll.i
-data/Scanners.UnitTests/Scanners.VisualState.xml.i
+data/Scanners/SETTINGS/BaseClass.cs.i
+data/packages/NUnit.3.0.0-alpha-4/lib/net40/nunit.framework.xml.i
 data/BscanILL/UI/ItSettings/Panels/ContentLocation.xaml.cs.i
 data/Shared/TransportController.dll.i
+data/BscanILL/Export/ArticleExchange/ArticleExchanger.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/DpiRollingControl.xaml.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_12.jpg.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/System.Runtime.xml.i
@@ -1287,40 +1288,38 @@ data/WpfTester/Properties/Resources.Designer.cs.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/net45-full/Ninject.Extensions.Conventions.dll.i
 data/KIC.zredb.i
 data/BscanILL/Export/ExportFiles/ExportFile.cs.i
-data/packages/NUnit.3.0.0-alpha-4/lib/sl50/nunit.framework.dll.i
+data/packages/Microsoft.Bcl.Async.1.0.168/lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/wpa81/_._.i
 data/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.xml.i
 data/Shared/CassiniDev4-lib.dll.i
-data/BscanILL/FormsProcessing/FormsProcessing.zip.d
 data/BscanILL/UI/Settings/Panels/NotifsAndStats.xaml.i
 data/BscanILL/UI/Settings/Panels/PanelBase.cs.i
 data/Scanners/S2N/S2NSettings/ColorModeSetting.cs.i
 data/BscanILLTester/TestForm.xaml.cs.i
 data/Scanners/Scanners.csproj.i
 data/BscanILL/Export/ILL/ArielAddressBookExtractor/ArielAddressBookExtractorForm.Designer.cs.i
-data/packages/NHibernate.4.0.4.4000/ConfigurationTemplates/Oracle.cfg.xml.i
+data/BscanILL/Export/ILL/PullslipReader/BookPullslipParser.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl5/System.Threading.Tasks.xml.i
 data/BscanILL/Images/Scanner/Height60/Widetek.png.i
 data/ViewPane/ViewPane3/Hierarchy/VpImages.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml.i
 data/ViewPane/ViewPane3App/Window1.xaml.cs.i
-data/packages/NUnit.3.0.0-alpha-4/CHANGES.txt.i
+data/BscanILL/SCANSETTINGS/SETTINGS/DpiSetting.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BitonalThresholdControl.xaml.i
 data/packages/NHibernate.4.0.0.4000/nhibernate-mapping.xsd.i
-data/BscanILL/x64/EdsImage.dll.i
+data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate0Disabled.png.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll.i
-data/BscanILL/x64/EdsImage.dll.d
+data/ViewPane/ViewPane3/ItResults/ItResultsImage.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_71.jpg.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate.psd.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.Extensions.xml.i
+data/BscanILL/UI/Settings/ClickWizard/PanelInit.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/PageSplittingStartPageControl.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/FileFormatControl.xaml.i
 data/BscanILL/FP/FormsProcessing.zip.d
 data/BscanILL/FP/FormsProcessing.zip.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8+wp8/Microsoft.Threading.Tasks.Extensions.xml.i
-data/BscanILL/Export/ExportType.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_65.jpg.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.xml.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/DpiRollingControl.xaml.i
@@ -1355,8 +1354,9 @@ data/Bscan-bridge/Bscan/OCR/OCR_CHAR_INFO_STRUCT.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/ColorModeControl.xaml.i
 data/BscanILL/Export/ILL/Exporter.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarBookInfo.xaml.i
+data/ArticleExchangeWrapper/ArticleExchangeWrapper/CollectCredentials.resx.i
 data/BscanILL/UI/Controls/ScannerControls/ClickControl.xaml.cs.i
-data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8/System.IO.xml.i
+data/ViewPane/ViewPane3/ImageTreatmentUi/CurveUi.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml.i
 data/images/scanners/Bookeye4.jpg.i
 data/BscanILLData/Configurators/AutoMapperConfigurator.cs.i
@@ -1368,13 +1368,12 @@ data/BscanILL/UI/Settings/ClickWizard/PanelLaserResult.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/ColorModeControl.xaml.cs.i
 data/packages/NHibernate.4.0.4.4000/nhibernate-mapping.xsd.i
 data/BscanILL/UI/ItSettings/ItSettingsDlg.xaml.cs.i
-data/BscanILLData/Models/Misc.cs.i
+data/BscanILL/Images/Tab Control/TabsCleanUp.png.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/BlackBorderRemovalChecked.png.i
 data/BscanILL/DB/ArticleDb.cs.i
-data/BscanILL/DPPRSC.dll.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_14.jpg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_34.jpg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_34.jpg.i
-data/BscanILL/DPPRSC.dll.d
 data/BscanILL/Export/Email/Email.cs.i
 data/Bscan-bridge/ConsoleTestApp/app.config.i
 data/BscanILL/UI/Settings/Panels/ScannerS2N.xaml.cs.i
@@ -1400,7 +1399,7 @@ data/BscanILL/Properties/Resources.resx.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll.i
 data/ViewPane/ViewPane3/IT/ItResults/ItResultsPanel.xaml.i
 data/ArticleExchangeWrapper/ArticleExchangeWrapper/OAuth.cs.i
-data/packages/EntityFramework.6.1.3/tools/EntityFramework.psd1.i
+data/BscanILL/UI/Settings/Panels/ScannerRebel.xaml.cs.i
 data/BscanILL/UI/Settings/Panels/ScannerAddOn.xaml.cs.i
 data/BscanILL/Export/ILL/EnterTransactionNumberDlg.cs.i
 data/BscanILL/Images/Tab Control/TabLong.psd.i
@@ -1415,7 +1414,6 @@ data/Scanners/Click/Settings/ClickSettingBase.cs.i
 data/BscanILL/UI/Frames/IFrameBase.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/UI/Dialogs/ExportDialog/ILLiad.xaml.i
-data/BscanILL/UI/Settings/ClickWizard/PanelWhiteBalanceResult.xaml.i
 data/ArticleExchangeWrapper/ArticleExchangeWorkbench/Program.cs.i
 data/Shared/ThumbnailCreator.exe.i
 data/BscanILL/UI/Controls/ScannerControls/AdfControl.xaml.i
@@ -1426,8 +1424,7 @@ data/packages/Microsoft.Bcl.1.1.10/License-Stable.rtf.i
 data/BscanILL/UI/Frames/Resend/FrameResendUi.xaml.cs.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate180Unchecked.png.i
 data/images/scanners/Height40 Transparent/FB6280E.png.i
-data/BscanILL/UI/Settings/Panels/FormsProcessing.xaml.cs.i
-data/ViewPane/ViewPane3/ImageTreatmentUi/BfPointUi.xaml.i
+data/Shared/ICSharpCode.SharpZipLib.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/win8/Microsoft.Threading.Tasks.Extensions.xml.i
 data/Scanners/S2N/S2NSettings/DocumentMode.cs.i
 data/Scanners/S2N/S2NSettings/Range.cs.i
@@ -1442,14 +1439,15 @@ data/packages/EntityFramework.6.1.3/tools/EntityFramework.PowerShell.Utility.dll
 data/BscanILL/UI/Settings/SettingsDlg.xaml.cs.i
 data/BscanILL/SCANSETTINGS/SETTINGS/ContrastSetting.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_36.jpg.i
+data/BscanILL/data/BscanILLData.db3.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/DownNew.png.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.dll.i
 data/BscanILL/UI/Dialogs/ExportDialog/PanelBase.cs.i
 data/BscanILL/UI/Frames/Start/FrameStartClickMini.cs.i
-data/ViewPane/ViewPane3App/app.config.i
+data/Shared/IKVM.OpenJDK.Media.dll.i
 data/Shared/IKVM.OpenJDK.Media.dll.d
 data/BscanILL/UI/Dialogs/ExportDialog/Ariel.xaml.cs.i
-data/ViewPane/ViewPane3/Toolbar/Toolbar.xaml.cs.i
+data/BscanILL/Export/ExportFiles/ExportFilesBasics.cs.i
 data/Scanners/Properties/AssemblyInfo.cs.i
 data/BscanILL/Export/Printing/IllPrintableArea.cs.i
 data/BscanILL/Export/Printing/IPaperSize.cs.i
@@ -1457,8 +1455,9 @@ data/BscanILL/UI/Settings/Dialogs/ArticleExchangeRecipientsDlg.xaml.cs.i
 data/BscanILL/Export/FileSystem/SaveOnDisk.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.dll.i
 data/BscanILLData/Misc/Miscelaneous.cs.i
+data/ViewPane/ViewPane3/ImageTreatmentUi/FingersUi.xaml.cs.i
 data/BscanILL/Export/ILL/DsIlliad.cs.i
-data/BscanILL/Images/Scanner/FB6080E.png.i
+data/BscanILL/UI/Controls/ScannerControls/ClickMini/ScannerControlBase.cs.i
 data/images/scanners/From Diana/Click-BSCAN ILL.png.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_41.jpg.d
 data/BscanILL/UI/Windows/ImageWindow.xaml.i
@@ -1468,7 +1467,8 @@ data/ViewPane/ViewPane3/images/PostProcessingToolbar/BackgroundRemovalUnchecked.
 data/BscanILL/UI/Dialogs/ExportDialog/Tipasa.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/wp8/Microsoft.Threading.Tasks.xml.i
 data/Scanners/WakeOnLAN.cs.i
-data/BscanILL/Export/ILLiad/DsIlliad.xss.i
+data/BscanILLData/FluentMappings/SQLite/DbArticleFullMap.cs.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_07.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/GammaRollingControl.xaml.i
 data/BscanILL/UI/Settings/ClickWizard/MainPanel.xaml.cs.i
 data/packages/NUnit.3.0.1/CHANGES.txt.i
@@ -1481,27 +1481,27 @@ data/BscanILL/UI/Dialogs/PrintOptionDlg.xaml.cs.i
 data/BscanILLData/KicTransaction.cs.i
 data/BscanILL/UI/Settings/Panels/Email.xaml.cs.i
 data/BscanILL/UI/Frames/Start/FrameStartBookeye4.cs.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/win8/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILLData/Helpers/SQLite/ISQLiteHelper.cs.i
-data/packages/NUnit.3.0.0-alpha-4/NOTICES.txt.i
 data/Scanners/S2N/S2NSettings/SpeedSetting.cs.i
 data/Bscan-bridge/test/test.csproj.i
 data/Scanners/Twain/Settings/BrightnessSetting.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/data/data12633.data.i
-data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/System.Runtime.dll.i
+data/ViewPane/ViewPane3/Toolbar/Toolbar.xaml.i
+data/BscanILL/UI/Windows/SecondWindow.xaml.i
 data/BscanILL/RequiredFiles/FormsProcessing/ND-SHOW-ID.bsf.i
 data/BscanILL/data/data12633.data.d
 data/BscanILL/Export/Printing/PrinterProfile.cs.i
 data/BscanILLData/KicSession.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll.i
 data/images/scanners/Click.jpg.i
-data/BscanILL/Images/Scanner/Bookeye2.png.i
-data/BscanILL/UI/Controls/ScannerControls/ClickMini/ColorModeControl.xaml.cs.i
+data/BscanILL/UI/Controls/ScannerControls/S2N/JpegQualityRollingControl.xaml.i
 data/BscanILL/Images/TabsControl/TabsScan.png.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/win8/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL.UnitTests/BscanILL.UnitTests.csproj.i
 data/Scanners/Click/ClickBase.cs.i
-data/BscanILL/UI/Controls/ScannerControls/Click/ColorModeControl.xaml.i
+data/BscanILLData/FluentMappings/SQLite/DbArticleMap.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/System.Threading.Tasks.xml.i
 data/BscanILL/UI/Dialogs/ExportDialog/Ftp.xaml.cs.i
@@ -1535,21 +1535,21 @@ data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_26.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/DocModeControlControl.xaml.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_26.jpg.d
 data/ViewPane/ViewPane3/ViewPane2Strings.en.resx.i
-data/ViewPane/ViewPane3/Toolbar/ToolbarTreatment.xaml.cs.i
+data/BscanILL/UI/Settings/Panels/Rapido.xaml.cs.i
 data/ViewPane/ViewPane3/Enums.cs.i
 data/BscanILLData/Models/DbScanFull.cs.i
 data/BscanILL/UI/Frames/Edit/ControlPanel.xaml.cs.i
-data/BscanILL/data/BscanILLData.db3.i
-data/BscanILL/UI/Controls/ScannerControls/S2N/TiffCompressionControl.xaml.cs.i
+data/packages/EntityFramework.6.1.3/tools/migrate.exe.i
+data/BscanILL/UI/Misc.cs.i
 data/images/scanners/Height40 Transparent/Bookeye2.png.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/BrightnessContrastControl.xaml.cs.i
-data/packages/NUnit.3.0.0-alpha-4/lib/net35/nunit.framework.dll.i
+data/BscanILL/UI/Controls/ScannerControls/Click/BrightnessContrastControl.xaml.i
 data/BscanILL/Export/ILL/DatabaseSQL7_2.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.xml.i
 data/ViewPane/ViewPane3/Thumbnails/StripPane.xaml.cs.i
 data/BscanILL/Images/Tab Control/SendU.png.i
 data/BscanILL/Shared/Google.GData.Extensions.dll.i
-data/BscanILL/UI/Settings/ClickWizard/PanelLaser.xaml.cs.i
+data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl3/Ninject.Extensions.Conventions.xml.i
 data/BscanILL/Shared/ThumbnailCreator.exe.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/DpiRollingControl.xaml.i
 data/packages/Microsoft.Bcl.1.1.7/content/wp8/_._.i
@@ -1559,16 +1559,16 @@ data/ViewPane/ViewPane3App/Properties/Settings.Designer.cs.i
 data/BscanILL/UI/Windows/ItResultsWindow.xaml.cs.i
 data/ViewPane/ViewPane3/Dialogs/DespeckleDlg.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BrightnessContrastControl.xaml.i
-data/BscanILL.opensdf.i
+data/images/scanners/Height40 Transparent/Widetek.png.i
 data/BscanILL/Export/Printing/Xps/KicPrinters.cs.i
 data/BscanILL/UI/ItSettings/Panels/FingerRemoval.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml.i
 data/packages/Microsoft.Bcl.Build.1.0.14/tools/Install.ps1.i
 data/BscanILL/UI/Settings/Panels/ArticleExchange.xaml.i
-data/WpfTester/Properties/Resources.resx.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_02.jpg.i
-data/ViewPane/ViewPane3/images/NavigationFirst.png.i
-data/BscanILL/Export/ILLiad/ILLiad7_1_8_0.cs.i
+data/ViewPane/ViewPane3/ImageTreatmentUi/FingersUi.xaml.i
+data/ViewPane/ViewPane3/Toolbar/ToolbarComboBox.cs.i
+data/BscanILLData/Models/DbArticle.cs.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_02.jpg.d
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml.i
 data/BscanILL/Export/FTP/FtpLogin.cs.i
 data/BscanILL/UI/Frames/ItResults/ControlPanel.xaml.i
@@ -1579,27 +1579,28 @@ data/packages/EntityFramework.6.1.3/tools/EntityFramework.psm1.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/images/Brightness.png.i
 data/BscanILL/Themes/TabControlDictionary.xaml.i
 data/BscanILL/UI/Settings/Panels/SaveOnDisk.xaml.cs.i
-data/BscanILL/UI/Frames/Start/IFrameStartScanner.cs.i
+data/BscanILL/SCANSETTINGS/SETTINGS/BrightnessSetting.cs.i
 data/Scanners/S2N/Settings/SplittingStartPageSetting.cs.i
+data/Scanners/S2N/S2NSettings/RangeSetting.cs.i
 data/BscanILL/Export/ILL/ProgressUi.designer.cs.i
-data/BscanILL/DB/Database.cs.i
+data/BscanILL/UI/Settings/Panels/ScannerAddOn.xaml.i
 data/BscanILL/UI/Dialogs/ExportDialog/ExportDlg.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL/RequiredFiles/FormsProcessing/Lib/Default/Default-Reg-FormA.bsf.i
-data/ViewPane/ViewPane3/images/PagesR.png.i
+data/BscanILL/UI/Settings/Panels/Scanner.xaml.cs.i
 data/BscanILL/Misc/Io.cs.i
 data/BscanILL/SCANSETTINGS/ScanSettings.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_59.jpg.d
+data/BscanILL/UI/ItSettings/Panels/PanelsResources.xaml.i
 data/BscanILLData/Models/Helpers/NewDbPullslip.cs.i
 data/BscanILL/Export/ILLiad/DsIlliad.xsd.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_59.jpg.i
 data/Shared/Google.GData.Client.dll.i
-data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml.i
+data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/MySql.cfg.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4/System.Runtime.xml.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/net35/Ninject.Extensions.Conventions.xml.i
-data/BscanILL/Images/Manual/31.jpg.d
+data/BscanILL/Hierarchy/IllPage.cs.i
 data/BscanILL/Images/Manual/28.jpg.d
-data/Bscan-bridge/Bscan/OCR/Ocr.cs.i
+data/WpfTester/Window1.xaml.i
 data/BscanILL/Export/Email.cs.i
 data/BscanILLData/FluentMappings/SQLite/DbScanFullMap.cs.i
 data/BscanILL/Images/Tab Control/HelpU.png.i
@@ -1610,11 +1611,11 @@ data/BscanILL/Settings/Settings.cs.i
 data/packages/Ninject.3.2.0.0/lib/sl5/Ninject.dll.i
 data/packages/EntityFramework.6.1.3/Content/App.config.transform.i
 data/packages/NHibernate.4.0.0.4000/lib/net40/NHibernate.dll.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll.i
+data/packages/Iesi.Collections.4.0.0.4000/Iesi.Collections.4.0.0.4000.nupkg.i
+data/Scanners/Twain/AdfSettings.cs.i
 data/packages/NHibernate.4.0.0.4000/lib/net40/NHibernate.dll.d
 data/BscanILL/Export/FTP/FtpServer.resx.i
-data/Shared/System.Data.SQLite.Linq.dll.i
+data/BscanILL/UI/Controls/ScannerControls/S2N/RotationControl.xaml.cs.i
 data/BscanILL/Export/ILL/Ariel3_X.cs.i
 data/Bscan-bridge/Bscan/BC/AXBARMULTIPLE.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-win81+wp81+wpa81/_._.i
@@ -1623,22 +1624,22 @@ data/BscanILL/UI/Controls/ScannerControls/ClickControl.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/win8/Microsoft.Threading.Tasks.dll.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarZoomMode.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml.i
+data/BscanILL/Misc/RapidoDllsLoader.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/ensureRedirect.xml.i
-data/BscanILL/UI/Settings/ClickWizard/MainPanel.xaml.i
+data/BscanILL/Export/ILL/ILLiad7_1_8_0.cs.i
 data/packages/EntityFramework.6.1.3/EntityFramework.6.1.3.nupkg.d
 data/BscanILL/Shared/WpdLibrary32.dll.i
 data/BscanILL.UnitTests/packages.config.i
 data/packages/EntityFramework.6.1.3/EntityFramework.6.1.3.nupkg.i
 data/BscanILL/UI/Controls/ScannerControls/ClickMiniControl.xaml.cs.i
-data/ViewPane/ViewPane3/Toolbar/ToolbarPages.xaml.cs.i
-data/BscanILL/UI/Frames/Start/FormsProcessingExecution.cs.i
+data/BscanILL/Misc/Zipping.cs.i
 data/packages/Ninject.3.2.2.0/Ninject.3.2.2.0.nupkg.i
 data/BscanILL/UI/Frames/IFrameStartScanner.cs.i
 data/Scanners/Twain/Settings/ISetting.cs.i
 data/Scanners/S2N/Settings/ISetting.cs.i
-data/Bscan-bridge/Bscan/BscanCache.cs.i
+data/BscanILL/UI/Controls/ScannerControls/BookEdge/ColorModeControl.xaml.i
 data/Bscan-bridge/Bscan/BC/BarcodeReader.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.xml.i
+data/BscanILLData/Data/KICS20060414.mdf.i
 data/Shared/SmartAssembly.Attributes.dll.i
 data/Scanners.UnitTests/Twain/TwainScanner.cs.i
 data/BscanILLData/Data/KICS20060414.mdf.d
@@ -1652,18 +1653,18 @@ data/images/scanners/From Diana/WT25-600_SideOpen.png.d
 data/BscanILL/Images/Tab Control/NewS.png.i
 data/packages/NUnit.3.0.1/lib/net40/nunit.framework.dll.i
 data/Scanners/Twain/Settings/FileFormatSetting.cs.i
-data/BscanILL/UI/Frames/Help/FrameHelpUi.xaml.cs.i
+data/BscanILL/RequiredFiles/FormsProcessing/Lib/Default/Default.bsa.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8+wp8+wpa81/System.IO.dll.i
 data/Bscan-bridge/Bscan/IniFile.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml.i
-data/BscanILL/UI/Dialogs/TransactionNumberDlg.xaml.i
+data/BscanILL/Export/ILLiad/ILLiad8_0_0_0.cs.i
 data/BscanILL/Export/FTP/FtpServer.cs.i
 data/BscanILL/SCANSETTINGS/SETTINGS/ClickPagesSetting.cs.i
 data/BscanILLData/Properties/AssemblyInfo.cs.i
 data/BscanILL/Images/Logos/BSCAN ILL_Logo_LARGE.png.d
-data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate0Disabled.png.i
+data/BscanILL/x64/EdsImage.dll.i
 data/BscanILL/DB/DbExport.cs.i
-data/ViewPane/ViewPane3/ItResults/ItResultsImage.cs.i
+data/BscanILL/x64/EdsImage.dll.d
 data/BscanILL/Images/Logos/BSCAN ILL_Logo_LARGE.png.i
 data/BscanILL/Export/ExportFiles/PdfsBuilder.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.dll.i
@@ -1672,13 +1673,13 @@ data/images/scanners/Height40 Transparent/Bookeye3.png.i
 data/BscanILL.UnitTests/app.config.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_49.jpg.d
 data/BscanILL/SCANSETTINGS/SETTINGS/Sv600ModeSetting.cs.i
-data/BscanILL/UI/Controls/ScannerControls/ScannersControl.xaml.cs.i
+data/Scanners/S2N/TestS2N.cs.i
 data/packages/Ninject.3.2.0.0/lib/sl3-wp/Ninject.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdgeControl.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/DocSizeControl.xaml.cs.i
 data/WpfTester/Window1.xaml.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_38.jpg.d
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll.i
 data/BscanILL/Export/ILL/IllException.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_38.jpg.i
 data/BscanILL/UI/Dialogs/ExportDialog/FtpDir.xaml.i
@@ -1690,13 +1691,14 @@ data/BscanILLData/Models/Helpers/NewDbPage.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml.i
 data/packages/Ninject.3.2.0.0/lib/net40/Ninject.xml.i
 data/BscanILL/Export/ILLiad/ILLiad8_1_0_0.cs.i
+data/BscanILL/Shared/System.Data.SQLite.dll.d
 data/BscanILL/UI/Settings/Dialogs/ClickCalibrationDlg.xaml.cs.i
-data/BscanILL/UI/Windows/SecondWindow.xaml.i
+data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/System.Runtime.dll.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/System.Runtime.xml.i
 data/Shared/RebelScanner.dll.i
-data/BscanILL/UI/Controls/ScannerControls/S2N/JpegQualityRollingControl.xaml.i
+data/BscanILL/UI/Controls/ScannerControls/ClickMini/ColorModeControl.xaml.cs.i
 data/Scanners/S2N/S2NSettings/Speed.cs.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_07.jpg.i
+data/BscanILL/UI/Frames/Resend/FrameResendUi.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/ensureRedirect.xml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/monotouch/_._.i
 data/Scanners/S2N/Settings/AutofocusSetting.cs.i
@@ -1707,17 +1709,17 @@ data/BscanILL/UI/Settings/Panels/ScannerTwain.xaml.i
 data/BscanILL/Export/ILL/PullslipReader/RapidParser.cs.i
 data/ViewPane/ViewPane3/Misc.cs.i
 data/BscanILL/UI/Controls/NavigationControl.xaml.cs.i
-data/images/scanners/Height40 Transparent/Widetek.png.i
+data/BscanILL.opensdf.i
 data/BscanILL/Images/Manual/07.jpg.i
 data/packages/NUnit.3.0.0-alpha-4/lib/portable-net45+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/nunit.framework.dll.i
 data/images/scanners/Height40/Widetek.jpg.i
 data/BscanILL/UI/Dialogs/ExportDialog/Email.xaml.cs.i
-data/BscanILL/Hierarchy/IllPage.cs.i
+data/BscanILL/Images/Manual/31.jpg.d
 data/BscanILL/Images/Manual/31.jpg.i
 data/BscanILLData/FluentMappings/SQLite/DbScanMap.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8/System.Runtime.xml.i
 data/packages/repositories.config.i
-data/Scanners/Twain/AdfSettings.cs.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll.i
 data/BscanILL/Shared/yeti.mmedia.dll.i
 data/BscanILL/Images/Manual/05.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/PullslipClickMiniControl.xaml.i
@@ -1727,19 +1729,19 @@ data/Shared/DPPRSC.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.dll.i
 data/BscanILL/Misc/DataProtector.cs.i
 data/BscanILL/UI/Settings/Panels/FtpDir.xaml.cs.i
-data/BscanILL/Export/ILLiad/ILLiad8_0_0_0.cs.i
+data/BscanILL/UI/Dialogs/TransactionNumberDlg.xaml.i
 data/ArticleExchangeWrapper/ArticleExchangeWorkbench/app.config.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl4/Ninject.Extensions.Conventions.dll.i
 data/packages/NHibernate.4.0.0.4000/ConfigurationTemplates/MSSQL.cfg.xml.i
-data/Shared/Jscape.Ftp.dll.d
+data/Scanners/Properties/ScannersSettings.settings.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/BackgroundRemovalChecked.png.i
 data/Scanners/S2N/Settings/SplittingSetting.cs.i
 data/ArticleExchangeWrapper/ArticleExchangeWrapper/Properties/AssemblyInfo.cs.i
 data/BscanILL/UI/Settings/ClickWizard/ClickDlg.functions.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/DespeckleControl.xaml.cs.i
 data/BscanILL/UI/Converters/Converters.cs.i
-data/Scanners/Properties/ScannersSettings.settings.i
-data/ArticleExchangeWrapper/ArticleExchangeWrapper/CollectCredentials.resx.i
+data/Shared/Jscape.Ftp.dll.d
+data/packages/NHibernate.4.0.4.4000/NHibernate.releasenotes.txt.i
 data/ScannersTester/MainWindow.xaml.i
 data/BscanILLData/FluentMappings/SQLite/DbExportMap.cs.i
 data/Shared/Jscape.Ftp.dll.i
@@ -1748,7 +1750,7 @@ data/Scanners/S2N/S2NSettings/Splitting.cs.i
 data/Scanners/S2N/Settings/ColorModeSetting.cs.i
 data/BscanILL/Shared/IdrsWrapper3.dll.i
 data/Shared/Google.GData.AccessControl.DLL.i
-data/BscanILL/Export/ILL/DatabaseSQLBase.cs.i
+data/BscanILL/Export/ILLiad/ILLiad7_4_0_0.cs.i
 data/BscanILL/Export/ILLiad/IILLiad.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl5/System.Runtime.xml.i
 data/BscanILL/UI/Controls/ScannerControls/FileFormatControl.xaml.i
@@ -1774,22 +1776,22 @@ data/packages/Microsoft.Bcl.Async.1.0.168/lib/wp8/Microsoft.Threading.Tasks.dll.
 data/BscanILL/Export/ExportTempUnits.cs.i
 data/BscanILL/BscanILL.csproj.i
 data/Scanners/S2N/S2NSettings/Enum.cs.i
-data/BscanILL/Images/Scanner/Height60/FB6280E.png.i
 data/BscanILL/Shared/BIP.dll.d
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/FileFormatControl.xaml.cs.i
 data/ScannersTester/App.xaml.i
 data/BscanILL/Images/Manual/22.jpg.d
 data/BscanILL/Images/Manual/22.jpg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/net40/System.Runtime.dll.i
-data/BscanILL/Export/ExportUnits.cs.i
-data/Shared/yeti.mp3.dll.i
+data/BscanILL/Images/Tab Control/Icons.psd.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_37.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/Click/ScanModeControl.xaml.cs.i
 data/images/scanners/Height40 Transparent/Bookeye4.png.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml.i
-data/Shared/ClickDLL.dll.d
+data/BscanILL/UI/Controls/ScannerControls/ClickMiniControl.xaml.i
 data/Shared/ClickDLL.dll.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_72.jpg.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl5/System.Threading.Tasks.dll.i
+data/BscanILL/DB/DbPage.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_54.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/PageControl.xaml.cs.i
 data/BscanILL/Images/Manual/29.jpg.d
@@ -1808,14 +1810,14 @@ data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/System.IO.dll.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate0Checked.png.i
 data/Scanners.UnitTests/app.config.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net40/Microsoft.Threading.Tasks.Extensions.dll.i
-data/Shared/Interop.FREngine.dll.i
-data/ViewPane/ViewPane3/Thumbnails/StripPane.xaml.i
+data/BscanILLData/Models/Misc.cs.i
+data/packages/NUnit.3.0.0-alpha-4/NOTICES.txt.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4/System.IO.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8/ensureRedirect.xml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_23.jpg.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/wp8/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_23.jpg.d
-data/BscanILLData/Models/Enums.cs.i
+data/BscanILL/Shared/System.Data.SQLite.dll.i
 data/images/scanners/Height40 Transparent/KodakI1120.png.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net45/Microsoft.Threading.Tasks.dll.i
 data/ViewPane/ViewPane3/ItResults/ItResultsImagePane.xaml.cs.i
@@ -1830,7 +1832,7 @@ data/WpfTester/Videos/01.wmv.d
 data/BscanILL/Hierarchy/SessionBatch.cs.i
 data/ArticleExchangeWrapper/ArticleExchangeWorkbench/Properties/Resources.resx.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_58.jpg.i
-data/packages/Microsoft.Bcl.1.1.7/lib/sl4-windowsphone71/System.IO.dll.i
+data/images/scanners/Height40/Bookeye4.jpg.i
 data/BscanILL/DB/Model1.Context.tt.i
 data/Scanners/S2N/S2NSettings/UserUnit.cs.i
 data/ViewPane/ViewPane3/Resources/Cursors/Hand.cur.i
@@ -1846,23 +1848,24 @@ data/ViewPane/ViewPane3/images/PostProcessingToolbar/Rotate270Disabled.png.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.dll.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/BitonalThresholdControl.xaml.i
 data/WpfTester/App.xaml.i
-data/BscanILL/Shared/System.Data.SQLite.dll.d
-data/BscanILL/UI/Dialogs/ArticleDlg.xaml.cs.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_05.jpg.i
+data/BscanILL/data/data12634.data.d
 data/BscanILL/Export/ILL/ProgressUi.resx.i
 data/BscanILL/Export/Printing/Win32/IllPrinter.cs.i
-data/BscanILL/Shared/System.Data.SQLite.dll.i
-data/ViewPane/ViewPane3App/Properties/Settings.settings.i
+data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_05.jpg.d
+data/BscanILL/UI/Dialogs/ArticleDlg.xaml.i
 data/BscanILL/UI/Dialogs/ExportDialog/Printer.xaml.cs.i
 data/BscanILL/UI/Frames/FrameBase.cs.i
 data/BscanILL/UI/Settings/Panels/Tipasa.xaml.cs.i
-data/BscanILL/Export/ILL/Odyssey.cs.i
+data/BscanILL/UI/Dialogs/AlertDlg.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4-windowsphone71/ensureRedirect.xml.i
 data/packages/EntityFramework.6.1.3/Content/Web.config.transform.i
 data/Scanners/Clicks/Click.cs.i
-data/BscanILL/RequiredFiles/FormsProcessing/ND-SHOW-Reg-FormA.bsf.i
-data/Scanners/S2N/S2NSettings/RangeSetting.cs.i
+data/ScannersTester/Properties/AssemblyInfo.cs.i
+data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.xml.i
+data/BscanILLData/Models/Enums.cs.i
 data/ViewPane/ViewPane3/ItResults/Thumbnail.cs.i
-data/BscanILLTester/app.config.i
+data/packages/NHibernate.4.0.4.4000/NHibernate.4.0.4.4000.nupkg.i
 data/Scanners/S2N/Settings/RotationSetting.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/System.IO.xml.i
 data/Scanners/Twain/BookedgeSettings.cs.i
@@ -1876,22 +1879,22 @@ data/images/scanners/Height40 Transparent/FB6080E.png.i
 data/Shared/DPPLibCom.dll.i
 data/BscanILL/UI/Controls/ScannerControls/Twain/BrightnessContrastControl.xaml.i
 data/Scanners/Notifications.cs.i
-data/ViewPane/ViewPane3/Toolbar/ToolbarItTransforms.xaml.i
+data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl3/Ninject.Extensions.Conventions.dll.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdgeScanMode.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/sl4/System.Threading.Tasks.dll.i
 data/Bscan-bridge/FormTester/Properties/Settings.settings.i
-data/ViewPane/ViewPane3App/Window1.xaml.i
+data/packages/Microsoft.Bcl.1.1.10/lib/monoandroid/_._.i
 data/BscanILL/UI/Controls/ScannerControls/DpiModeControl.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/DpiModeControl.xaml.cs.i
 data/BscanILL/UI/Dialogs/ExportDialog/FileParamControl.xaml.i
 data/BscanILL/UI/Frames/Edit/ManualItControl.xaml.i
 data/BscanILLData/BscanILLData.csproj.i
 data/images/scanners/From Diana/2013_Bookeye 4-V2-Basic_No Monitor.png.i
-data/BscanILL/UI/Controls/ScannerControls/ColorModeControl.xaml.i
-data/BscanILL/DB/PageDb.cs.i
+data/images/scanners/From Diana/2013_Bookeye 4-V2-Basic_No Monitor.png.d
+data/BscanILL/UI/Frames/Edit/AutoItControl.xaml.i
 data/ViewPane/ViewPane3/Languages/UiStrings.resx.i
 data/BscanILL/UI/Frames/Scan/FrameScanS2N.cs.i
-data/packages/ARSoft.Tools.Net.2.2.9/NOTICE.i
+data/BscanILL/Export/ExportFiles/Abbyy.cs.i
 data/BscanILL/Images/Manual/12.jpg.i
 data/packages/ARSoft.Tools.Net.2.2.9/ARSoft.Tools.Net.2.2.9.nupkg.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_16.jpg.d
@@ -1931,19 +1934,19 @@ data/BscanILL/UI/Controls/ScannerControls/ClickMini/BrightnessContrastControl.xa
 data/BscanILL/UI/Dialogs/ExportDialog/ArticleExchange.xaml.i
 data/BscanILL/UI/Frames/Shared/FrameClick.cs.i
 data/ArticleExchangeWrapper/ArticleExchangeWrapper/ArticleExchangeWrapper.csproj.i
-data/BscanILL/Images/TabsControl/TabsShortResend.png.i
+data/BscanILL/UI/Controls/ScannerControls/S2N.xaml.cs.i
 data/BscanILL/Hierarchy/Article.cs.i
-data/BscanILL/UI/Settings/Panels/WorldShareILL.xaml.i
+data/BscanILL/DB/Database.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl5/System.Threading.Tasks.xml.i
 data/BscanILL/Export/ExportFiles/TextFileCreator.cs.i
 data/BscanILL/UI/Settings/Panels/ILLiad.xaml.cs.i
 data/images/scanners/FB6080E.png.i
 data/BscanILL/Export/Printing/Win32/KicPrinters.cs.i
-data/BscanILL/Export/ILL/FinalReport.resx.i
-data/Scanners/S2N/IS2NWrapper.cs.i
+data/packages/AutoMapper.2.2.1/lib/net40/AutoMapper.dll.i
+data/BscanILL/UI/Settings/ClickWizard/PanelWhiteBalanceResult.xaml.i
 data/images/scanners/FB6080E.png.d
-data/ViewPane/ViewPane3/ImageTreatmentUi/FingersUi.xaml.cs.i
-data/Bscan-bridge/Bscan-bridge.sdf.d
+data/packages/Microsoft.Bcl.1.1.7/lib/portable-win81+wp81+wpa81/_._.i
+data/BscanILL/DB/Model1.Context.cs.i
 data/Bscan-bridge/Bscan-bridge.sdf.i
 data/BscanILL/UI/Dialogs/PrintOptionDlg.xaml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl5/System.Runtime.dll.i
@@ -1955,6 +1958,7 @@ data/packages/ninject.extensions.conventions.3.2.0.0/lib/net45-full/Ninject.Exte
 data/BscanILL/MLib.dll.i
 data/packages/Microsoft.Bcl.Build.1.0.21/Microsoft.Bcl.Build.1.0.21.nupkg.i
 data/BscanILL/UI/Dialogs/Scanning/S2NAdditionalSettingsDlg.xaml.i
+data/BscanILL/Export/Rapido/Rapido.cs.i
 data/BscanILL/UI/Settings/Dialogs/FtpServerDlg.xaml.cs.i
 data/BscanILL/UI/Frames/Scan/FrameScanUi.xaml.i
 data/BscanILLData/Models/DbExportFileFull.cs.i
@@ -1965,10 +1969,10 @@ data/ArticleExchangeWrapper/ArticleExchangeWorkbench/Form1.resx.i
 data/Scanners/SETTINGS/ScanSettings.cs.i
 data/ViewPane/UpgradeLog.XML.i
 data/BscanILL/UI/Controls/ScannerControls/Adf/ScannerControlBase.cs.i
-data/BscanILL/UI/Dialogs/ExportDialog/Odyssey.xaml.cs.i
+data/BscanILL/Images/Scanner/Height60/Bookeye2.png.i
 data/BscanILL/UI/Settings/Panels/General.xaml.i
 data/BscanILL/Images/Scanner/Bookeye4.png.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net45+win8/Microsoft.Threading.Tasks.Extensions.dll.i
+data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll.i
 data/Bscan-bridge/Bscan/Properties/AssemblyInfo.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Adf/DuplexControl.xaml.cs.i
 data/BscanILL/DB/ScanDb.cs.i
@@ -1982,9 +1986,9 @@ data/BscanILL/Hierarchy/IllImage.cs.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.dll.i
 data/packages/NUnit.3.0.1/lib/dotnet/nunit.framework.dll.i
 data/BscanILL/UI/Settings/Panels/SharedDisk.xaml.i
-data/BscanILL/x86/EDSDK.dll.i
+data/BscanILL/UI/Frames/Scan/FrameScanBookeye4.cs.i
 data/packages/NUnit.3.0.0-alpha-4/lib/net20/nunit.framework.xml.i
-data/BscanILL/UI/Controls/CleanUpControl.xaml.i
+data/BscanILL/Images/Scanner/Height60/KodakI1120.png.i
 data/BscanILL/Images/Tab Control/HelpS.png.i
 data/ViewPane/ViewPane3/IP/Resizing.cs.i
 data/packages/Microsoft.Bcl.1.1.7/Microsoft.Bcl.1.1.7.nupkg.i
@@ -1996,8 +2000,8 @@ data/packages/ninject.extensions.conventions.3.2.0.0/lib/net40/Ninject.Extension
 data/ViewPane/ViewPane3/ImageTreatmentUi/PageUi.xaml.i
 data/packages/Microsoft.Bcl.1.1.7/Microsoft.Bcl.1.1.7.nupkg.d
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_03.jpg.i
-data/BscanILL/UI/Settings/Panels/SharedDisk.xaml.cs.i
-data/BscanILL/UI/Frames/Edit/AutoItFloatingPanel.xaml.i
+data/Shared/ClickDLL.dll.d
+data/packages/NUnit.3.0.1/lib/net20/nunit.framework.xml.i
 data/Shared/WpdLibrary64.dll.i
 data/BscanILL/Images/Tab Control/ScanU.png.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.xml.i
@@ -2005,25 +2009,25 @@ data/BscanILL/Images/Manual/15.jpg.i
 data/BscanILL/UI/Controls/ScannerControls/Click/ColorModeControl.xaml.cs.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarPostProcessingCheck.cs.i
 data/BscanILLData/x86/SQLite.Interop.dll.d
-data/Scanners/S2N/S2NSettings/BitonalThresholdSetting.cs.i
-data/packages/Microsoft.Bcl.1.1.10/lib/net40/System.IO.dll.i
+data/BscanILLData/x86/SQLite.Interop.dll.i
+data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8/System.Runtime.dll.i
 data/images/scanners/Height40 Transparent/KodakI1405.png.i
 data/BscanILL/UI/ItSettings/Panels/FingerRemoval.xaml.cs.i
 data/BscanILL/Images/Scanner/ClickMini.png.i
 data/Shared/FTPClientConnector.dll.i
 data/BscanILL/UI/Settings/AddIllUsbDriveDlg.xaml.i
 data/BscanILL/Images/TabsControl/TabsCleanUp.png.i
-data/packages/Microsoft.Bcl.1.1.7/content/sl5/_._.i
+data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8/System.Threading.Tasks.xml.i
 data/BscanILL/Images/Tab Control/TabsSend.png.i
 data/packages/Microsoft.Bcl.1.1.7/lib/net40/System.Runtime.xml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/sl4-windowsphone71/System.Runtime.dll.i
 data/BscanILL/UI/Frames/Edit/ItExecution.cs.i
-data/ViewPane/ViewPane3/images/PostProcessingToolbar/InvertDisabled.png.i
+data/BscanILL/Images/Scanner/Height60/FB6280E.png.i
 data/BscanILL/UI/Settings/Panels/NotifsAndStats.xaml.cs.i
 data/BscanILL/Export/ILLiad/DsIlliad.cs.i
 data/BscanILL/Shared/Google.GData.Documents.dll.i
-data/Bscan-bridge/FormTester/Program.cs.i
-data/packages/NUnit.3.0.1/lib/dotnet/nunit.framework.xml.i
+data/packages/EntityFramework.6.1.3/tools/EntityFramework.psd1.i
+data/packages/NHibernate.4.0.4.4000/lib/net40/NHibernate.xml.d
 data/BscanILL/Export/ILLiad/DatabaseSQL7_3.cs.i
 data/BscanILL/Export/ILL/ILLiad8_0_0_0.cs.i
 data/ViewPane/ViewPane3/ItResults/ItResultsPanel.xaml.cs.i
@@ -2034,7 +2038,7 @@ data/packages/ARSoft.Tools.Net.2.2.9/lib/net45/ARSoft.Tools.Net.dll.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdgeScanMode.xaml.i
 data/packages/Ninject.3.2.0.0/lib/net45-full/Ninject.xml.i
 data/BscanILL/FileUtilities.dll.i
-data/BscanILL/Export/ArticleExchange/ArticleExchanger.cs.i
+data/BscanILL/UI/Dialogs/ExportDialog/Tipasa.xaml.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Bookeye4.xaml.cs.i
 data/ViewPane/ViewPane3/ViewPane2Strings.zh-CHS.resx.i
 data/Scanners/S2N/S2NSettings/EnumSetting.cs.i
@@ -2047,41 +2051,41 @@ data/Scanners/SETTINGS/CurrentSettings.cs.i
 data/BscanILL/UI/Dialogs/ExportDialog/FtpLoginControl.xaml.i
 data/Scanners/Click/ClickSettings.cs.i
 data/BscanILL/Export/ILL/IILLiad.cs.i
-data/images/scanners/KodakI1120.jpg.i
+data/BscanILL/UI/Settings/ClickWizard/PanelTest.xaml.i
 data/BscanILL/UI/Settings/ClickWizard/PanelFocusResult.xaml.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml.i
 data/BscanILL/Misc/FileEncryption.cs.i
-data/packages/Microsoft.Bcl.Build.1.0.14/content/portable-net40+win8+sl4+wp71+wpa81/_._.i
+data/BscanILL/UI/Settings/Panels/FormsProcessing.xaml.cs.i
 data/packages/Microsoft.Bcl.Async.1.0.168/License-Stable.rtf.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/DpiRollingControl.xaml.cs.i
-data/BscanILL/UI/Controls/ScannerControls/S2N/BrightnessContrastControl.xaml.i
+data/BscanILL/Images/Manual/02.jpg.i
 data/BscanILL/Images/Scanner/Widetek.png.i
 data/BscanILL/UI/Settings/ClickWizard/PanelRegPointsResult.xaml.i
-data/BscanILL/UI/Settings/ClickWizard/PanelLightDist.xaml.i
+data/Bscan-bridge/FormTester/Properties/AssemblyInfo.cs.i
 data/BscanILL/UI/Settings/Panels/Ftp.xaml.cs.i
 data/BscanILL/Images/Manual/25.jpg.d
 data/BscanILL/UI/Controls/ScannerControls/ClickMini/images/Contrast.png.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/win8/Microsoft.Threading.Tasks.xml.i
 data/BscanILL/Images/Manual/23.jpg.i
-data/Scanners/SETTINGS/BaseClass.cs.i
+data/packages/Microsoft.Bcl.Async.1.0.168/lib/win8/Microsoft.Threading.Tasks.Extensions.dll.i
 data/ViewPane/ViewPane3/images/ZoomMinus.gif.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll.i
-data/BscanILL/SCANSETTINGS/SETTINGS/DpiSetting.cs.i
+data/packages/NUnit.3.0.0-alpha-4/CHANGES.txt.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/wp8/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILL/UI/Settings/Dialogs/ClickSettingsDlg.xaml.i
 data/Bscan-bridge/FormTester/Properties/Resources.Designer.cs.i
 data/BscanILL/UI/Controls/ScannerControls/Bookeye2.xaml.i
-data/BscanILL/UI/Settings/ClickWizard/PanelInit.xaml.i
+data/packages/Microsoft.Bcl.Async.1.0.165/lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILL/Export/AdditionalInfo/AdditionalInfoClasses.cs.i
 data/packages/Microsoft.Bcl.1.1.7/License-Stable.rtf.i
 data/BscanILL/UI/Controls/ScannerControls/Click/images/Contrast.png.i
 data/BscanILL/UI/Settings/ClickWizard/PanelLightDist.xaml.cs.i
 data/BscanILL/x64/EDSDK.dll.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8/System.IO.xml.i
-data/ViewPane/ViewPane3/ImageTreatmentUi/CurveUi.xaml.i
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_14.jpg.d
-data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_14.jpg.i
-data/ViewPane/ViewPane3/Toolbar/Toolbar.xaml.i
+data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+win8/System.IO.xml.i
+data/BscanILL/DPPRSC.dll.i
+data/BscanILL/DPPRSC.dll.d
+data/BscanILL/Export/ILL/ArticleForm.Designer.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_33.jpg.i
 data/packages/NUnit.3.0.1/lib/net45/nunit.framework.dll.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.xml.i
@@ -2100,25 +2104,26 @@ data/packages/Ninject.3.2.0.0/Ninject.3.2.0.0.nupkg.d
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.xml.i
 data/packages/Ninject.3.2.0.0/Ninject.3.2.0.0.nupkg.i
 data/packages/Ninject.3.2.0.0/lib/sl3-wp/Ninject.xml.i
-data/BscanILL/DB/DbPage.cs.i
+data/BscanILL/Images/Scanner/Bookeye2.png.i
 data/ProgramsDebug/ViewPane/BIP.dll.d
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl5+win8+wp8+wpa81/ensureRedirect.xml.i
 data/images/scanners/Height40/FB6280E.jpg.i
 data/BscanILLData/Models/DbScan.cs.i
 data/ProgramsDebug/ViewPane/BIP.dll.i
-data/Shared/Interop.FREngine.dll.d
+data/ViewPane/ViewPane3/Thumbnails/StripPane.xaml.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net40/Microsoft.Threading.Tasks.dll.i
 data/BscanILL/UI/Frames/Resend/FrameResend.cs.i
-data/BscanILL/UI/Misc.cs.i
+data/BscanILL/UI/Controls/ScannerControls/S2N/TiffCompressionControl.xaml.cs.i
 data/ViewPane/ViewPane3/Properties/Resources.zh-CHS.resx.i
 data/BscanILL/UI/Controls/ScannerControls/SharpenControl.xaml.cs.i
+data/BscanILL/UI/Dialogs/ExportDialog/Rapido.xaml.i
 data/BscanILL/UI/Controls/ScannerControls/S2N/PageSplittingStartPageControl.xaml.cs.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/net40/Ninject.Extensions.Conventions.xml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/lib/net45/Microsoft.Threading.Tasks.xml.i
 data/images/scanners/Height40/FB6080E.jpg.i
 data/ViewPane/ViewPane3/ItResults/ItResultsItem.cs.i
-data/ViewPane/ViewPane3/ImageTreatmentUi/FingersUi.xaml.i
+data/WpfTester/Properties/Resources.resx.i
 data/BscanILLData/FluentMappings/SQLite/DbPageFullMap.cs.i
 data/BscanILL/Export/ILL/ArielBasics.cs.i
 data/Bscan-bridge/Bscan/BC/AXIMAGE.cs.i
@@ -2126,9 +2131,10 @@ data/BscanILL/UI/Controls/ScannerControls/Adf/DuplexControl.xaml.i
 data/KIC.saproj.i
 data/BscanILL/Export/ILL/ArielAddressBookExtractor/ArielAddressBookExtractorForm.resx.i
 data/BscanILL/Shared/PerformaxCom.dll.i
-data/BscanILL/Export/ILL/ILLiad7_1_8_0.cs.i
+data/BscanILL/UI/Settings/ClickWizard/MainPanel.xaml.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml.i
 data/BscanILL/DB/ExportFileDb.cs.i
+data/BscanILL/UI/Dialogs/ExportDialog/Rapido.xaml.cs.i
 data/KIC.zreproj.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+win8+wp8+wpa81/System.Runtime.dll.i
 data/packages/ninject.extensions.conventions.3.2.0.0/lib/sl4/Ninject.Extensions.Conventions.xml.i
@@ -2141,24 +2147,24 @@ data/packages/NUnit.3.0.0-alpha-4/lib/net40/nunit.framework.dll.i
 data/BscanILLData/Models/Helpers/NewDbScan.cs.i
 data/packages/Ninject.3.2.2.0/lib/sl3-wp/Ninject.xml.i
 data/Scanners/Twain/Settings/Adf/DuplexSetting.cs.i
-data/BscanILL/Export/ILLiad/ILLiad7_4_0_0.cs.i
+data/BscanILL/Export/ILL/DatabaseSQLBase.cs.i
 data/BscanILL/Export/ILL/DatabaseSQL8_1.cs.i
 data/BscanILL/Export/Printing/Xps/KicInputBin.cs.i
 data/BscanILL/UI/Settings/ClickWizard/PanelLaserResult.xaml.i
-data/BscanILL/Images/Tab Control/Icons.psd.i
+data/BscanILL/Export/ExportUnits.cs.i
 data/BscanILLData/Models/DbExportFull.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge/BrightnessContrastControl.xaml.cs.i
 data/BscanILL/DB/Model1.tt.i
-data/images/scanners/Height40/Bookeye4.jpg.i
+data/packages/Microsoft.Bcl.1.1.7/lib/sl4-windowsphone71/System.IO.dll.i
 data/BscanILL/Images/Scanner/ClickMini2.png.i
-data/BscanILL/data/data12634.data.i
+data/ViewPane/ViewPane3/IT/ItResults/StripPane.xaml.cs.i
 data/packages/ninject.extensions.conventions.3.2.0.0/ninject.extensions.conventions.3.2.0.0.nupkg.i
-data/BscanILL/data/data12634.data.d
+data/BscanILL/UI/Dialogs/ArticleDlg.xaml.cs.i
 data/packages/ninject.extensions.conventions.3.2.0.0/ninject.extensions.conventions.3.2.0.0.nupkg.d
 data/packages/Microsoft.Bcl.Async.1.0.165/Microsoft.Bcl.Async.1.0.165.nupkg.i
 data/packages/Microsoft.Bcl.1.1.7/lib/portable-net40+sl4+win8/System.IO.dll.i
-data/BscanILL/UI/Dialogs/AlertDlg.xaml.i
-data/ScannersTester/Properties/AssemblyInfo.cs.i
+data/BscanILL/Export/ILL/Odyssey.cs.i
+data/BscanILL/UI/Frames/Start/FormsProcessingExecution.cs.i
 data/BscanILL/UI/Controls/ScannerControls/BookEdge.xaml.cs.i
 data/BscanILL/UI/Frames/Help/FrameHelp.cs.i
 data/BscanILL/UI/ItSettings/Panels/PanelBase.cs.i
@@ -2166,16 +2172,16 @@ data/BscanILL/UI/Dialogs/ExportDialog/Ariel.xaml.i
 data/packages/Microsoft.Bcl.Async.1.0.165/Microsoft.Bcl.Async.1.0.165.nupkg.d
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml.i
 data/BscanILL/Export/IP/ExportFileCreator.cs.i
-data/packages/Microsoft.Bcl.Async.1.0.165/lib/win8/Microsoft.Threading.Tasks.Extensions.xml.i
+data/ViewPane/ViewPane3/ImageTreatmentUi/BfPointUi.xaml.i
 data/ViewPane/ViewPane3/images/PostProcessingToolbar/BackgroundRemovalDisabled.png.i
 data/packages/Microsoft.Bcl.1.1.7/lib/net40/System.IO.xml.i
 data/ViewPane/ViewPane3/Languages/UiStrings.Designer.cs.i
-data/Bscan-bridge/ConsoleTestApp/Properties/AssemblyInfo.cs.i
+data/ViewPane/ViewPane3/Toolbar/ToolbarTreatment.xaml.cs.i
 data/BscanILL/UI/Dialogs/DependencyDlg.xaml.i
 data/Scanners/Twain/Settings/TwainSettingBase.cs.i
 data/ArticleExchangeWrapper/ArticleExchangeWorkbench/Form1.cs.i
 data/BscanILL/Export/ILLiad/DatabaseSQL8_1.cs.i
-data/BscanILL/UI/Frames/Scan/FrameScanBookeye4.cs.i
+data/BscanILL/x86/EDSDK.dll.i
 data/packages/Ninject.3.2.0.0/lib/sl4/Ninject.dll.i
 data/BscanILL/x86/EDSDK.dll.d
 data/packages/NHibernate.4.0.4.4000/lib/net40/NHibernate.xml.i
@@ -2183,12 +2189,12 @@ data/BscanILL/UI/Settings/Panels/Export.xaml.i
 data/ViewPane/ViewPane3/Toolbar/ToolbarRadioButton.cs.i
 data/ViewPane/ViewPane3/Resources/Cursors/Fist.cur.i
 data/BscanILL/Themes/TabControls.xaml.i
-data/packages/NHibernate.4.0.4.4000/lib/net40/NHibernate.xml.d
+data/packages/NUnit.3.0.1/lib/dotnet/nunit.framework.xml.i
 data/packages/Microsoft.Bcl.Async.1.0.168/lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.dll.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_67.jpg.d
 data/ViewPane/ViewPane3/IT/ItResults/ItResultsImagePane.xaml.cs.i
 data/BscanILL/Shared/zxing.dll.i
-data/BscanILL/UI/Settings/Dialogs/ArticleForm.xaml.cs.i
+data/packages/AutoMapper.2.2.1/AutoMapper.2.2.1.nupkg.i
 data/BscanILLData/Helpers/INHibernateHelper.cs.i
 data/BscanILL/Images/Manual/BSCAN ILL User Guide Version 3_Page_67.jpg.i
 data/Bscan-bridge/ConsoleTestApp/Program.cs.i
@@ -2209,4 +2215,4 @@ data/Scanners/IScanner.cs.i
 data/packages/Microsoft.Bcl.1.1.10/lib/portable-net40+sl4+win8+wp8+wpa81/ensureRedirect.xml.i
 data/BscanILL/FormsProcessing/FormsProcessing.zip.i
 data/packages/NUnit.3.0.1/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.dll.i
-data/Scanners/S2N/Settings/SpeedSetting.cs.i
+data/BscanILL/FormsProcessing/FormsProcessing.zip.d

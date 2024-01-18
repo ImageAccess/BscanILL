@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DLSG")]
 [assembly: AssemblyProduct("BscanILLData")]
-[assembly: AssemblyCopyright("Copyright ©  2001 - 2023 DLSG at Image Access, Inc.")]
+[assembly: AssemblyCopyright("Copyright ©  2001 - 2024 DLSG at Image Access, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,4 +32,4 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.3.27.1")]
+[assembly: AssemblyVersion("4.3.28.1")]

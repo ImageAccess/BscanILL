@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DLSG")]
 [assembly: AssemblyProduct("BscanILL")]
-[assembly: AssemblyCopyright("Copyright © 2001-2023 DLSG at Image Access")]
+[assembly: AssemblyCopyright("Copyright © 2001-2024 DLSG at Image Access")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,4 +51,4 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.3.27.1")]
+[assembly: AssemblyVersion("4.3.28.1")]
